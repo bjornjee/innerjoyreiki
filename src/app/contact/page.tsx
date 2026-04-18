@@ -1,10 +1,101 @@
+import type { Metadata } from "next";
+import { PageHeader } from "@/components/page-header";
+import { ContactForm } from "@/components/contact-form";
+import { InfoCard } from "@/components/info-card";
+import { CTASection } from "@/components/cta-section";
+import { BOOKING_URL, CONTACT_EMAIL } from "@/lib/constants";
+
+export const metadata: Metadata = {
+  title: "Contact | InnerJoy Reiki",
+  description:
+    "Get in touch with InnerJoy Reiki. Ask questions, share your needs, or book a session.",
+};
+
 export default function Contact() {
   return (
-    <div className="mx-auto max-w-5xl px-6 py-20">
-      <h1 className="font-serif text-4xl font-semibold text-foreground">Contact</h1>
-      <p className="mt-4 text-lg text-text-muted">
-        Get in touch with us.
-      </p>
-    </div>
+    <>
+      <PageHeader
+        label="Contact"
+        heading="Get in Touch"
+        description="Have a question or want to learn more before booking? I'd love to hear from you."
+      />
+
+      {/* Form + Info */}
+      <section className="bg-surface py-20">
+        <div className="mx-auto max-w-5xl px-6">
+          <div className="grid grid-cols-1 gap-16 md:grid-cols-2">
+            {/* Contact form */}
+            <div>
+              <h2 className="font-serif text-2xl font-semibold text-foreground">
+                Send a Message
+              </h2>
+              <p className="mt-2 text-sm text-text-muted">
+                Fill out the form and I&apos;ll respond within 1–2 business
+                days.
+              </p>
+              <div className="mt-8">
+                <ContactForm />
+              </div>
+            </div>
+
+            {/* Info cards */}
+            <div className="space-y-8">
+              <h2 className="font-serif text-2xl font-semibold text-foreground">
+                Other Ways to Connect
+              </h2>
+
+              <InfoCard label="Email">
+                <a
+                  href={`mailto:${CONTACT_EMAIL}`}
+                  className="text-foreground hover:text-primary"
+                >
+                  {CONTACT_EMAIL}
+                </a>
+              </InfoCard>
+
+              <InfoCard label="Location">
+                <p className="text-foreground">Singapore</p>
+                <p className="mt-1 text-sm text-text-muted">
+                  Exact address shared upon booking confirmation.
+                </p>
+              </InfoCard>
+
+              <InfoCard label="Social">
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-foreground hover:text-primary"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="h-5 w-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                  </svg>
+                  Follow on Instagram
+                </a>
+              </InfoCard>
+
+              <InfoCard label="Response Time">
+                <p className="text-sm text-text-muted">
+                  I typically respond within 1–2 business days. For urgent
+                  enquiries, please email directly.
+                </p>
+              </InfoCard>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <CTASection
+        heading="Prefer to Book Directly?"
+        subtitle="Skip the form and reserve your session online."
+        buttonLabel="Book Now"
+        buttonHref={BOOKING_URL}
+      />
+    </>
   );
 }

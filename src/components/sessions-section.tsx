@@ -26,7 +26,7 @@ export function SessionsSection() {
           <div className="flex gap-2">
             <button
               onClick={() => scroll("left")}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-border transition-colors hover:bg-icon-bg"
+              className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-border transition-colors hover:bg-icon-bg"
               aria-label="Scroll left"
             >
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -35,7 +35,7 @@ export function SessionsSection() {
             </button>
             <button
               onClick={() => scroll("right")}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-primary text-white transition-colors hover:bg-primary-light"
+              className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-border bg-primary text-white transition-colors hover:bg-primary-light"
               aria-label="Scroll right"
             >
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -58,10 +58,10 @@ export function SessionsSection() {
             iconBgColor="bg-icon-bg-green"
             title="Private Reiki Session"
             duration="60 Min"
-            price="$95"
-            description="A one-on-one session tailored to your specific energetic needs and intentions to restore absolute balance."
-            actionLabel="Book Session"
-            actionHref="/sessions"
+            price="SGD $95"
+            description="A one-on-one session tailored to your needs and intentions, designed to release tension and support your body's natural balance."
+            actionLabel="View Details"
+            actionHref="/classes"
           />
           <ServiceCard
             icon={
@@ -72,7 +72,7 @@ export function SessionsSection() {
             iconBgColor="bg-icon-bg-peach"
             title="Group Meditation"
             duration="90 Min"
-            price="$45"
+            price="SGD $45"
             description="Join our weekly community gathering for guided meditation and energy healing in a supportive group setting."
             actionLabel="Join Class"
             actionHref="/classes"
