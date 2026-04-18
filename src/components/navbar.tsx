@@ -4,28 +4,29 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { NAV_LINKS, SITE_NAME } from "@/lib/constants";
+import { Button } from "@/components/button";
 
 export function Navbar() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="border-b border-zinc-200 bg-white dark:border-zinc-800 dark:bg-zinc-950">
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <Link href="/" className="text-lg font-semibold">
+    <nav className="bg-white">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+        <Link href="/" className="font-serif text-xl italic">
           {SITE_NAME}
         </Link>
 
         {/* Desktop links */}
-        <ul className="hidden gap-6 sm:flex">
+        <ul className="hidden gap-8 md:flex">
           {NAV_LINKS.map(({ label, href }) => (
             <li key={href}>
               <Link
                 href={href}
-                className={`text-sm transition-colors hover:text-zinc-900 dark:hover:text-zinc-100 ${
+                className={`text-sm transition-colors hover:text-primary ${
                   pathname === href
-                    ? "font-medium text-zinc-900 dark:text-zinc-100"
-                    : "text-zinc-500 dark:text-zinc-400"
+                    ? "font-medium text-primary"
+                    : "text-text-muted"
                 }`}
               >
                 {label}
@@ -34,11 +35,20 @@ export function Navbar() {
           ))}
         </ul>
 
+        {/* Desktop CTA */}
+        <div className="hidden md:block">
+          <Button variant="primary" href="/book">
+            Book Now
+          </Button>
+        </div>
+
         {/* Mobile menu button */}
         <button
-          className="sm:hidden"
+          className="md:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
+          aria-expanded={menuOpen}
+          aria-controls="mobile-menu"
         >
           <svg
             className="h-6 w-6"
@@ -67,7 +77,7 @@ export function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <ul className="border-t border-zinc-200 px-6 py-4 sm:hidden dark:border-zinc-800">
+        <ul id="mobile-menu" className="border-t border-border px-6 py-4 md:hidden">
           {NAV_LINKS.map(({ label, href }) => (
             <li key={href}>
               <Link
@@ -75,14 +85,19 @@ export function Navbar() {
                 onClick={() => setMenuOpen(false)}
                 className={`block py-2 text-sm ${
                   pathname === href
-                    ? "font-medium text-zinc-900 dark:text-zinc-100"
-                    : "text-zinc-500 dark:text-zinc-400"
+                    ? "font-medium text-primary"
+                    : "text-text-muted"
                 }`}
               >
                 {label}
               </Link>
             </li>
           ))}
+          <li className="pt-2">
+            <Button variant="primary" href="/book">
+              Book Now
+            </Button>
+          </li>
         </ul>
       )}
     </nav>
