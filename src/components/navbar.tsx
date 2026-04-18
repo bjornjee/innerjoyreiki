@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -13,8 +14,15 @@ export function Navbar() {
   return (
     <nav className="bg-white">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <Link href="/" className="font-serif text-xl italic">
-          {SITE_NAME}
+        <Link href="/">
+          <Image
+            src="/images/innerjoy-logo.png"
+            alt={SITE_NAME}
+            width={200}
+            height={67}
+            className="h-14 w-auto"
+            priority
+          />
         </Link>
 
         {/* Desktop links */}
