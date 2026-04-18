@@ -7,9 +7,13 @@ export const NAV_LINKS = [
   { label: "FAQ", href: "/faq" },
 ] as const;
 
-export const FOOTER_LINKS = [
+export const FOOTER_NAV_LINKS = [
+  { label: "What to Expect", href: "/about#what-to-expect" },
+  { label: "Contact", href: "/contact" },
+  { label: "Instagram", href: "https://instagram.com" },
+] as const;
+
+export const FOOTER_LEGAL_LINKS = [
   { label: "Privacy Policy", href: "/privacy" },
   { label: "Terms of Service", href: "/terms" },
-  { label: "Instagram", href: "https://instagram.com" },
-  { label: "Contact", href: "/contact" },
 ] as const;

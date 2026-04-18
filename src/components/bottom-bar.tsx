@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FOOTER_LINKS, SITE_NAME } from "@/lib/constants";
+import { FOOTER_NAV_LINKS, FOOTER_LEGAL_LINKS, SITE_NAME } from "@/lib/constants";
 
 export function BottomBar() {
   return (
@@ -17,8 +17,8 @@ export function BottomBar() {
             </p>
           </div>
           <div className="flex flex-col gap-4 sm:items-end">
-            <ul className="flex flex-wrap gap-6">
-              {FOOTER_LINKS.map(({ label, href }) => (
+            <ul className="flex flex-wrap gap-x-6 gap-y-2">
+              {FOOTER_NAV_LINKS.map(({ label, href }) => (
                 <li key={href}>
                   <Link
                     href={href}
@@ -29,18 +29,21 @@ export function BottomBar() {
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link
-                  href="/about#what-to-expect"
-                  className="text-sm text-text-muted transition-colors hover:text-foreground"
-                >
-                  What to Expect
-                </Link>
-              </li>
             </ul>
-            <p className="text-xs text-text-muted">
-              &copy; {new Date().getFullYear()} {SITE_NAME}
-            </p>
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+              {FOOTER_LEGAL_LINKS.map(({ label, href }) => (
+                <Link
+                  key={href}
+                  href={href}
+                  className="text-xs text-text-muted transition-colors hover:text-foreground"
+                >
+                  {label}
+                </Link>
+              ))}
+              <span className="text-xs text-text-muted">
+                &copy; {new Date().getFullYear()} {SITE_NAME}
+              </span>
+            </div>
           </div>
         </div>
       </div>
