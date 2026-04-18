@@ -37,7 +37,7 @@ export default function Home() {
           <div className="flex justify-center">
             <div className="relative h-72 w-72 overflow-hidden rounded-[40%_60%_50%_50%] md:h-96 md:w-96">
               <Image
-                src="/images/reiki-hands.png"
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/reiki-hands.png`}
                 alt="Reiki healing hands"
                 fill
                 className="object-cover"
