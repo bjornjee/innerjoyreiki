@@ -56,6 +56,11 @@ const faqs = [
       "Yes. Distance Reiki sessions are available for those who cannot attend in person. The session is conducted via a video call, and many clients report similar benefits to in-person sessions.",
   },
   {
+    question: "How much does a session cost?",
+    answer:
+      "Private sessions range from SGD $75 to $130 depending on duration and type. Group classes start at SGD $45. Visit our Classes & Sessions page for full details. A reduced-rate First-Time Discovery session is available if you are new to Reiki.",
+  },
+  {
     question: "What is your cancellation policy?",
     answer:
       "Please provide at least 24 hours' notice if you need to cancel or reschedule. Late cancellations or no-shows may be charged the full session fee. I understand that things come up — just let me know as early as you can.",

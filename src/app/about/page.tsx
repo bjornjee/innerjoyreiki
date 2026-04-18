@@ -7,12 +7,36 @@ export default function About() {
       <section className="bg-background py-20">
         <div className="mx-auto max-w-3xl px-6">
           <p className="mb-4 text-xs uppercase tracking-[0.2em] text-text-muted">
-            Our Story
+            My Story
           </p>
           <h1 className="font-serif text-4xl font-semibold leading-[1.15] -tracking-[0.02em] text-foreground md:text-5xl">
             Why Reiki?
           </h1>
-          <div className="mt-8 space-y-6 text-base leading-relaxed text-text-muted">
+
+          {/* Practitioner identity placeholder */}
+          <div className="mt-10 flex flex-col items-center gap-6 rounded-2xl border border-border bg-surface p-8 sm:flex-row sm:items-start">
+            <div className="flex h-24 w-24 flex-shrink-0 items-center justify-center rounded-full bg-icon-bg">
+              <svg aria-hidden="true" className="h-10 w-10 text-text-muted" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+              </svg>
+            </div>
+            <div>
+              <h2 className="font-serif text-xl font-semibold text-foreground">
+                {/* Replace with practitioner name */}
+                [Practitioner Name]
+              </h2>
+              <p className="mt-1 text-sm font-medium text-primary">
+                {/* Replace with credentials */}
+                Certified Usui Reiki Master &middot; Singapore
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-text-muted">
+                {/* Replace with a brief bio */}
+                Trained in the Usui Reiki tradition with a focus on nervous-system regulation and stress recovery. Practising since [year].
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-10 space-y-6 text-base leading-relaxed text-text-muted">
             <p>
               I came to Reiki the way most people do — not because I was
               looking for it, but because nothing else was working. Years of
@@ -79,7 +103,10 @@ export default function About() {
       {/* What to Expect */}
       <section id="what-to-expect" className="bg-background py-20">
         <div className="mx-auto max-w-3xl px-6">
-          <SectionHeading heading="What to Expect" />
+          <SectionHeading
+            heading="What to Expect"
+            subtitle="Your first visit is designed to feel easy. Here is how a typical session unfolds."
+          />
           <ol className="mt-12 space-y-10">
             <li className="flex gap-6">
               <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-icon-bg font-serif text-lg font-semibold text-foreground">
@@ -90,9 +117,11 @@ export default function About() {
                   Arrive &amp; Settle
                 </h3>
                 <p className="mt-1 text-sm leading-relaxed text-text-muted">
-                  We begin with a short conversation about how you are
-                  feeling and what you would like to focus on. You stay
-                  fully clothed and lie on a comfortable treatment table.
+                  You will be welcomed into a quiet, softly lit room with
+                  calming music. We start with a short conversation about
+                  how you are feeling and what you would like to focus on.
+                  You stay fully clothed and lie on a comfortable treatment
+                  table.
                 </p>
               </div>
             </li>
@@ -107,7 +136,9 @@ export default function About() {
                 <p className="mt-1 text-sm leading-relaxed text-text-muted">
                   Hands are placed gently on or above the body. Most people
                   feel warmth, tingling, or simply deep relaxation. Many
-                  fall asleep — that is perfectly welcome.
+                  fall asleep — that is perfectly welcome. A private session
+                  typically lasts 60 minutes, with the first visit running
+                  slightly longer to allow time for your intake conversation.
                 </p>
               </div>
             </li>
@@ -120,9 +151,12 @@ export default function About() {
                   Afterwards
                 </h3>
                 <p className="mt-1 text-sm leading-relaxed text-text-muted">
-                  We check in briefly. Drink water, take it easy for the
-                  rest of the day. Some people notice shifts immediately;
-                  for others it unfolds over the following days.
+                  We check in briefly about your experience. Drink water and
+                  take it easy for the rest of the day. Some people feel
+                  lighter immediately; others notice subtle shifts over the
+                  following days. It is also normal to feel a little tired
+                  or emotional — this usually passes quickly and is a sign
+                  that your body is processing.
                 </p>
               </div>
             </li>

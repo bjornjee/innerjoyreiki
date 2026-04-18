@@ -16,8 +16,8 @@ export default function Classes() {
     <>
       <PageHeader
         label="Classes & Sessions"
-        heading="Our Offerings"
-        description="Whether you prefer one-on-one healing or the shared calm of a group setting, there is a place for you here."
+        heading="Find What Feels Right"
+        description="One-on-one healing for deep, personal work. Small-group classes for shared stillness. There is no wrong place to start."
       />
 
       {/* Private Sessions */}
@@ -25,14 +25,14 @@ export default function Classes() {
         <div className="mx-auto max-w-5xl px-6">
           <SectionHeading
             heading="Private Sessions"
-            subtitle="Personalised, one-on-one Reiki healing tailored to where you are right now."
+            subtitle="Personalised, one-on-one healing tailored to where you are — physically, emotionally, and energetically."
           />
           <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
             <OfferingCard
               title="First-Time Discovery"
               duration="75 min"
-              price="$75"
-              description="A gentle introduction for newcomers. Includes a longer consultation so we can understand your needs and set intentions together."
+              price="SGD $75"
+              description="Your introduction to Reiki. We take extra time to understand what brought you here and what you are hoping to feel, before moving into a full treatment."
               highlights={[
                 "Extended intake conversation",
                 "Full Reiki treatment",
@@ -45,8 +45,8 @@ export default function Classes() {
             <OfferingCard
               title="Private Reiki Session"
               duration="60 min"
-              price="$95"
-              description="Our signature session. A focused, restorative treatment designed to release tension and rebalance your energy."
+              price="SGD $95"
+              description="Our signature session. Focused, unhurried time to release what your body has been holding and settle into a deeper state of rest."
               highlights={[
                 "Brief check-in",
                 "Full Reiki treatment",
@@ -59,8 +59,8 @@ export default function Classes() {
             <OfferingCard
               title="Extended Session"
               duration="90 min"
-              price="$130"
-              description="For deeper work. Extra time allows us to address multiple areas and incorporate breathwork or guided meditation."
+              price="SGD $130"
+              description="For when you need more space. The extra time allows us to go deeper, layer in breathwork or guided meditation, and create a personalised aftercare plan."
               highlights={[
                 "In-depth consultation",
                 "Extended Reiki treatment",
@@ -85,8 +85,8 @@ export default function Classes() {
             <OfferingCard
               title="Group Meditation"
               duration="90 min"
-              price="$45"
-              description="A weekly guided meditation circle combining breathwork, gentle Reiki energy, and group stillness."
+              price="SGD $45"
+              description="A weekly circle of guided breathwork, gentle Reiki energy, and shared stillness. No experience needed — just come as you are."
               highlights={[
                 "Guided breathwork",
                 "Group Reiki healing",
@@ -99,8 +99,8 @@ export default function Classes() {
             <OfferingCard
               title="Intro to Reiki Workshop"
               duration="3 hours"
-              price="$120"
-              description="A hands-on workshop covering Reiki fundamentals. Learn the history, principles, and basic hand positions for self-healing."
+              price="SGD $120"
+              description="A hands-on introduction to the Usui Reiki tradition. Learn the history, core principles, and basic hand positions so you can practise self-healing at home."
               highlights={[
                 "Reiki history & principles",
                 "Self-healing techniques",
@@ -113,8 +113,8 @@ export default function Classes() {
             <OfferingCard
               title="Restorative Evening"
               duration="2 hours"
-              price="$65"
-              description="A monthly evening of deep relaxation combining Reiki, sound healing, and guided visualisation in a candlelit space."
+              price="SGD $65"
+              description="A monthly candlelit evening weaving together Reiki, singing-bowl sound healing, and guided visualisation. Ends with herbal tea and quiet reflection."
               highlights={[
                 "Sound healing",
                 "Group Reiki session",

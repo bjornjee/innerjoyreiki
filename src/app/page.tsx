@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/button";
 import { SectionHeading } from "@/components/section-heading";
 import { FeatureCard } from "@/components/feature-card";
@@ -21,7 +22,7 @@ export default function Home() {
               Restore balance.
             </h1>
             <p className="mt-6 max-w-lg text-lg text-white/80">
-              A gentle, evidence-informed practice to calm your nervous system.
+              A gentle, evidence-informed practice to calm your nervous system, ease tension, and support deeper rest.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button variant="primary" href={BOOKING_URL}>
@@ -32,7 +33,10 @@ export default function Home() {
               </Button>
             </div>
             <p className="mt-3 text-xs text-white/60">
-              New here? Start with a session.
+              New here?{" "}
+              <Link href="/about#what-to-expect" className="underline hover:text-white/80">
+                See what to expect
+              </Link>
             </p>
           </div>
           <div className="flex justify-center">
@@ -64,7 +68,7 @@ export default function Home() {
                 </svg>
               }
               title="Energy Flow"
-              description="We work to clear blockages in your natural energy pathways, promoting a sense of calm and physical relaxation."
+              description="Gentle hands-on work to ease tension held in the body, promoting a sense of calm and physical relaxation."
             />
             <FeatureCard
               icon={
@@ -73,7 +77,7 @@ export default function Home() {
                 </svg>
               }
               title="Deep Rest"
-              description="The primary goal is moving your nervous system from 'fight or flight' into a state of profound rest and digest."
+              description="Helping your nervous system shift from &lsquo;fight or flight&rsquo; into a state of genuine rest — the kind your body has been asking for."
             />
             <FeatureCard
               icon={
@@ -82,8 +86,44 @@ export default function Home() {
                 </svg>
               }
               title="Grounded Healing"
-              description="A safe, non-invasive approach that complements traditional medicine by addressing the emotional and energetic roots of stress."
+              description="A safe, non-invasive approach that works alongside your existing care — not as a replacement, but as a companion to it."
             />
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="bg-background py-20">
+        <div className="mx-auto max-w-5xl px-6">
+          <SectionHeading
+            heading="What Clients Say"
+            subtitle="A few words from people who have experienced Reiki at InnerJoy."
+          />
+          <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
+            <div className="rounded-2xl border border-border bg-white p-8">
+              <p className="text-sm leading-relaxed text-text-muted italic">
+                &ldquo;I went in skeptical and came out calmer than I have felt in months. I slept deeply that night for the first time in a long time.&rdquo;
+              </p>
+              <p className="mt-4 text-sm font-semibold text-foreground">
+                — First-time client
+              </p>
+            </div>
+            <div className="rounded-2xl border border-border bg-white p-8">
+              <p className="text-sm leading-relaxed text-text-muted italic">
+                &ldquo;The space is warm and safe. There is no pressure to believe anything — just permission to rest. I look forward to my sessions every month.&rdquo;
+              </p>
+              <p className="mt-4 text-sm font-semibold text-foreground">
+                — Regular client
+              </p>
+            </div>
+            <div className="rounded-2xl border border-border bg-white p-8">
+              <p className="text-sm leading-relaxed text-text-muted italic">
+                &ldquo;I was carrying so much tension without realising it. After just one session, something shifted. I felt lighter, like I could breathe again.&rdquo;
+              </p>
+              <p className="mt-4 text-sm font-semibold text-foreground">
+                — Discovery session client
+              </p>
+            </div>
           </div>
         </div>
       </section>
