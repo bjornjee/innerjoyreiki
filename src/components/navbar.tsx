@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { NAV_LINKS, SITE_NAME, BOOKING_URL } from "@/lib/constants";
 import { Button } from "@/components/button";
+import { LanguageSwitcher } from "@/components/language-switcher";
 
 export function Navbar() {
   const pathname = usePathname();
@@ -44,7 +45,8 @@ export function Navbar() {
         </ul>
 
         {/* Desktop CTA */}
-        <div className="hidden md:block">
+        <div className="hidden items-center gap-3 md:flex">
+          <LanguageSwitcher />
           <Button variant="primary" href={BOOKING_URL}>
             Book Now
           </Button>
@@ -101,6 +103,9 @@ export function Navbar() {
               </Link>
             </li>
           ))}
+          <li className="pt-2">
+            <LanguageSwitcher />
+          </li>
           <li className="pt-2">
             <Button variant="primary" href={BOOKING_URL}>
               Book Now

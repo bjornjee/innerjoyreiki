@@ -3,6 +3,7 @@ import { Inter, Geist_Mono } from "next/font/google";
 import { Playfair_Display } from "next/font/google";
 import { Navbar } from "@/components/navbar";
 import { BottomBar } from "@/components/bottom-bar";
+import { GoogleTranslateProvider } from "@/components/language-switcher";
 import "./globals.css";
 
 const inter = Inter({
@@ -37,9 +38,11 @@ export default function RootLayout({
       className={`${inter.variable} ${geistMono.variable} ${playfair.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-background text-foreground">
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <BottomBar />
+        <GoogleTranslateProvider>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <BottomBar />
+        </GoogleTranslateProvider>
       </body>
     </html>
   );
