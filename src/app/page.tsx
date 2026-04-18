@@ -3,6 +3,7 @@ import { Button } from "@/components/button";
 import { SectionHeading } from "@/components/section-heading";
 import { FeatureCard } from "@/components/feature-card";
 import { SessionsSection } from "@/components/sessions-section";
+import { BOOKING_URL } from "@/lib/constants";
 
 export default function Home() {
   return (
@@ -23,7 +24,7 @@ export default function Home() {
               A gentle, evidence-informed practice to calm your nervous system.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Button variant="primary" href="/sessions">
+              <Button variant="primary" href={BOOKING_URL}>
                 Book a Session
               </Button>
               <Button variant="outline" href="/classes" className="border-white text-white hover:border-white/80 hover:text-white/80">

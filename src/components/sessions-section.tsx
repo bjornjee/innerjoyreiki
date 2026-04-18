@@ -61,7 +61,7 @@ export function SessionsSection() {
             price="$95"
             description="A one-on-one session tailored to your specific energetic needs and intentions to restore absolute balance."
             actionLabel="Book Session"
-            actionHref="/sessions"
+            actionHref="/classes"
           />
           <ServiceCard
             icon={

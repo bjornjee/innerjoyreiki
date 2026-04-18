@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { NAV_LINKS, SITE_NAME } from "@/lib/constants";
+import { NAV_LINKS, SITE_NAME, BOOKING_URL } from "@/lib/constants";
 import { Button } from "@/components/button";
 
 export function Navbar() {
@@ -45,7 +45,7 @@ export function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden md:block">
-          <Button variant="primary" href="/book">
+          <Button variant="primary" href={BOOKING_URL}>
             Book Now
           </Button>
         </div>
@@ -102,7 +102,7 @@ export function Navbar() {
             </li>
           ))}
           <li className="pt-2">
-            <Button variant="primary" href="/book">
+            <Button variant="primary" href={BOOKING_URL}>
               Book Now
             </Button>
           </li>

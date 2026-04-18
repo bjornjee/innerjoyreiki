@@ -77,7 +77,7 @@ export default function About() {
       </section>
 
       {/* What to Expect */}
-      <section className="bg-background py-20">
+      <section id="what-to-expect" className="bg-background py-20">
         <div className="mx-auto max-w-3xl px-6">
           <SectionHeading heading="What to Expect" />
           <ol className="mt-12 space-y-10">

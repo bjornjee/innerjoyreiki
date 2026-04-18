@@ -1,7 +1,8 @@
 export const SITE_NAME = "InnerJoy Reiki";
+export const BOOKING_URL = "https://calendly.com/innerjoyreiki";
+export const CONTACT_EMAIL = "hello@innerjoyreiki.com";
 
 export const NAV_LINKS = [
-  { label: "Sessions", href: "/sessions" },
   { label: "Classes", href: "/classes" },
   { label: "About", href: "/about" },
   { label: "FAQ", href: "/faq" },
