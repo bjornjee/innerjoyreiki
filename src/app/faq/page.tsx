@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/page-header";
-import { SectionHeading } from "@/components/section-heading";
-import { Button } from "@/components/button";
+import { CTASection } from "@/components/cta-section";
 
 export const metadata: Metadata = {
   title: "FAQ | InnerJoy Reiki",
@@ -104,20 +103,13 @@ export default function FAQ() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-background py-20">
-        <div className="mx-auto max-w-3xl px-6 text-center">
-          <SectionHeading
-            heading="Still Have Questions?"
-            subtitle="I'm happy to chat. Reach out and I'll get back to you within 1–2 business days."
-          />
-          <div className="mt-8">
-            <Button variant="outline" href="/contact">
-              Get in Touch
-            </Button>
-          </div>
-        </div>
-      </section>
+      <CTASection
+        heading="Still Have Questions?"
+        subtitle="I'm happy to chat. Reach out and I'll get back to you within 1–2 business days."
+        buttonLabel="Get in Touch"
+        buttonHref="/contact"
+        buttonVariant="outline"
+      />
     </>
   );
 }

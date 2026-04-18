@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/button";
 import { SectionHeading } from "@/components/section-heading";
 import { FeatureCard } from "@/components/feature-card";
+import { TestimonialCard } from "@/components/testimonial-card";
 import { SessionsSection } from "@/components/sessions-section";
 import { BOOKING_URL } from "@/lib/constants";
 
@@ -100,30 +101,18 @@ export default function Home() {
             subtitle="A few words from people who have experienced Reiki at InnerJoy."
           />
           <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
-            <div className="rounded-2xl border border-border bg-white p-8">
-              <p className="text-sm leading-relaxed text-text-muted italic">
-                &ldquo;I went in skeptical and came out calmer than I have felt in months. I slept deeply that night for the first time in a long time.&rdquo;
-              </p>
-              <p className="mt-4 text-sm font-semibold text-foreground">
-                — First-time client
-              </p>
-            </div>
-            <div className="rounded-2xl border border-border bg-white p-8">
-              <p className="text-sm leading-relaxed text-text-muted italic">
-                &ldquo;The space is warm and safe. There is no pressure to believe anything — just permission to rest. I look forward to my sessions every month.&rdquo;
-              </p>
-              <p className="mt-4 text-sm font-semibold text-foreground">
-                — Regular client
-              </p>
-            </div>
-            <div className="rounded-2xl border border-border bg-white p-8">
-              <p className="text-sm leading-relaxed text-text-muted italic">
-                &ldquo;I was carrying so much tension without realising it. After just one session, something shifted. I felt lighter, like I could breathe again.&rdquo;
-              </p>
-              <p className="mt-4 text-sm font-semibold text-foreground">
-                — Discovery session client
-              </p>
-            </div>
+            <TestimonialCard
+              quote="I went in skeptical and came out calmer than I have felt in months. I slept deeply that night for the first time in a long time."
+              attribution="First-time client"
+            />
+            <TestimonialCard
+              quote="The space is warm and safe. There is no pressure to believe anything — just permission to rest. I look forward to my sessions every month."
+              attribution="Regular client"
+            />
+            <TestimonialCard
+              quote="I was carrying so much tension without realising it. After just one session, something shifted. I felt lighter, like I could breathe again."
+              attribution="Discovery session client"
+            />
           </div>
         </div>
       </section>

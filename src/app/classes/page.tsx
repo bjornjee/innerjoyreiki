@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/page-header";
 import { OfferingCard } from "@/components/offering-card";
 import { SectionHeading } from "@/components/section-heading";
-import { Button } from "@/components/button";
+import { CTASection } from "@/components/cta-section";
 import { BOOKING_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -128,35 +128,21 @@ export default function Classes() {
         </div>
       </section>
 
-      {/* New to Reiki */}
-      <section className="bg-surface py-20">
-        <div className="mx-auto max-w-3xl px-6 text-center">
-          <SectionHeading
-            heading="New to Reiki?"
-            subtitle="Your first session is a safe, pressure-free experience. You stay fully clothed, and we go at your pace."
-          />
-          <div className="mt-8">
-            <Button variant="outline" href="/about#what-to-expect">
-              See What to Expect
-            </Button>
-          </div>
-        </div>
-      </section>
+      <CTASection
+        heading="New to Reiki?"
+        subtitle="Your first session is a safe, pressure-free experience. You stay fully clothed, and we go at your pace."
+        buttonLabel="See What to Expect"
+        buttonHref="/about#what-to-expect"
+        buttonVariant="outline"
+        bg="bg-surface"
+      />
 
-      {/* CTA */}
-      <section className="bg-background py-20">
-        <div className="mx-auto max-w-3xl px-6 text-center">
-          <SectionHeading
-            heading="Ready to Begin?"
-            subtitle="Book a session or reserve your spot in an upcoming class."
-          />
-          <div className="mt-8">
-            <Button variant="primary" href={BOOKING_URL}>
-              Book Now
-            </Button>
-          </div>
-        </div>
-      </section>
+      <CTASection
+        heading="Ready to Begin?"
+        subtitle="Book a session or reserve your spot in an upcoming class."
+        buttonLabel="Book Now"
+        buttonHref={BOOKING_URL}
+      />
     </>
   );
 }

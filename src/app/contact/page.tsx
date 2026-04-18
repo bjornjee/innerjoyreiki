@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/page-header";
 import { ContactForm } from "@/components/contact-form";
-import { SectionHeading } from "@/components/section-heading";
-import { Button } from "@/components/button";
+import { InfoCard } from "@/components/info-card";
+import { CTASection } from "@/components/cta-section";
 import { BOOKING_URL, CONTACT_EMAIL } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -44,37 +44,28 @@ export default function Contact() {
                 Other Ways to Connect
               </h2>
 
-              <div className="rounded-2xl border border-border bg-white p-6">
-                <h3 className="text-sm font-semibold uppercase tracking-wide text-text-muted">
-                  Email
-                </h3>
+              <InfoCard label="Email">
                 <a
                   href={`mailto:${CONTACT_EMAIL}`}
-                  className="mt-1 block text-foreground hover:text-primary"
+                  className="text-foreground hover:text-primary"
                 >
                   {CONTACT_EMAIL}
                 </a>
-              </div>
+              </InfoCard>
 
-              <div className="rounded-2xl border border-border bg-white p-6">
-                <h3 className="text-sm font-semibold uppercase tracking-wide text-text-muted">
-                  Location
-                </h3>
-                <p className="mt-1 text-foreground">Singapore</p>
+              <InfoCard label="Location">
+                <p className="text-foreground">Singapore</p>
                 <p className="mt-1 text-sm text-text-muted">
                   Exact address shared upon booking confirmation.
                 </p>
-              </div>
+              </InfoCard>
 
-              <div className="rounded-2xl border border-border bg-white p-6">
-                <h3 className="text-sm font-semibold uppercase tracking-wide text-text-muted">
-                  Social
-                </h3>
+              <InfoCard label="Social">
                 <a
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-1 inline-flex items-center gap-2 text-foreground hover:text-primary"
+                  className="inline-flex items-center gap-2 text-foreground hover:text-primary"
                 >
                   <svg
                     aria-hidden="true"
@@ -86,36 +77,25 @@ export default function Contact() {
                   </svg>
                   Follow on Instagram
                 </a>
-              </div>
+              </InfoCard>
 
-              <div className="rounded-2xl border border-border bg-white p-6">
-                <h3 className="text-sm font-semibold uppercase tracking-wide text-text-muted">
-                  Response Time
-                </h3>
-                <p className="mt-1 text-sm text-text-muted">
+              <InfoCard label="Response Time">
+                <p className="text-sm text-text-muted">
                   I typically respond within 1–2 business days. For urgent
                   enquiries, please email directly.
                 </p>
-              </div>
+              </InfoCard>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-background py-20">
-        <div className="mx-auto max-w-3xl px-6 text-center">
-          <SectionHeading
-            heading="Prefer to Book Directly?"
-            subtitle="Skip the form and reserve your session online."
-          />
-          <div className="mt-8">
-            <Button variant="primary" href={BOOKING_URL}>
-              Book Now
-            </Button>
-          </div>
-        </div>
-      </section>
+      <CTASection
+        heading="Prefer to Book Directly?"
+        subtitle="Skip the form and reserve your session online."
+        buttonLabel="Book Now"
+        buttonHref={BOOKING_URL}
+      />
     </>
   );
 }
