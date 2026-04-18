@@ -22,7 +22,7 @@ export function ServiceCard({
   actionHref,
 }: ServiceCardProps) {
   return (
-    <div className="min-w-[300px] flex-shrink-0 rounded-2xl border border-border bg-white p-6">
+    <div className="min-w-[300px] flex-shrink-0 rounded-2xl border border-border bg-white p-6 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md">
       <div
         className={`mb-4 flex h-12 w-12 items-center justify-center rounded-xl ${iconBgColor}`}
       >
@@ -30,7 +30,7 @@ export function ServiceCard({
       </div>
       <h3 className="text-lg font-semibold">{title}</h3>
       <p className="mt-1 text-sm text-text-muted">
-        {duration} &middot; {price}
+        {duration} &middot; <span className="font-semibold text-foreground">{price}</span>
       </p>
       <p className="mt-3 text-sm leading-relaxed text-text-muted">
         {description}

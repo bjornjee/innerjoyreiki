@@ -7,7 +7,7 @@ interface SectionHeadingProps {
 export function SectionHeading({ heading, subtitle, align = "center" }: SectionHeadingProps) {
   return (
     <div className={align === "center" ? "text-center" : "text-left"}>
-      <h2 className="font-serif text-3xl font-bold text-foreground md:text-4xl">
+      <h2 className="font-serif text-3xl font-semibold text-foreground md:text-4xl">
         {heading}
       </h2>
       {subtitle && (

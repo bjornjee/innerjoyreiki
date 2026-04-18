@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Button } from "@/components/button";
 import { SectionHeading } from "@/components/section-heading";
 import { FeatureCard } from "@/components/feature-card";
@@ -15,29 +14,28 @@ export default function Home() {
             <p className="mb-4 text-xs uppercase tracking-[0.2em] text-white/80">
               InnerJoy Reiki
             </p>
-            <h1 className="font-serif text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
+            <h1 className="font-serif text-4xl font-semibold leading-[1.15] -tracking-[0.02em] text-white md:text-5xl lg:text-6xl">
               Find stillness.
               <br />
               Restore balance.
             </h1>
             <p className="mt-6 max-w-lg text-lg text-white/80">
-              Step away from the noise. Experience deep, restorative healing in a
-              space designed for your absolute peace.
+              A gentle, evidence-informed practice to calm your nervous system.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button variant="primary" href="/sessions">
                 Book a Session
               </Button>
-              <Link
-                href="/classes"
-                className="inline-flex items-center justify-center rounded-full border-2 border-white px-6 py-3 text-sm font-medium tracking-wide text-white transition-colors hover:bg-white hover:text-primary"
-              >
+              <Button variant="outline" href="/classes" className="border-white text-white hover:border-white/80 hover:text-white/80">
                 Explore Classes
-              </Link>
+              </Button>
             </div>
+            <p className="mt-3 text-xs text-white/60">
+              New here? Start with a session.
+            </p>
           </div>
           <div className="flex justify-center">
-            <div className="relative h-72 w-72 overflow-hidden rounded-full md:h-96 md:w-96">
+            <div className="relative h-72 w-72 overflow-hidden rounded-[40%_60%_50%_50%] md:h-96 md:w-96">
               <Image
                 src="/images/reiki-hands.png"
                 alt="Reiki healing hands"
@@ -51,7 +49,7 @@ export default function Home() {
       </section>
 
       {/* Features — Demystifying Reiki */}
-      <section className="bg-background py-20">
+      <section className="bg-surface py-20">
         <div className="mx-auto max-w-5xl px-6">
           <SectionHeading
             heading="Demystifying Reiki"
