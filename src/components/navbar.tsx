@@ -52,7 +52,7 @@ export function Navbar() {
 
         {/* Mobile menu button */}
         <button
-          className="md:hidden"
+          className="cursor-pointer md:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
           aria-expanded={menuOpen}

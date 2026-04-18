@@ -46,7 +46,7 @@ export function ContactForm() {
         <button
           type="button"
           onClick={() => setStatus("idle")}
-          className="mt-4 text-sm font-medium text-primary hover:underline"
+          className="mt-4 cursor-pointer text-sm font-medium text-primary hover:underline"
         >
           Send another message
         </button>
@@ -105,7 +105,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "sending"}
-        className="inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-medium tracking-wide text-white transition-colors hover:bg-accent-light disabled:opacity-60"
+        className="inline-flex cursor-pointer items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-medium tracking-wide text-white transition-colors hover:bg-accent-light disabled:cursor-not-allowed disabled:opacity-60"
       >
         {status === "sending" ? "Sending…" : "Send Message"}
       </button>

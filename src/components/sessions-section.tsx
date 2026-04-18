@@ -26,7 +26,7 @@ export function SessionsSection() {
           <div className="flex gap-2">
             <button
               onClick={() => scroll("left")}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-border transition-colors hover:bg-icon-bg"
+              className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-border transition-colors hover:bg-icon-bg"
               aria-label="Scroll left"
             >
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -35,7 +35,7 @@ export function SessionsSection() {
             </button>
             <button
               onClick={() => scroll("right")}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-primary text-white transition-colors hover:bg-primary-light"
+              className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-border bg-primary text-white transition-colors hover:bg-primary-light"
               aria-label="Scroll right"
             >
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
