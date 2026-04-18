@@ -16,7 +16,7 @@ export function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Link href="/">
           <Image
-            src="/images/innerjoy-logo.png"
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/innerjoy-logo.png`}
             alt={SITE_NAME}
             width={200}
             height={67}
