@@ -6,9 +6,9 @@ import { CTASection } from "@/components/cta-section";
 import { BOOKING_URL, CONTACT_EMAIL } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Contact | InnerJoy Reiki",
+  title: "Contact | innerjoy reiki",
   description:
-    "Get in touch with InnerJoy Reiki. Ask questions, share your needs, or book a session.",
+    "Get in touch with innerjoy reiki. Ask questions, share your needs, or book a session.",
 };
 
 export default function Contact() {

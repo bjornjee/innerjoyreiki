@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { SectionHeading } from "@/components/section-heading";
 import { ServiceCard } from "@/components/service-card";
+import { T } from "@/components/translate-override";
 
 export function SessionsSection() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -19,7 +20,7 @@ export function SessionsSection() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex items-end justify-between">
           <SectionHeading
-            heading="Classes & Sessions"
+            heading={<T term="Classes & Sessions" />}
             subtitle="Discover our range of healing offerings designed for your journey."
             align="left"
           />
@@ -56,11 +57,11 @@ export function SessionsSection() {
               </svg>
             }
             iconBgColor="bg-icon-bg-green"
-            title="Private Reiki Session"
+            title={<T term="Private Reiki Session" />}
             duration="60 Min"
             price="SGD $95"
             description="A one-on-one session tailored to your needs and intentions, designed to release tension and support your body's natural balance."
-            actionLabel="View Details"
+            actionLabel={<T term="View Details" />}
             actionHref="/classes"
           />
           <ServiceCard
@@ -74,7 +75,7 @@ export function SessionsSection() {
             duration="90 Min"
             price="SGD $45"
             description="Join our weekly community gathering for guided meditation and energy healing in a supportive group setting."
-            actionLabel="Join Class"
+            actionLabel={<T term="Join Class" />}
             actionHref="/classes"
           />
         </div>

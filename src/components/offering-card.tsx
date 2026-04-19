@@ -1,12 +1,12 @@
 import { Button } from "@/components/button";
 
 interface OfferingCardProps {
-  title: string;
+  title: React.ReactNode;
   duration: string;
   price: string;
   description: string;
-  highlights: string[];
-  actionLabel: string;
+  highlights: React.ReactNode[];
+  actionLabel: React.ReactNode;
   actionHref: string;
 }
 
@@ -30,8 +30,8 @@ export function OfferingCard({
         {description}
       </p>
       <ul className="mt-6 space-y-2">
-        {highlights.map((item) => (
-          <li key={item} className="flex items-start gap-2 text-sm text-text-muted">
+        {highlights.map((item, i) => (
+          <li key={i} className="flex items-start gap-2 text-sm text-text-muted">
             <svg
               aria-hidden="true"
               className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary"

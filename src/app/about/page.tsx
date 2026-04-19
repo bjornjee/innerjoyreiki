@@ -1,4 +1,5 @@
 import { SectionHeading } from "@/components/section-heading";
+import { T } from "@/components/translate-override";
 
 export default function About() {
   return (
@@ -49,7 +50,7 @@ export default function About() {
               trained so I could offer that same experience to others.
             </p>
             <p>
-              InnerJoy exists to make Reiki accessible and grounded. No
+              innerjoy exists to make Reiki accessible and grounded. No
               mysticism required — just a quiet space, a clear intention,
               and the permission to let your body do what it already knows
               how to do.
@@ -104,7 +105,7 @@ export default function About() {
       <section id="what-to-expect" className="bg-background py-20">
         <div className="mx-auto max-w-3xl px-6">
           <SectionHeading
-            heading="What to Expect"
+            heading={<T term="What to Expect" />}
             subtitle="Your first visit is designed to feel easy. Here is how a typical session unfolds."
           />
           <ol className="mt-12 space-y-10">
@@ -131,7 +132,7 @@ export default function About() {
               </span>
               <div>
                 <h3 className="text-lg font-semibold text-foreground">
-                  The Session
+                  <T term="The Session" />
                 </h3>
                 <p className="mt-1 text-sm leading-relaxed text-text-muted">
                   Hands are placed gently on or above the body. Most people
@@ -148,7 +149,7 @@ export default function About() {
               </span>
               <div>
                 <h3 className="text-lg font-semibold text-foreground">
-                  Afterwards
+                  <T term="Afterwards" />
                 </h3>
                 <p className="mt-1 text-sm leading-relaxed text-text-muted">
                   We check in briefly about your experience. Drink water and

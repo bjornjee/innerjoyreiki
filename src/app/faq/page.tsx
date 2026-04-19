@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/page-header";
 import { CTASection } from "@/components/cta-section";
+import { T } from "@/components/translate-override";
 
 export const metadata: Metadata = {
-  title: "FAQ | InnerJoy Reiki",
+  title: "FAQ | innerjoy reiki",
   description:
-    "Frequently asked questions about Reiki, what to expect in a session, and how InnerJoy Reiki can support your wellbeing.",
+    "Frequently asked questions about Reiki, what to expect in a session, and how innerjoy reiki can support your wellbeing.",
 };
 
 const faqs = [
@@ -106,7 +107,7 @@ export default function FAQ() {
       <CTASection
         heading="Still Have Questions?"
         subtitle="I'm happy to chat. Reach out and I'll get back to you within 1–2 business days."
-        buttonLabel="Get in Touch"
+        buttonLabel={<T term="Get in Touch" />}
         buttonHref="/contact"
         buttonVariant="outline"
       />
