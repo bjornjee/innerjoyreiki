@@ -1,5 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import { FOOTER_NAV_LINKS, FOOTER_LEGAL_LINKS, SITE_NAME } from "@/lib/constants";
+import { T } from "@/components/translate-override";
+import { glossary, type GlossaryTerm } from "@/lib/glossary";
 
 export function BottomBar() {
   return (
@@ -25,7 +29,7 @@ export function BottomBar() {
                     className="text-sm text-text-muted transition-colors hover:text-foreground"
                     {...(href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   >
-                    {label}
+                    {label in glossary ? <T term={label as GlossaryTerm} /> : label}
                   </Link>
                 </li>
               ))}

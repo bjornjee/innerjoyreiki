@@ -1,5 +1,5 @@
 interface SectionHeadingProps {
-  heading: string;
+  heading: React.ReactNode;
   subtitle?: string;
   align?: "center" | "left";
 }

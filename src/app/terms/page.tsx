@@ -4,8 +4,8 @@ import { ProseSection } from "@/components/prose-section";
 import { CONTACT_EMAIL } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | InnerJoy Reiki",
-  description: "Terms and conditions for using InnerJoy Reiki services.",
+  title: "Terms of Service | innerjoy reiki",
+  description: "Terms and conditions for using innerjoy reiki services.",
 };
 
 export default function Terms() {
@@ -21,8 +21,8 @@ export default function Terms() {
         <div className="mx-auto max-w-3xl space-y-12 px-6">
           <ProseSection heading="Acceptance of Terms">
             <p>
-              By accessing this website or booking a session with InnerJoy
-              Reiki, you agree to be bound by these Terms of Service. If you do
+              By accessing this website or booking a session with innerjoy
+              reiki, you agree to be bound by these Terms of Service. If you do
               not agree with any part of these terms, please do not use our
               services.
             </p>
@@ -30,7 +30,7 @@ export default function Terms() {
 
           <ProseSection heading="Services">
             <p>
-              InnerJoy Reiki offers Reiki healing sessions, group meditation
+              innerjoy reiki offers Reiki healing sessions, group meditation
               classes, and wellness workshops. All services are provided on an
               as-available basis and may be modified or discontinued at any
               time.
@@ -48,7 +48,7 @@ export default function Terms() {
               no-shows may be charged the full session fee.
             </p>
             <p>
-              InnerJoy Reiki reserves the right to cancel or reschedule
+              innerjoy reiki reserves the right to cancel or reschedule
               sessions due to unforeseen circumstances. In such cases, a full
               refund or rescheduled session will be offered.
             </p>
@@ -63,7 +63,7 @@ export default function Terms() {
               condition.
             </p>
             <p>
-              InnerJoy Reiki does not diagnose, treat, or cure any medical
+              innerjoy reiki does not diagnose, treat, or cure any medical
               condition. Results vary from person to person and are not
               guaranteed. By booking a session, you acknowledge that you
               understand the nature of Reiki as a complementary practice.
@@ -72,7 +72,7 @@ export default function Terms() {
 
           <ProseSection heading="Limitation of Liability">
             <p>
-              InnerJoy Reiki shall not be held liable for any direct, indirect,
+              innerjoy reiki shall not be held liable for any direct, indirect,
               incidental, or consequential damages arising from the use of our
               services or this website. Your participation in any session or
               class is entirely voluntary and at your own risk.

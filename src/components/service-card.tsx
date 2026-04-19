@@ -3,11 +3,11 @@ import Link from "next/link";
 interface ServiceCardProps {
   icon: React.ReactNode;
   iconBgColor: string;
-  title: string;
+  title: React.ReactNode;
   duration: string;
   price: string;
   description: string;
-  actionLabel: string;
+  actionLabel: React.ReactNode;
   actionHref: string;
 }
 

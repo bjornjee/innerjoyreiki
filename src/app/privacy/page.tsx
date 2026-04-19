@@ -4,8 +4,8 @@ import { ProseSection } from "@/components/prose-section";
 import { CONTACT_EMAIL } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | InnerJoy Reiki",
-  description: "How InnerJoy Reiki collects, uses, and protects your personal information.",
+  title: "Privacy Policy | innerjoy reiki",
+  description: "How innerjoy reiki collects, uses, and protects your personal information.",
 };
 
 export default function Privacy() {

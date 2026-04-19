@@ -1,4 +1,4 @@
-export const SITE_NAME = "InnerJoy Reiki";
+export const SITE_NAME = "innerjoy reiki";
 export const BOOKING_URL = "https://calendly.com/innerjoyreiki";
 export const CONTACT_EMAIL = "hello@innerjoyreiki.com";
 

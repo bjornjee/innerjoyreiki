@@ -1,6 +1,6 @@
 interface TestimonialCardProps {
   quote: string;
-  attribution: string;
+  attribution: React.ReactNode;
 }
 
 export function TestimonialCard({ quote, attribution }: TestimonialCardProps) {

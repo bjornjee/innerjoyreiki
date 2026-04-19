@@ -18,6 +18,12 @@ declare global {
 }
 
 const TranslateReadyContext = createContext(false);
+const ChineseContext = createContext(false);
+const SetChineseContext = createContext<((v: boolean) => void) | null>(null);
+
+export function useIsChinese() {
+  return useContext(ChineseContext);
+}
 
 /**
  * Renders the hidden Google Translate widget + script once.
@@ -25,6 +31,10 @@ const TranslateReadyContext = createContext(false);
  */
 export function GoogleTranslateProvider({ children }: { children: React.ReactNode }) {
   const [ready, setReady] = useState(false);
+  const [chinese, setChinese] = useState(() => {
+    if (typeof document === "undefined") return false;
+    return document.cookie.includes("googtrans=/en/zh-CN");
+  });
 
   useEffect(() => {
     // Register callback before script loads so ?cb= finds it
@@ -39,12 +49,16 @@ export function GoogleTranslateProvider({ children }: { children: React.ReactNod
 
   return (
     <TranslateReadyContext.Provider value={ready}>
-      <div id="google_translate_element" />
-      <Script
-        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-        strategy="afterInteractive"
-      />
-      {children}
+      <ChineseContext.Provider value={chinese}>
+        <SetChineseContext.Provider value={setChinese}>
+          <div id="google_translate_element" />
+          <Script
+            src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+            strategy="afterInteractive"
+          />
+          {children}
+        </SetChineseContext.Provider>
+      </ChineseContext.Provider>
     </TranslateReadyContext.Provider>
   );
 }
@@ -55,11 +69,8 @@ export function GoogleTranslateProvider({ children }: { children: React.ReactNod
  */
 export function LanguageSwitcher() {
   const ready = useContext(TranslateReadyContext);
-
-  const [chinese, setChinese] = useState(() => {
-    if (typeof document === "undefined") return false;
-    return document.cookie.includes("googtrans=/en/zh-CN");
-  });
+  const chinese = useContext(ChineseContext);
+  const setChinese = useContext(SetChineseContext);
 
   function toggle() {
     if (chinese) {
@@ -75,7 +86,7 @@ export function LanguageSwitcher() {
 
     select.value = "zh-CN";
     select.dispatchEvent(new Event("change"));
-    setChinese(true);
+    setChinese?.(true);
   }
 
   return (

@@ -1,5 +1,5 @@
 interface PageHeaderProps {
-  label: string;
+  label: React.ReactNode;
   heading: string;
   description?: string;
 }

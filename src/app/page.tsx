@@ -6,6 +6,7 @@ import { FeatureCard } from "@/components/feature-card";
 import { TestimonialCard } from "@/components/testimonial-card";
 import { SessionsSection } from "@/components/sessions-section";
 import { BOOKING_URL } from "@/lib/constants";
+import { T } from "@/components/translate-override";
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 md:grid-cols-2 md:py-28">
           <div>
             <p className="mb-4 text-xs uppercase tracking-[0.2em] text-white/80">
-              InnerJoy Reiki
+              innerjoy reiki
             </p>
             <h1 className="font-serif text-4xl font-semibold leading-[1.15] -tracking-[0.02em] text-white md:text-5xl lg:text-6xl">
               Find stillness.
@@ -27,16 +28,16 @@ export default function Home() {
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button variant="primary" href={BOOKING_URL}>
-                Book a Session
+                <T term="Book a Session" />
               </Button>
               <Button variant="outline" href="/classes" className="border-white text-white hover:border-white/80 hover:text-white/80">
-                Explore Classes
+                <T term="Explore Classes" />
               </Button>
             </div>
             <p className="mt-3 text-xs text-white/60">
               New here?{" "}
               <Link href="/about#what-to-expect" className="underline hover:text-white/80">
-                See what to expect
+                <T term="See What to Expect" />
               </Link>
             </p>
           </div>
@@ -86,7 +87,7 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                 </svg>
               }
-              title="Grounded Healing"
+              title={<T term="Grounded Healing" />}
               description="A safe, non-invasive approach that works alongside your existing care — not as a replacement, but as a companion to it."
             />
           </div>
@@ -98,20 +99,20 @@ export default function Home() {
         <div className="mx-auto max-w-5xl px-6">
           <SectionHeading
             heading="What Clients Say"
-            subtitle="A few words from people who have experienced Reiki at InnerJoy."
+            subtitle="A few words from people who have experienced Reiki at innerjoy."
           />
           <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
             <TestimonialCard
               quote="I went in skeptical and came out calmer than I have felt in months. I slept deeply that night for the first time in a long time."
-              attribution="First-time client"
+              attribution={<T term="First-time client" />}
             />
             <TestimonialCard
               quote="The space is warm and safe. There is no pressure to believe anything — just permission to rest. I look forward to my sessions every month."
-              attribution="Regular client"
+              attribution={<T term="Regular client" />}
             />
             <TestimonialCard
               quote="I was carrying so much tension without realising it. After just one session, something shifted. I felt lighter, like I could breathe again."
-              attribution="Discovery session client"
+              attribution={<T term="Discovery session client" />}
             />
           </div>
         </div>

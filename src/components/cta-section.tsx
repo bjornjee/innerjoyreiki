@@ -4,7 +4,7 @@ import { Button } from "@/components/button";
 interface CTASectionProps {
   heading: string;
   subtitle: string;
-  buttonLabel: string;
+  buttonLabel: React.ReactNode;
   buttonHref: string;
   buttonVariant?: "primary" | "outline";
   bg?: "bg-background" | "bg-surface";

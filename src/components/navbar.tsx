@@ -7,6 +7,8 @@ import { useState } from "react";
 import { NAV_LINKS, SITE_NAME, BOOKING_URL } from "@/lib/constants";
 import { Button } from "@/components/button";
 import { LanguageSwitcher } from "@/components/language-switcher";
+import { T } from "@/components/translate-override";
+import { glossary, type GlossaryTerm } from "@/lib/glossary";
 
 export function Navbar() {
   const pathname = usePathname();
@@ -38,7 +40,7 @@ export function Navbar() {
                     : "text-text-muted"
                 }`}
               >
-                {label}
+                {label in glossary ? <T term={label as GlossaryTerm} /> : label}
               </Link>
             </li>
           ))}
@@ -48,7 +50,7 @@ export function Navbar() {
         <div className="hidden items-center gap-3 md:flex">
           <LanguageSwitcher />
           <Button variant="primary" href={BOOKING_URL}>
-            Book Now
+            <T term="Book Now" />
           </Button>
         </div>
 
@@ -99,7 +101,7 @@ export function Navbar() {
                     : "text-text-muted"
                 }`}
               >
-                {label}
+                {label in glossary ? <T term={label as GlossaryTerm} /> : label}
               </Link>
             </li>
           ))}
@@ -108,7 +110,7 @@ export function Navbar() {
           </li>
           <li className="pt-2">
             <Button variant="primary" href={BOOKING_URL}>
-              Book Now
+              <T term="Book Now" />
             </Button>
           </li>
         </ul>
