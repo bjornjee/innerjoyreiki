@@ -35,9 +35,9 @@ export default function Classes() {
               price="SGD $75"
               description="Your introduction to Reiki. We take extra time to understand what brought you here and what you are hoping to feel, before moving into a full treatment."
               highlights={[
-                <T term="Extended intake conversation" />,
+                <T key="intake" term="Extended intake conversation" />,
                 "Full Reiki treatment",
-                <T term="Post-session guidance" />,
+                <T key="guidance" term="Post-session guidance" />,
                 "Take-home self-care tips",
               ]}
               actionLabel={<T term="Book Discovery" />}
@@ -49,10 +49,10 @@ export default function Classes() {
               price="SGD $95"
               description="Our signature session. Focused, unhurried time to release what your body has been holding and settle into a deeper state of rest."
               highlights={[
-                <T term="Brief check-in" />,
+                <T key="checkin" term="Brief check-in" />,
                 "Full Reiki treatment",
                 "Chakra balancing",
-                <T term="Post-session debrief" />,
+                <T key="debrief" term="Post-session debrief" />,
               ]}
               actionLabel={<T term="Book Session" />}
               actionHref={BOOKING_URL}
