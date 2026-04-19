@@ -153,7 +153,7 @@ export function LanguageSwitcher() {
           />
         </svg>
       )}
-      {translating ? "Translating..." : chinese ? "EN" : "中文"}
+      {translating ? null : chinese ? "EN" : "中文"}
     </button>
   );
 }
