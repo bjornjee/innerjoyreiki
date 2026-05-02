@@ -75,6 +75,14 @@ const faqs: { question: string; answer: React.ReactNode }[] = [
   },
 ];
 
+function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-");
+}
+
 export default function FAQ() {
   return (
     <>
@@ -87,9 +95,26 @@ export default function FAQ() {
       {/* Accordion */}
       <section className="bg-surface py-20">
         <div className="mx-auto max-w-3xl px-6">
+          <nav aria-label="Jump to question" className="mb-8 rounded-2xl border border-border bg-white p-6">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-text-muted">
+              Jump to a question
+            </p>
+            <ul className="grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2">
+              {faqs.map(({ question }) => (
+                <li key={question}>
+                  <a
+                    href={`#${slugify(question)}`}
+                    className="text-sm text-text-muted transition-colors hover:text-primary-light"
+                  >
+                    {question}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
           <div className="divide-y divide-border rounded-2xl border border-border bg-white">
             {faqs.map(({ question, answer }) => (
-              <details key={question} className="group">
+              <details key={question} id={slugify(question)} className="group scroll-mt-24">
                 <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-sm font-semibold text-foreground transition-colors hover:text-primary-light">
                   {question}
                   <svg
