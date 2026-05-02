@@ -3,8 +3,10 @@ export const BOOKING_URL = "https://calendly.com/innerjoyreiki";
 export const CONTACT_EMAIL = "hello@innerjoyreiki.com";
 
 export const NAV_LINKS = [
-  { label: "Classes", href: "/classes" },
   { label: "About", href: "/about" },
+  { label: "Reiki", href: "/reiki" },
+  { label: "Services", href: "/services" },
+  { label: "Events", href: "/events" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
 ] as const;
