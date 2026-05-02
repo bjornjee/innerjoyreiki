@@ -1,6 +1,5 @@
 export const glossary = {
   // Nav & UI
-  "About": "关于我们",
   "About Us": "关于我们",
   "About Yin Ling": "关于颖玲",
   "About Reiki": "关于灵气",
@@ -17,7 +16,6 @@ export const glossary = {
   "Book a Session": "预约疗程",
   "Book Session": "预约疗程",
   "Explore Services": "浏览疗程",
-  "See What to Expect": "了解疗程须知",
   "Register Interest": "登记报名",
   "Reserve Your Spot": "预留位置",
   "Get in Touch": "联系我们",
@@ -50,11 +48,6 @@ export const glossary = {
   "Distant Reiki treatment": "远距灵气疗程",
   "Post-session debrief": "疗程后总结",
   "Short sharing afterwards": "疗程后简短分享",
-
-  // What to Expect step labels
-  "Brief Discussion": "疗程前沟通",
-  "The Treatment": "疗程进行中",
-  "Post-Session Debrief": "疗程后总结",
 
   // Event details
   "Date & Time": "日期与时间",
