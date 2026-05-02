@@ -190,31 +190,36 @@ export default function Services() {
 
           {/* Reiki for Pets */}
           <div className="mt-20 border-t border-border pt-16">
-            <p className="mb-6 text-xs uppercase tracking-[0.2em] text-text-muted">
-              Reiki for Pets
-            </p>
-            <div className="relative mx-auto aspect-[4/5] w-full max-w-xs overflow-hidden rounded-2xl sm:max-w-sm lg:max-w-md">
-              <Image
-                src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/reiki-dog.png`}
-                alt="A golden retriever resting peacefully while receiving Reiki"
-                fill
-                sizes="(min-width: 1024px) 448px, (min-width: 640px) 384px, 320px"
-                className="object-cover"
-              />
+            <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-12">
+              <div>
+                <p className="mb-4 text-xs uppercase tracking-[0.2em] text-text-muted">
+                  Reiki for Pets
+                </p>
+                <h3 className="font-serif text-2xl font-semibold text-foreground">
+                  <T term="Reiki Healing Session for Pets" />
+                </h3>
+                <p className="mt-4 text-base leading-relaxed text-text-muted">
+                  Animals are naturally sensitive to energy and often respond very well to
+                  Reiki. Reiki healing can support your pet in a gentle and non-invasive way,
+                  helping to ease physical discomfort such as arthritic pain, reduce
+                  inflammation, and support recovery after surgery. It can also help calm
+                  stress and anxiety, including those related to past trauma, changes in
+                  environment or bereavement. Reiki offers a soothing form of support, making
+                  it especially beneficial for senior or ageing pets who may need extra
+                  comfort and care.
+                </p>
+              </div>
+              <div className="relative mx-auto aspect-[4/5] w-full max-w-xs overflow-hidden rounded-2xl sm:max-w-sm md:max-w-none">
+                <Image
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/reiki-dog.png`}
+                  alt="A golden retriever resting peacefully while receiving Reiki"
+                  fill
+                  sizes="(min-width: 1024px) 448px, (min-width: 768px) 50vw, (min-width: 640px) 384px, 320px"
+                  className="object-cover"
+                />
+              </div>
             </div>
-            <h3 className="mt-10 font-serif text-2xl font-semibold text-foreground">
-              <T term="Reiki Healing Session for Pets" />
-            </h3>
-            <p className="mt-4 max-w-3xl text-base leading-relaxed text-text-muted">
-              Animals are naturally sensitive to energy and often respond very well to Reiki.
-              Reiki healing can support your pet in a gentle and non-invasive way, helping to
-              ease physical discomfort such as arthritic pain, reduce inflammation, and
-              support recovery after surgery. It can also help calm stress and anxiety,
-              including those related to past trauma, changes in environment or bereavement.
-              Reiki offers a soothing form of support, making it especially beneficial for
-              senior or ageing pets who may need extra comfort and care.
-            </p>
-            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-text-muted">
+            <p className="mt-10 max-w-3xl text-sm leading-relaxed text-text-muted">
               Reiki healing for pets is offered either in person or remotely, depending on
               what is most suitable for your pet. In-person sessions are conducted at the
               client&apos;s residence to ensure your pet remains in a familiar and comfortable
