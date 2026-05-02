@@ -4,15 +4,39 @@ import { PageHeader } from "@/components/page-header";
 import { OfferingCard } from "@/components/offering-card";
 import { SectionHeading } from "@/components/section-heading";
 import { CTASection } from "@/components/cta-section";
+import { TrackCard } from "@/components/track-card";
+import { LevelCard } from "@/components/level-card";
+import { CohortCard } from "@/components/cohort-card";
+import { Button } from "@/components/button";
 import { T } from "@/components/translate-override";
+import type { GlossaryTerm } from "@/lib/glossary";
 
 export const metadata: Metadata = {
   title: "Services | innerjoy reiki",
   description:
-    "Reiki healing sessions (in-person, distant, and for pets) and Reiki workshops (Levels 1, 2, 3, and Master Teacher) in Singapore.",
+    "Reiki healing sessions and Reiki workshops with Yin Ling. Same Usui curriculum across two formats: English Online + Hybrid, and Chinese fully in-person, in Singapore.",
 };
 
-const workshops = [
+type Tone = "sage" | "peach" | "muted";
+
+interface AvailabilityBadge {
+  term: GlossaryTerm;
+  tone: Tone;
+}
+
+interface Level {
+  title: string;
+  level: string;
+  duration: string;
+  outcome: string;
+  prereqSummary: string;
+  summary: string;
+  topics: string[];
+  prerequisites: string;
+  availability: AvailabilityBadge[];
+}
+
+const levels: Level[] = [
   {
     title: "Reiki Level 1 for Beginners",
     level: "Level 1",
@@ -37,6 +61,10 @@ const workshops = [
     ],
     prerequisites:
       "No prerequisites required. No specific background, beliefs or 'special' skills are needed — anyone can learn Reiki.",
+    availability: [
+      { term: "EN · Online + Hybrid", tone: "sage" },
+      { term: "中文 · In-Person", tone: "peach" },
+    ],
   },
   {
     title: "Reiki Level 2 Advanced",
@@ -58,6 +86,10 @@ const workshops = [
     ],
     prerequisites:
       "Completion of Reiki Level 1 in the traditional Usui lineage, at least 2 months prior to enrolling in Level 2. Students who completed Level 1 outside the Reiki Centre lineage will be invited for a short chat before enrolment.",
+    availability: [
+      { term: "EN · Online + Hybrid", tone: "sage" },
+      { term: "中文 · In-Person", tone: "peach" },
+    ],
   },
   {
     title: "Reiki Level 3 Advanced",
@@ -77,7 +109,47 @@ const workshops = [
     ],
     prerequisites:
       "Completion of Reiki Level 2 with a Reiki Centre–trained Reiki Master, at least 6 months prior. Consistent practice of Level 2 techniques is required, as this level can be challenging without a strong foundation. Pre-course homework must be completed before attending.",
+    availability: [
+      { term: "EN · Online + Hybrid", tone: "sage" },
+      { term: "中文 · On Request", tone: "muted" },
+    ],
   },
+];
+
+interface ScheduledCohort {
+  level: string;
+  dates: string;
+  time: string;
+  venue: string;
+  fee: string;
+  depositNote: string;
+  onRequest?: false;
+}
+
+interface OnRequestCohort {
+  level: string;
+  onRequest: true;
+}
+
+const zhCohorts: Array<ScheduledCohort | OnRequestCohort> = [
+  {
+    level: "Reiki Level 1 for Beginners",
+    dates: "Friday, 5 & 12 June 2026",
+    time: "10.00 am – 5.00 pm",
+    venue: "Tanjong Pagar",
+    fee: "SGD $460",
+    depositNote: "Includes a $180 non-refundable deposit",
+  },
+  {
+    level: "Reiki Level 2 Advanced",
+    dates: "Wednesday, 3 & 10 June 2026",
+    time: "10.00 am – 5.00 pm",
+    venue: "Tanjong Pagar",
+    fee: "SGD $560",
+    depositNote: "Includes a $220 non-refundable deposit",
+  },
+  { level: "Reiki Level 3 Advanced", onRequest: true },
+  { level: "Reiki Master Teacher Training", onRequest: true },
 ];
 
 export default function Services() {
@@ -85,8 +157,8 @@ export default function Services() {
     <>
       <PageHeader
         label={<T term="Services" />}
-        heading="Reiki Healing & Workshops"
-        description="One-on-one healing sessions for personal restoration. Workshops for those ready to learn Reiki for themselves."
+        heading="Reiki Healing & Workshops with Yin Ling"
+        description="One-on-one healing sessions for personal restoration. Workshops, taught by Yin Ling, for those ready to learn Reiki for themselves."
       />
 
       {/* Healing Sessions */}
@@ -94,7 +166,7 @@ export default function Services() {
         <div className="mx-auto max-w-5xl px-6">
           <SectionHeading
             heading={<T term="Reiki Healing Sessions" />}
-            subtitle="Tailored to your individual needs and rebalancing your system holistically."
+            subtitle="One-on-one sessions with Yin Ling — tailored to your needs and rebalancing your system holistically."
           />
           <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2">
             <OfferingCard
@@ -197,190 +269,184 @@ export default function Services() {
       <section className="bg-background py-20">
         <div className="mx-auto max-w-5xl px-6">
           <SectionHeading
-            heading={<T term="Learn Reiki" />}
-            subtitle="Simple. Practical. Grounded."
+            heading={<T term="Learn Reiki with Yin Ling" />}
+            subtitle="Yin Ling teaches every workshop. Same Usui Reiki curriculum — choose the format that fits you."
           />
-          <p className="mx-auto mt-6 max-w-2xl text-center text-base leading-relaxed text-text-muted">
-            Our workshops follow the traditional Usui Reiki system, with a focus on Reiki as a
-            powerful modality for self-healing and personal empowerment. Each class is taught
-            in a supportive, grounded, and easy-to-understand way. Classes are held in small
-            groups, combining lecture, discussion and hands-on practice. Continued support is
-            available beyond the workshop.
-          </p>
 
-          <div className="mt-16 space-y-10">
-            {workshops.map((w) => (
-              <article key={w.title} className="rounded-2xl border border-border bg-white p-8 shadow-sm">
-                <h3 className="font-serif text-xl font-semibold text-foreground">
-                  {w.title}
-                </h3>
-                <dl className="mt-4 grid grid-cols-2 gap-3 border-y border-border py-4 text-xs sm:grid-cols-4">
-                  <div>
-                    <dt className="font-medium uppercase tracking-wide text-text-muted">Level</dt>
-                    <dd className="mt-1 text-foreground">{w.level}</dd>
-                  </div>
-                  <div>
-                    <dt className="font-medium uppercase tracking-wide text-text-muted">Duration</dt>
-                    <dd className="mt-1 text-foreground">{w.duration}</dd>
-                  </div>
-                  <div>
-                    <dt className="font-medium uppercase tracking-wide text-text-muted">Outcome</dt>
-                    <dd className="mt-1 text-foreground">{w.outcome}</dd>
-                  </div>
-                  <div>
-                    <dt className="font-medium uppercase tracking-wide text-text-muted">Prereq</dt>
-                    <dd className="mt-1 text-foreground">{w.prereqSummary}</dd>
-                  </div>
-                </dl>
-                <p className="mt-6 text-sm leading-relaxed text-text-muted">{w.summary}</p>
+          {/* Track Selector */}
+          <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2">
+            <TrackCard
+              tone="sage"
+              eyebrowLanguage="ENGLISH"
+              eyebrowFormat="Online + Hybrid"
+              instructorLine="Taught by Yin Ling"
+              partnerName="The Reiki Centre"
+              formatLine="Self-paced online theory + 2× 3-hour in-person sessions"
+              levelsLine="Levels 1 · 2 · 3 · Master"
+              ctaLabel="View English track"
+              anchor="#en-track"
+            />
+            <TrackCard
+              tone="peach"
+              eyebrowLanguage="中文"
+              eyebrowFormat="Fully In-Person"
+              instructorLine="Taught by Yin Ling"
+              formatLine="2-day in-person workshop in Tanjong Pagar"
+              levelsLine="Levels 1 · 2 · 3 · Master"
+              ctaLabel="View Chinese track"
+              anchor="#zh-track"
+            />
+          </div>
 
-                <h4 className="mt-6 text-sm font-semibold uppercase tracking-wide text-text-muted">
-                  <T term="Topics Covered" />
-                </h4>
-                <ul className="mt-3 grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2">
-                  {w.topics.map((topic) => (
-                    <li key={topic} className="flex items-start gap-2 text-sm text-text-muted">
-                      <svg
-                        aria-hidden="true"
-                        className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth={2}
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span>{topic}</span>
-                    </li>
-                  ))}
-                </ul>
+          {/* Shared Curriculum */}
+          <div className="mt-20">
+            <h3 className="font-serif text-2xl font-semibold text-foreground">
+              <T term="Same curriculum, two formats" />
+            </h3>
+            <p className="mt-3 max-w-2xl text-base leading-relaxed text-text-muted">
+              <T term="The same content, taught by Yin Ling, in either format." />{" "}
+              Our workshops follow the traditional Usui Reiki system, with a focus on Reiki
+              as a powerful modality for self-healing and personal empowerment. Each class
+              is taught in a supportive, grounded, and easy-to-understand way, in small
+              groups, combining lecture, discussion and hands-on practice. Continued
+              support is available beyond the workshop.
+            </p>
 
-                <h4 className="mt-6 text-sm font-semibold uppercase tracking-wide text-text-muted">
-                  <T term="Prerequisites" />
-                </h4>
-                <p className="mt-2 text-sm leading-relaxed text-text-muted">{w.prerequisites}</p>
+            <div className="mt-10 space-y-10">
+              {levels.map((l) => (
+                <LevelCard
+                  key={l.title}
+                  title={l.title}
+                  level={l.level}
+                  duration={l.duration}
+                  outcome={l.outcome}
+                  prereqSummary={l.prereqSummary}
+                  summary={l.summary}
+                  topics={l.topics}
+                  prerequisites={l.prerequisites}
+                  availability={l.availability}
+                />
+              ))}
+
+              {/* Master Teacher (placeholder) */}
+              <article className="rounded-2xl border border-dashed border-border bg-white/60 p-8">
+                <div className="flex flex-wrap items-start justify-between gap-4">
+                  <h4 className="font-serif text-xl font-semibold text-foreground">
+                    <T term="Reiki Master Teacher Training" />
+                  </h4>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="inline-flex items-center rounded-full bg-icon-bg px-3 py-1 text-xs font-medium text-text-muted">
+                      <T term="EN · On Request" />
+                    </span>
+                    <span className="inline-flex items-center rounded-full bg-icon-bg px-3 py-1 text-xs font-medium text-text-muted">
+                      <T term="中文 · On Request" />
+                    </span>
+                  </div>
+                </div>
+                <p className="mt-4 text-sm leading-relaxed text-text-muted">
+                  Reiki Master Teacher Training is also available — taught by Yin Ling.
+                  Please contact Yin Ling to register your interest.
+                </p>
+                <div className="mt-5">
+                  <Button variant="outline" href="/contact?type=workshop">
+                    <T term="Contact Yin Ling" />
+                  </Button>
+                </div>
               </article>
-            ))}
-
-            {/* Master Teacher */}
-            <article className="rounded-2xl border border-border bg-white p-8 shadow-sm">
-              <h3 className="font-serif text-xl font-semibold text-foreground">
-                <T term="Reiki Master Teacher Training" />
-              </h3>
-              <p className="mt-4 text-sm leading-relaxed text-text-muted">
-                Reiki Master Teacher Training is also available. Please contact us to register
-                your interest.
-              </p>
-            </article>
+            </div>
           </div>
 
-          {/* Hybrid format note */}
-          <div className="mt-12 rounded-2xl border border-border bg-surface p-8">
-            <p className="text-sm leading-relaxed text-text-muted">
-              We&apos;ve partnered with The Reiki Centre to offer a thoughtfully designed Reiki
-              workshop delivered through a hybrid learning experience. This format allows you
-              to study the foundational theory at your own pace online, complemented by two
-              in-person sessions (3 hours each). During these sessions you&apos;ll meet with
-              Yin Ling for your Reiki attunements, guided practice, and hands-on learning to
-              deepen your understanding and confidence. This blended approach ensures both
-              flexibility and meaningful, personal guidance as you develop your Reiki skills.
+          {/* Upcoming Cohorts — EN track */}
+          <div id="en-track" className="mt-24 scroll-mt-24">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary-light">
+              <T term="ENGLISH" />
+              <span className="mx-2 opacity-50">·</span>
+              <T term="Online + Hybrid" />
             </p>
-            <p className="mt-4 text-sm leading-relaxed text-text-muted">
-              If you prefer a fully in-person workshop experience, please contact us — we&apos;ll
-              be happy to share more details and keep you updated on upcoming sessions.
-            </p>
+            <h3 className="mt-3 font-serif text-2xl font-semibold text-foreground">
+              <T term="Upcoming Cohorts" />
+            </h3>
+
+            <div className="mt-6 rounded-2xl border border-border bg-white p-8 shadow-sm">
+              <p className="text-sm leading-relaxed text-text-muted">
+                Self-paced online theory at your own pace, complemented by two in-person
+                sessions (3 hours each). During these sessions you&apos;ll meet with{" "}
+                <span className="font-medium text-foreground">Yin Ling</span> for your Reiki
+                attunements, guided practice, and hands-on learning to deepen your
+                understanding and confidence.
+              </p>
+              <p className="mt-3 text-sm italic text-text-muted">
+                <T term="in partnership with" />{" "}
+                <span className="font-medium not-italic">The Reiki Centre</span>.
+              </p>
+
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Button variant="primary" href="/contact?type=workshop">
+                  <T term="See available dates" />
+                </Button>
+                <Button variant="outline" href="/contact?type=workshop">
+                  <T term="Contact Yin Ling" />
+                </Button>
+              </div>
+
+              <div className="mt-8 border-t border-border pt-6">
+                <p className="text-sm leading-relaxed text-text-muted">
+                  <span className="font-medium text-foreground">
+                    <T term="Prefer fully in-person English?" />
+                  </span>{" "}
+                  <T term="Contact Yin Ling — she'll arrange a private cohort." />
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
 
-      {/* Chinese Workshops */}
-      <section className="bg-surface py-20">
-        <div className="mx-auto max-w-5xl px-6">
-          <SectionHeading
-            heading="Chinese Reiki Workshops"
-            subtitle="Two-day in-person workshops conducted in Chinese."
-          />
-          <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2">
-            <article className="flex flex-col rounded-2xl border border-border bg-white p-8 shadow-sm">
-              <h3 className="font-serif text-xl font-semibold text-foreground">
-                Reiki Level 1 for Beginners
-              </h3>
-              <p className="mt-1 text-sm font-medium text-primary-light">
-                2-Day In-Person Workshop
-              </p>
-              <dl className="mt-6 space-y-3 text-sm">
-                <div className="flex gap-3">
-                  <dt className="w-20 flex-shrink-0 font-medium text-text-muted">Dates</dt>
-                  <dd className="text-foreground">Friday, 5 &amp; 12 June 2026</dd>
-                </div>
-                <div className="flex gap-3">
-                  <dt className="w-20 flex-shrink-0 font-medium text-text-muted">Time</dt>
-                  <dd className="text-foreground">10.00 am – 5.00 pm</dd>
-                </div>
-                <div className="flex gap-3">
-                  <dt className="w-20 flex-shrink-0 font-medium text-text-muted">Venue</dt>
-                  <dd className="text-foreground">Tanjong Pagar</dd>
-                </div>
-                <div className="flex gap-3">
-                  <dt className="w-20 flex-shrink-0 font-medium text-text-muted">Fee</dt>
-                  <dd className="text-foreground">
-                    SGD $460
-                    <span className="mt-1 block text-xs leading-snug text-text-muted">
-                      Includes a $180 non-refundable deposit
-                    </span>
-                  </dd>
-                </div>
-              </dl>
-              <p className="mt-6 text-sm leading-relaxed text-text-muted">
-                Upon completion you will receive a Reiki manual and a certificate. To
-                register, please complete the form on the contact page indicating the
-                workshop date.
-              </p>
-            </article>
+          {/* Upcoming Cohorts — ZH track */}
+          <div id="zh-track" className="mt-20 scroll-mt-24">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-foreground">
+              <T term="中文" />
+              <span className="mx-2 opacity-50">·</span>
+              <T term="Fully In-Person" />
+            </p>
+            <h3 className="mt-3 font-serif text-2xl font-semibold text-foreground">
+              <T term="Upcoming Cohorts" />
+            </h3>
+            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-text-muted">
+              <T term="2-day in-person workshop in Tanjong Pagar" /> · 10:00 am – 5:00 pm ·{" "}
+              <T term="Taught by Yin Ling" />.
+            </p>
 
-            <article className="flex flex-col rounded-2xl border border-border bg-white p-8 shadow-sm">
-              <h3 className="font-serif text-xl font-semibold text-foreground">
-                Reiki Level 2 Advanced
-              </h3>
-              <p className="mt-1 text-sm font-medium text-primary-light">
-                2-Day In-Person Workshop
-              </p>
-              <dl className="mt-6 space-y-3 text-sm">
-                <div className="flex gap-3">
-                  <dt className="w-20 flex-shrink-0 font-medium text-text-muted">Dates</dt>
-                  <dd className="text-foreground">Wednesday, 3 &amp; 10 June 2026</dd>
-                </div>
-                <div className="flex gap-3">
-                  <dt className="w-20 flex-shrink-0 font-medium text-text-muted">Time</dt>
-                  <dd className="text-foreground">10.00 am – 5.00 pm</dd>
-                </div>
-                <div className="flex gap-3">
-                  <dt className="w-20 flex-shrink-0 font-medium text-text-muted">Venue</dt>
-                  <dd className="text-foreground">Tanjong Pagar</dd>
-                </div>
-                <div className="flex gap-3">
-                  <dt className="w-20 flex-shrink-0 font-medium text-text-muted">Fee</dt>
-                  <dd className="text-foreground">
-                    SGD $560
-                    <span className="mt-1 block text-xs leading-snug text-text-muted">
-                      Includes a $220 non-refundable deposit
-                    </span>
-                  </dd>
-                </div>
-              </dl>
-              <p className="mt-6 text-sm leading-relaxed text-text-muted">
-                Upon completion you will receive a Reiki manual and a certificate. To
-                register, please complete the form on the contact page indicating the
-                workshop date.
-              </p>
-            </article>
+            <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
+              {zhCohorts.map((c) =>
+                c.onRequest ? (
+                  <CohortCard
+                    key={c.level}
+                    onRequest
+                    level={c.level}
+                    actionLabel="Contact Yin Ling"
+                    actionHref="/contact?type=workshop"
+                  />
+                ) : (
+                  <CohortCard
+                    key={c.level}
+                    level={c.level}
+                    dates={c.dates}
+                    time={c.time}
+                    venue={c.venue}
+                    fee={c.fee}
+                    depositNote={c.depositNote}
+                    actionLabel="Register Interest"
+                    actionHref="/contact?type=workshop"
+                  />
+                )
+              )}
+            </div>
           </div>
         </div>
       </section>
 
       <CTASection
         heading="Ready to Register?"
-        subtitle="Send us your details and we'll be in touch with the next steps."
+        subtitle="Send Yin Ling your details and she'll be in touch with the next steps."
         buttonLabel={<T term="Register Interest" />}
         buttonHref="/contact?type=workshop"
       />
