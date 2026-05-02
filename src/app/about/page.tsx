@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { SectionHeading } from "@/components/section-heading";
 import { T } from "@/components/translate-override";
 
@@ -22,12 +23,17 @@ export default function About() {
           </h1>
 
           <div className="mt-10 flex flex-col items-center gap-6 rounded-2xl border border-border bg-surface p-8 sm:flex-row sm:items-start">
-            <div className="flex h-24 w-24 flex-shrink-0 items-center justify-center rounded-full bg-icon-bg">
-              <svg aria-hidden="true" className="h-10 w-10 text-text-muted" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-              </svg>
+            <div className="relative h-32 w-32 flex-shrink-0 overflow-hidden rounded-full bg-icon-bg sm:h-40 sm:w-40">
+              <Image
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/practioner.jpeg`}
+                alt="Yin Ling, Usui Reiki Master Teacher and founder of innerjoy reiki"
+                fill
+                sizes="(min-width: 640px) 160px, 128px"
+                className="object-cover object-[50%_20%]"
+                priority
+              />
             </div>
-            <div>
+            <div className="text-center sm:text-left">
               <h2 className="font-serif text-xl font-semibold text-foreground">
                 Yin Ling
               </h2>

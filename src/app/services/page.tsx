@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageHeader } from "@/components/page-header";
 import { OfferingCard } from "@/components/offering-card";
 import { SectionHeading } from "@/components/section-heading";
@@ -116,7 +117,16 @@ export default function Services() {
 
           {/* Reiki for Pets */}
           <div className="mt-20">
-            <h3 className="font-serif text-2xl font-semibold text-foreground">
+            <div className="relative mx-auto aspect-[4/5] w-full max-w-xs overflow-hidden rounded-2xl sm:max-w-sm lg:max-w-md">
+              <Image
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/reiki-dog.png`}
+                alt="A golden retriever resting peacefully while receiving Reiki"
+                fill
+                sizes="(min-width: 1024px) 448px, (min-width: 640px) 384px, 320px"
+                className="object-cover"
+              />
+            </div>
+            <h3 className="mt-10 font-serif text-2xl font-semibold text-foreground">
               <T term="Reiki Healing Session for Pets" />
             </h3>
             <p className="mt-4 max-w-3xl text-base leading-relaxed text-text-muted">

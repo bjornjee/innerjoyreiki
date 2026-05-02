@@ -29,7 +29,7 @@ export function Navbar() {
         </Link>
 
         {/* Desktop links */}
-        <ul className="hidden gap-8 md:flex">
+        <ul className="hidden gap-8 lg:flex">
           {NAV_LINKS.map(({ label, href }) => (
             <li key={href}>
               <Link
@@ -47,7 +47,7 @@ export function Navbar() {
         </ul>
 
         {/* Desktop CTA */}
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="hidden items-center gap-3 lg:flex">
           <LanguageSwitcher />
           <Button variant="primary" href={BOOKING_URL}>
             <T term="Book Now" />
@@ -56,7 +56,7 @@ export function Navbar() {
 
         {/* Mobile menu button */}
         <button
-          className="cursor-pointer md:hidden"
+          className="cursor-pointer lg:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
@@ -89,7 +89,7 @@ export function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <ul id="mobile-menu" className="border-t border-border px-6 py-4 md:hidden">
+        <ul id="mobile-menu" className="border-t border-border px-6 py-4 lg:hidden">
           {NAV_LINKS.map(({ label, href }) => (
             <li key={href}>
               <Link
