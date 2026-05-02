@@ -7,7 +7,7 @@ type Tone = "sage" | "peach";
 interface TrackCardProps {
   eyebrowLanguage: GlossaryTerm;
   eyebrowFormat: GlossaryTerm;
-  instructorLine: GlossaryTerm;
+  headline: GlossaryTerm;
   partnerName?: string;
   formatLine: GlossaryTerm;
   levelsLine: GlossaryTerm;
@@ -35,7 +35,7 @@ const toneClasses: Record<
 export function TrackCard({
   eyebrowLanguage,
   eyebrowFormat,
-  instructorLine,
+  headline,
   partnerName,
   formatLine,
   levelsLine,
@@ -56,7 +56,7 @@ export function TrackCard({
       </p>
 
       <p className="mt-6 font-serif text-2xl font-semibold text-foreground">
-        <T term={instructorLine} />
+        <T term={headline} />
       </p>
 
       {partnerName && (

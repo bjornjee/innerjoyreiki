@@ -158,7 +158,7 @@ export default function Services() {
       <PageHeader
         label={<T term="Services" />}
         heading="Reiki Healing & Workshops with Yin Ling"
-        description="One-on-one healing sessions for personal restoration. Workshops, taught by Yin Ling, for those ready to learn Reiki for themselves."
+        description="One-on-one healing sessions for personal restoration, and workshops for those ready to learn Reiki for themselves."
       />
 
       {/* Healing Sessions */}
@@ -166,7 +166,7 @@ export default function Services() {
         <div className="mx-auto max-w-5xl px-6">
           <SectionHeading
             heading={<T term="Reiki Healing Sessions" />}
-            subtitle="One-on-one sessions with Yin Ling — tailored to your needs and rebalancing your system holistically."
+            subtitle="Tailored to support your individual needs and rebalance your system holistically."
           />
           <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2">
             <OfferingCard
@@ -268,9 +268,12 @@ export default function Services() {
       {/* Workshops */}
       <section className="bg-background py-20">
         <div className="mx-auto max-w-5xl px-6">
+          <p className="mb-3 text-center text-xs font-medium uppercase tracking-[0.2em] text-text-muted">
+            <T term="Simple. Practical. Grounded." />
+          </p>
           <SectionHeading
-            heading={<T term="Learn Reiki with Yin Ling" />}
-            subtitle="Yin Ling teaches every workshop. Same Usui Reiki curriculum — choose the format that fits you."
+            heading={<T term="Learn Reiki" />}
+            subtitle="Same Usui Reiki curriculum — choose the format that fits you."
           />
 
           {/* Track Selector */}
@@ -279,7 +282,7 @@ export default function Services() {
               tone="sage"
               eyebrowLanguage="ENGLISH"
               eyebrowFormat="Online + Hybrid"
-              instructorLine="Taught by Yin Ling"
+              headline="Hybrid learning experience"
               partnerName="The Reiki Centre"
               formatLine="Self-paced online theory + 2× 3-hour in-person sessions"
               levelsLine="Levels 1 · 2 · 3 · Master"
@@ -290,7 +293,7 @@ export default function Services() {
               tone="peach"
               eyebrowLanguage="中文"
               eyebrowFormat="Fully In-Person"
-              instructorLine="Taught by Yin Ling"
+              headline="Two-day in-person workshop"
               formatLine="2-day in-person workshop in Tanjong Pagar"
               levelsLine="Levels 1 · 2 · 3 · Master"
               ctaLabel="View Chinese track"
@@ -304,12 +307,11 @@ export default function Services() {
               <T term="Same curriculum, two formats" />
             </h3>
             <p className="mt-3 max-w-2xl text-base leading-relaxed text-text-muted">
-              <T term="The same content, taught by Yin Ling, in either format." />{" "}
               Our workshops follow the traditional Usui Reiki system, with a focus on Reiki
               as a powerful modality for self-healing and personal empowerment. Each class
-              is taught in a supportive, grounded, and easy-to-understand way, in small
-              groups, combining lecture, discussion and hands-on practice. Continued
-              support is available beyond the workshop.
+              is taught in a supportive, grounded, and easy-to-understand way. Classes are
+              held in small groups, combining lecture, discussion and hands-on practice.
+              Continued support is available beyond the workshop.
             </p>
 
             <div className="mt-10 space-y-10">
@@ -344,12 +346,12 @@ export default function Services() {
                   </div>
                 </div>
                 <p className="mt-4 text-sm leading-relaxed text-text-muted">
-                  Reiki Master Teacher Training is also available — taught by Yin Ling.
-                  Please contact Yin Ling to register your interest.
+                  Reiki Master Teacher Training is also available. Please contact us to
+                  register your interest.
                 </p>
                 <div className="mt-5">
                   <Button variant="outline" href="/contact?type=workshop">
-                    <T term="Contact Yin Ling" />
+                    <T term="Register Interest" />
                   </Button>
                 </div>
               </article>
@@ -369,15 +371,18 @@ export default function Services() {
 
             <div className="mt-6 rounded-2xl border border-border bg-white p-8 shadow-sm">
               <p className="text-sm leading-relaxed text-text-muted">
-                Self-paced online theory at your own pace, complemented by two in-person
-                sessions (3 hours each). During these sessions you&apos;ll meet with{" "}
+                We&apos;ve partnered with{" "}
+                <span className="font-medium italic text-foreground">The Reiki Centre</span>{" "}
+                to offer a thoughtfully designed Reiki workshop delivered through a hybrid
+                learning experience. Study the foundational theory at your own pace online,
+                complemented by two in-person sessions (3 hours each). During these sessions
+                you&apos;ll meet with{" "}
                 <span className="font-medium text-foreground">Yin Ling</span> for your Reiki
-                attunements, guided practice, and hands-on learning to deepen your
-                understanding and confidence.
+                attunements, guided practice, and hands-on learning.
               </p>
-              <p className="mt-3 text-sm italic text-text-muted">
-                <T term="in partnership with" />{" "}
-                <span className="font-medium not-italic">The Reiki Centre</span>.
+              <p className="mt-3 text-sm leading-relaxed text-text-muted">
+                A blended approach for both flexibility and meaningful, personal guidance as
+                you develop your Reiki skills.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
@@ -385,16 +390,13 @@ export default function Services() {
                   <T term="See available dates" />
                 </Button>
                 <Button variant="outline" href="/contact?type=workshop">
-                  <T term="Contact Yin Ling" />
+                  <T term="Register Interest" />
                 </Button>
               </div>
 
               <div className="mt-8 border-t border-border pt-6">
                 <p className="text-sm leading-relaxed text-text-muted">
-                  <span className="font-medium text-foreground">
-                    <T term="Prefer fully in-person English?" />
-                  </span>{" "}
-                  <T term="Contact Yin Ling — she'll arrange a private cohort." />
+                  <T term="Prefer a fully in-person workshop? Please contact us to register your interest." />
                 </p>
               </div>
             </div>
@@ -411,8 +413,8 @@ export default function Services() {
               <T term="Upcoming Cohorts" />
             </h3>
             <p className="mt-3 max-w-2xl text-sm leading-relaxed text-text-muted">
-              <T term="2-day in-person workshop in Tanjong Pagar" /> · 10:00 am – 5:00 pm ·{" "}
-              <T term="Taught by Yin Ling" />.
+              <T term="2-day in-person workshop in Tanjong Pagar" /> · 10:00 am – 5:00 pm.
+              Upon completion, you&apos;ll receive a Reiki manual and a certificate.
             </p>
 
             <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">

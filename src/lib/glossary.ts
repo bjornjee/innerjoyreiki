@@ -28,9 +28,7 @@ export const glossary = {
   "Reiki Healing Sessions": "灵气疗程",
   "Reiki Healing Session for Pets": "宠物灵气疗程",
   "Learn Reiki": "学习灵气",
-  "Learn Reiki with Yin Ling": "跟颖玲学习灵气",
-  "Yin Ling teaches every workshop. Same Usui Reiki curriculum — choose the format that fits you.":
-    "所有课程均由颖玲亲自教授,内容相同,您可选择最适合自己的形式。",
+  "Simple. Practical. Grounded.": "简单 · 实用 · 踏实",
   "Reiki Workshops": "灵气课程",
   "Reiki Master Teacher Training": "灵气导师培训",
   "Reiki Share": "灵气分享会",
@@ -40,12 +38,11 @@ export const glossary = {
 
   // Workshop tracks (services page)
   "Same curriculum, two formats": "相同课程,两种形式",
-  "The same content, taught by Yin Ling, in either format.":
-    "无论选择哪种形式,内容均由颖玲亲自教授,完全相同。",
   "Online + Hybrid": "线上 + 实体混合",
   "Fully In-Person": "全程实体",
   "On Request": "可预约",
-  "Taught by Yin Ling": "由颖玲教授",
+  "Hybrid learning experience": "混合式学习课程",
+  "Two-day in-person workshop": "两日制实体课程",
   "in partnership with": "合作单位:",
   "Self-paced online theory + 2× 3-hour in-person sessions":
     "自学线上课程 + 两次 3 小时实体课",
@@ -69,10 +66,8 @@ export const glossary = {
   "Includes a non-refundable deposit": "费用包含不可退还订金",
   "Contact Yin Ling": "联系颖玲",
   "Contact Yin Ling for next cohort": "联系颖玲查询下一期课程",
-  "Prefer fully in-person English?":
-    "如希望参加全程实体英语课程?",
-  "Contact Yin Ling — she'll arrange a private cohort.":
-    "请联系颖玲 — 可为您安排私人课程。",
+  "Prefer a fully in-person workshop? Please contact us to register your interest.":
+    "如希望参加全程实体课程,请联系我们登记报名。",
 
   // Healing session card titles (GT mistranslates contextual terms)
   "In-Person Reiki Healing Session": "上门灵气疗程",
