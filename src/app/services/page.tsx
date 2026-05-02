@@ -116,7 +116,10 @@ export default function Services() {
           </div>
 
           {/* Reiki for Pets */}
-          <div className="mt-20">
+          <div className="mt-20 border-t border-border pt-16">
+            <p className="mb-6 text-xs uppercase tracking-[0.2em] text-text-muted">
+              Reiki for Pets
+            </p>
             <div className="relative mx-auto aspect-[4/5] w-full max-w-xs overflow-hidden rounded-2xl sm:max-w-sm lg:max-w-md">
               <Image
                 src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/reiki-dog.png`}

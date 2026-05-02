@@ -59,7 +59,7 @@ export default function Home() {
             heading={<T term="Why Reiki" />}
             subtitle="Reiki works with the physical, mental, emotional and spiritual aspects of an individual. Some of the benefits of a Reiki practice include:"
           />
-          <div className="mt-16 grid grid-cols-1 gap-12 md:grid-cols-3">
+          <div className="mt-16 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
             <FeatureCard
               icon={
                 <svg aria-hidden="true" className="h-7 w-7 text-text-muted" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
