@@ -325,7 +325,7 @@ export default function Services() {
                   <dt className="w-20 flex-shrink-0 font-medium text-text-muted">Fee</dt>
                   <dd className="text-foreground">
                     SGD $460
-                    <span className="block text-xs text-text-muted">
+                    <span className="mt-1 block text-xs leading-snug text-text-muted">
                       Includes a $180 non-refundable deposit
                     </span>
                   </dd>
@@ -362,7 +362,7 @@ export default function Services() {
                   <dt className="w-20 flex-shrink-0 font-medium text-text-muted">Fee</dt>
                   <dd className="text-foreground">
                     SGD $560
-                    <span className="block text-xs text-text-muted">
+                    <span className="mt-1 block text-xs leading-snug text-text-muted">
                       Includes a $220 non-refundable deposit
                     </span>
                   </dd>
