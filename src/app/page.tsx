@@ -15,9 +15,6 @@ export default function Home() {
       <section className="relative overflow-hidden bg-gradient-to-br from-hero-bg to-hero-bg-end">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 md:grid-cols-2 md:py-28">
           <div>
-            <p className="mb-4 text-xs uppercase tracking-[0.2em] text-white/80">
-              innerjoy reiki
-            </p>
             <h1 className="font-serif text-4xl font-semibold leading-[1.15] -tracking-[0.02em] text-white md:text-5xl lg:text-6xl">
               Find stillness.
               <br />
