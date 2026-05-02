@@ -190,7 +190,7 @@ export default function Services() {
 
           {/* Reiki for Pets */}
           <div className="mt-20 border-t border-border pt-16">
-            <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-12">
+            <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-2 md:gap-12">
               <div>
                 <p className="mb-4 text-xs uppercase tracking-[0.2em] text-text-muted">
                   Reiki for Pets
@@ -208,6 +208,15 @@ export default function Services() {
                   it especially beneficial for senior or ageing pets who may need extra
                   comfort and care.
                 </p>
+                <p className="mt-4 text-sm leading-relaxed text-text-muted">
+                  Reiki healing for pets is offered either in person or remotely, depending
+                  on what is most suitable for your pet. In-person sessions are conducted at
+                  the client&apos;s residence to ensure your pet remains in a familiar and
+                  comfortable environment. Your pet&apos;s comfort is always the priority,
+                  and Reiki may be offered through light touch or from a slight distance —
+                  whichever your pet responds to best. Your pet is free to move, rest, or
+                  disengage at any time. Sessions typically last around 45 minutes.
+                </p>
               </div>
               <div className="relative mx-auto aspect-[4/5] w-full max-w-xs overflow-hidden rounded-2xl sm:max-w-sm md:max-w-none">
                 <Image
@@ -219,15 +228,6 @@ export default function Services() {
                 />
               </div>
             </div>
-            <p className="mt-10 max-w-3xl text-sm leading-relaxed text-text-muted">
-              Reiki healing for pets is offered either in person or remotely, depending on
-              what is most suitable for your pet. In-person sessions are conducted at the
-              client&apos;s residence to ensure your pet remains in a familiar and comfortable
-              environment. Your pet&apos;s comfort is always the priority, and Reiki may be
-              offered through light touch or from a slight distance — whichever your pet
-              responds to best. Your pet is free to move, rest, or disengage at any time.
-              Sessions typically last around 45 minutes.
-            </p>
             <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2">
               <OfferingCard
                 title={<T term="In-Person Reiki for Pets" />}
