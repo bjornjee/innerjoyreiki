@@ -10,6 +10,7 @@
   --color-surface: var(--color-surface);
   --color-hero-bg: var(--color-hero-bg);
   --color-hero-bg-end: var(--color-hero-bg-end);
+  --color-hero-text: var(--color-hero-text);
   --color-icon-bg: var(--color-icon-bg);
   --color-icon-bg-green: var(--color-icon-bg-green);
   --color-icon-bg-peach: var(--color-icon-bg-peach);
@@ -30,6 +31,7 @@
   --color-surface: #f5f1ea;
   --color-hero-bg: #c6d8c0;
   --color-hero-bg-end: #b8c8b0;
+  --color-hero-text: #1f3a6b;
   --color-icon-bg: #e8e4dc;
   --color-icon-bg-green: #d4ddd4;
   --color-icon-bg-peach: #f0d9cc;

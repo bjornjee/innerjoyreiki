@@ -15,25 +15,25 @@ export default function Home() {
       <section className="relative overflow-hidden bg-gradient-to-br from-hero-bg to-hero-bg-end">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 md:grid-cols-2 md:py-28">
           <div>
-            <h1 className="font-serif text-4xl font-semibold leading-[1.15] -tracking-[0.02em] text-white md:text-5xl lg:text-6xl">
+            <h1 className="font-serif text-4xl font-semibold leading-[1.15] -tracking-[0.02em] text-hero-text md:text-5xl lg:text-6xl">
               Find stillness.
               <br />
               Restore balance.
             </h1>
-            <p className="mt-6 max-w-lg text-lg text-white/80">
+            <p className="mt-6 max-w-lg text-lg text-hero-text/80">
               A gentle, evidence-informed practice to calm your nervous system, ease tension, and support deeper rest.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button variant="primary" href={BOOKING_URL}>
                 <T term="Book a Session" />
               </Button>
-              <Button variant="outline" href="/classes" className="border-white text-white hover:border-white/80 hover:text-white/80">
+              <Button variant="outline" href="/classes" className="border-hero-text text-hero-text hover:border-hero-text/80 hover:text-hero-text/80">
                 <T term="Explore Classes" />
               </Button>
             </div>
-            <p className="mt-3 text-xs text-white/60">
+            <p className="mt-3 text-xs text-hero-text/70">
               New here?{" "}
-              <Link href="/about#what-to-expect" className="underline hover:text-white/80">
+              <Link href="/about#what-to-expect" className="underline hover:text-hero-text/80">
                 <T term="See What to Expect" />
               </Link>
             </p>
