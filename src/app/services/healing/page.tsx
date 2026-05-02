@@ -3,6 +3,7 @@ import Image from "next/image";
 import { PageHeader } from "@/components/page-header";
 import { OfferingCard } from "@/components/offering-card";
 import { CTASection } from "@/components/cta-section";
+import { SubTabs } from "@/components/sub-tabs";
 import { T } from "@/components/translate-override";
 
 export const metadata: Metadata = {
@@ -15,10 +16,21 @@ export default function HealingPage() {
   return (
     <>
       <PageHeader
-        label={<T term="Reiki Healing" />}
+        breadcrumb={[
+          { label: <T term="Services" />, href: "/services" },
+          { label: <T term="Reiki Healing" /> },
+        ]}
         heading="Book a Reiki Healing Session"
         description="Tailored to support your individual needs and rebalance your system holistically."
-      />
+      >
+        <SubTabs
+          ariaLabel="Services sections"
+          tabs={[
+            { label: <T term="Healing Sessions" />, href: "/services/healing" },
+            { label: <T term="Workshops" />, href: "/services/workshops" },
+          ]}
+        />
+      </PageHeader>
 
       <section className="bg-surface py-20">
         <div className="mx-auto max-w-5xl px-6">

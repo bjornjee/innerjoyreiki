@@ -5,6 +5,7 @@ import { TrackCard } from "@/components/track-card";
 import { LevelCard } from "@/components/level-card";
 import { CohortCard } from "@/components/cohort-card";
 import { Button } from "@/components/button";
+import { SubTabs } from "@/components/sub-tabs";
 import { T } from "@/components/translate-override";
 import type { GlossaryTerm } from "@/lib/glossary";
 
@@ -142,10 +143,21 @@ export default function WorkshopsPage() {
   return (
     <>
       <PageHeader
-        label={<T term="Reiki Workshops" />}
+        breadcrumb={[
+          { label: <T term="Services" />, href: "/services" },
+          { label: <T term="Reiki Workshops" /> },
+        ]}
         heading="Learn Reiki"
         description="Our workshops follow the traditional Usui Reiki system, with a focus on Reiki as a powerful modality for self-healing and personal empowerment."
-      />
+      >
+        <SubTabs
+          ariaLabel="Services sections"
+          tabs={[
+            { label: <T term="Healing Sessions" />, href: "/services/healing" },
+            { label: <T term="Workshops" />, href: "/services/workshops" },
+          ]}
+        />
+      </PageHeader>
 
       <section className="bg-background py-20">
         <div className="mx-auto max-w-5xl px-6">

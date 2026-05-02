@@ -42,6 +42,8 @@ export const glossary = {
   "Explore healing sessions": "浏览灵气疗程",
   "Explore workshops": "浏览灵气课程",
   "Choose your track": "选择您的课程",
+  "Healing Sessions": "灵气疗程",
+  "Workshops": "灵气课程",
 
   // Workshop tracks (services page)
   "Online + Hybrid": "线上 + 实体混合",
