@@ -24,7 +24,7 @@ export function SessionsSection() {
             subtitle="Reiki healing sessions and workshops to support your journey."
             align="left"
           />
-          <div className="flex gap-2">
+          <div className="flex gap-2 lg:hidden">
             <button
               onClick={() => scroll("left")}
               className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-border transition-colors hover:bg-icon-bg"
@@ -48,7 +48,7 @@ export function SessionsSection() {
 
         <div
           ref={scrollRef}
-          className="hide-scrollbar mt-10 flex gap-6 overflow-x-auto scroll-smooth pb-4"
+          className="hide-scrollbar mt-10 flex gap-6 overflow-x-auto scroll-smooth pb-4 lg:grid lg:grid-cols-4 lg:overflow-visible"
         >
           <ServiceCard
             icon={
