@@ -34,9 +34,9 @@ export function Navbar() {
             <li key={href}>
               <Link
                 href={href}
-                className={`text-sm transition-colors hover:text-primary ${
+                className={`text-sm transition-colors hover:text-primary-light ${
                   pathname === href
-                    ? "font-medium text-primary"
+                    ? "font-medium text-primary-light"
                     : "text-text-muted"
                 }`}
               >
@@ -97,7 +97,7 @@ export function Navbar() {
                 onClick={() => setMenuOpen(false)}
                 className={`block py-2 text-sm ${
                   pathname === href
-                    ? "font-medium text-primary"
+                    ? "font-medium text-primary-light"
                     : "text-text-muted"
                 }`}
               >

@@ -37,7 +37,7 @@ export function ServiceCard({
       </p>
       <Link
         href={actionHref}
-        className="mt-4 inline-flex items-center text-sm font-medium text-primary hover:underline"
+        className="mt-4 inline-flex items-center text-sm font-medium text-primary-light hover:underline"
       >
         {actionLabel} <span aria-hidden="true">&rarr;</span>
       </Link>

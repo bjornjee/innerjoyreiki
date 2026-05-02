@@ -63,7 +63,7 @@ export function ContactForm() {
         <button
           type="button"
           onClick={() => setStatus("idle")}
-          className="mt-4 cursor-pointer text-sm font-medium text-primary hover:underline"
+          className="mt-4 cursor-pointer text-sm font-medium text-primary-light hover:underline"
         >
           Send another message
         </button>

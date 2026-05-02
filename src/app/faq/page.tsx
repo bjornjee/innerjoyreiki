@@ -90,7 +90,7 @@ export default function FAQ() {
           <div className="divide-y divide-border rounded-2xl border border-border bg-white">
             {faqs.map(({ question, answer }) => (
               <details key={question} className="group">
-                <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-sm font-semibold text-foreground transition-colors hover:text-primary">
+                <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-sm font-semibold text-foreground transition-colors hover:text-primary-light">
                   {question}
                   <svg
                     aria-hidden="true"

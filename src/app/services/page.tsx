@@ -272,7 +272,7 @@ export default function Services() {
               <h3 className="font-serif text-xl font-semibold text-foreground">
                 Reiki Level 1 for Beginners
               </h3>
-              <p className="mt-1 text-sm font-medium text-primary">
+              <p className="mt-1 text-sm font-medium text-primary-light">
                 2-Day In-Person Workshop
               </p>
               <dl className="mt-6 space-y-3 text-sm">
@@ -309,7 +309,7 @@ export default function Services() {
               <h3 className="font-serif text-xl font-semibold text-foreground">
                 Reiki Level 2 Advanced
               </h3>
-              <p className="mt-1 text-sm font-medium text-primary">
+              <p className="mt-1 text-sm font-medium text-primary-light">
                 2-Day In-Person Workshop
               </p>
               <dl className="mt-6 space-y-3 text-sm">

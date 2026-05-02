@@ -51,7 +51,7 @@ export default function Contact() {
               <InfoCard label="Email">
                 <a
                   href={`mailto:${CONTACT_EMAIL}`}
-                  className="text-foreground hover:text-primary"
+                  className="text-foreground hover:text-primary-light"
                 >
                   {CONTACT_EMAIL}
                 </a>
@@ -70,7 +70,7 @@ export default function Contact() {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-foreground hover:text-primary"
+                  className="inline-flex items-center gap-2 text-foreground hover:text-primary-light"
                 >
                   <svg
                     aria-hidden="true"

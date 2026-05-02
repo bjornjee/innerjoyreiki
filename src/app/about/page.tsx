@@ -37,7 +37,7 @@ export default function About() {
               <h2 className="font-serif text-xl font-semibold text-foreground">
                 Yin Ling
               </h2>
-              <p className="mt-1 text-sm font-medium text-primary">
+              <p className="mt-1 text-sm font-medium text-primary-light">
                 Usui Reiki Master Teacher · The Reiki Centre lineage · Founder of innerjoy reiki
               </p>
               <p className="mt-3 text-sm leading-relaxed text-text-muted">

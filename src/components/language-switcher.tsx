@@ -129,7 +129,7 @@ export function LanguageSwitcher() {
       type="button"
       onClick={toggle}
       disabled={!ready || translating}
-      className="notranslate flex items-center gap-1.5 rounded-full border border-border px-3 py-1.5 text-xs font-medium text-text-muted transition-colors hover:border-primary hover:text-primary disabled:cursor-not-allowed disabled:opacity-40"
+      className="notranslate flex items-center gap-1.5 rounded-full border border-border px-3 py-1.5 text-xs font-medium text-text-muted transition-colors hover:border-primary-light hover:text-primary-light disabled:cursor-not-allowed disabled:opacity-40"
       translate="no"
       aria-label={chinese ? "Switch to English" : "Switch to Chinese"}
     >

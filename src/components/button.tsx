@@ -11,7 +11,7 @@ export function Button({ variant, href, children, className = "" }: ButtonProps)
   const base = "inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-medium tracking-wide transition-colors cursor-pointer";
   const variants = {
     primary: "bg-accent text-foreground hover:bg-accent-light",
-    outline: "border border-border text-foreground hover:border-primary hover:text-primary",
+    outline: "border border-border text-foreground hover:border-primary-light hover:text-primary-light",
   };
 
   const classes = `${base} ${variants[variant]} ${className}`;
