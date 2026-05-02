@@ -13,8 +13,8 @@ export function BottomBar() {
           <div className="max-w-xs">
             <p className="font-serif text-lg italic">{SITE_NAME}</p>
             <p className="mt-2 text-sm leading-relaxed text-text-muted">
-              Gentle, evidence-informed energy healing. Complementary to
-              the care you already receive.
+              Reconnect with your inner wisdom, step fully into your true
+              potential and experience joy within.
             </p>
             <p className="mt-3 text-xs text-text-muted">
               Singapore

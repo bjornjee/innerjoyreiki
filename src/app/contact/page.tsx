@@ -1,23 +1,25 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/page-header";
 import { ContactForm } from "@/components/contact-form";
 import { InfoCard } from "@/components/info-card";
 import { CTASection } from "@/components/cta-section";
 import { BOOKING_URL, CONTACT_EMAIL } from "@/lib/constants";
+import { T } from "@/components/translate-override";
 
 export const metadata: Metadata = {
   title: "Contact | innerjoy reiki",
   description:
-    "Get in touch with innerjoy reiki. Ask questions, share your needs, or book a session.",
+    "Get in touch with innerjoy reiki to book a Reiki healing session, register for a workshop, or reserve a spot at our next Reiki Share.",
 };
 
 export default function Contact() {
   return (
     <>
       <PageHeader
-        label="Contact"
+        label={<T term="Contact" />}
         heading="Get in Touch"
-        description="Have a question or want to learn more before booking? I'd love to hear from you."
+        description="Connect with us to book a healing session, register for a workshop, or reserve a spot at the next Reiki Share."
       />
 
       {/* Form + Info */}
@@ -34,7 +36,9 @@ export default function Contact() {
                 days.
               </p>
               <div className="mt-8">
-                <ContactForm />
+                <Suspense fallback={<div className="h-96" />}>
+                  <ContactForm />
+                </Suspense>
               </div>
             </div>
 
@@ -56,7 +60,8 @@ export default function Contact() {
               <InfoCard label="Location">
                 <p className="text-foreground">Singapore</p>
                 <p className="mt-1 text-sm text-text-muted">
-                  Exact address shared upon booking confirmation.
+                  Healing-session venues are confirmed upon booking. Workshops are held at
+                  Tanjong Pagar; Reiki Share is held at Fifth Avenue, Bukit Timah.
                 </p>
               </InfoCard>
 
@@ -93,7 +98,7 @@ export default function Contact() {
       <CTASection
         heading="Prefer to Book Directly?"
         subtitle="Skip the form and reserve your session online."
-        buttonLabel="Book Now"
+        buttonLabel={<T term="Book Now" />}
         buttonHref={BOOKING_URL}
       />
     </>

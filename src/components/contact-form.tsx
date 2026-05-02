@@ -1,12 +1,29 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { useSearchParams } from "next/navigation";
 
 const FORMSPREE_URL = "https://formspree.io/f/your-form-id";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
+const TYPE_OPTIONS = [
+  { value: "healing-session", label: "Reiki Healing Session" },
+  { value: "workshop", label: "Reiki Workshop" },
+  { value: "reiki-share", label: "Reiki Share" },
+] as const;
+
+type TypeValue = (typeof TYPE_OPTIONS)[number]["value"];
+
+function isTypeValue(v: string | null): v is TypeValue {
+  return v !== null && TYPE_OPTIONS.some((opt) => opt.value === v);
+}
+
 export function ContactForm() {
+  const searchParams = useSearchParams();
+  const initialType = searchParams.get("type");
+  const defaultType: TypeValue | "" = isTypeValue(initialType) ? initialType : "";
+
   const [status, setStatus] = useState<Status>("idle");
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
@@ -83,6 +100,27 @@ export function ContactForm() {
         />
       </div>
       <div>
+        <label htmlFor="type" className="block text-sm font-medium text-foreground">
+          Type of Service / Event
+        </label>
+        <select
+          id="type"
+          name="type"
+          required
+          defaultValue={defaultType}
+          className="mt-1 block w-full rounded-lg border border-border bg-white px-4 py-3 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+        >
+          <option value="" disabled>
+            Choose one…
+          </option>
+          {TYPE_OPTIONS.map((opt) => (
+            <option key={opt.value} value={opt.value}>
+              {opt.label}
+            </option>
+          ))}
+        </select>
+      </div>
+      <div>
         <label htmlFor="message" className="block text-sm font-medium text-foreground">
           Message
         </label>
@@ -92,7 +130,7 @@ export function ContactForm() {
           required
           rows={5}
           className="mt-1 block w-full rounded-lg border border-border bg-white px-4 py-3 text-sm text-foreground placeholder:text-text-muted/50 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
-          placeholder="How can I help you?"
+          placeholder="How can I help you? For workshops, please indicate the date you're registering for."
         />
       </div>
 
