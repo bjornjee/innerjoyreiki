@@ -43,7 +43,7 @@ export default function Contact() {
             </div>
 
             {/* Info cards */}
-            <div className="space-y-8">
+            <div className="space-y-4">
               <h2 className="font-serif text-2xl font-semibold text-foreground">
                 Other Ways to Connect
               </h2>
@@ -84,12 +84,6 @@ export default function Contact() {
                 </a>
               </InfoCard>
 
-              <InfoCard label="Response Time">
-                <p className="text-sm text-text-muted">
-                  I typically respond within 1–2 business days. For urgent
-                  enquiries, please email directly.
-                </p>
-              </InfoCard>
             </div>
           </div>
         </div>
