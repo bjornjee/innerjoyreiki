@@ -2,8 +2,10 @@ export const glossary = {
   // Nav & UI
   "About": "关于我们",
   "About Us": "关于我们",
+  "About Yin Ling": "关于颖玲",
   "About Reiki": "关于灵气",
   "Reiki": "灵气",
+  "What is Reiki": "什么是灵气",
   "Services": "疗程与课程",
   "Events": "活动",
   "Contact": "联系我们",
