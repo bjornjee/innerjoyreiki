@@ -21,7 +21,8 @@ export default function Home() {
               Reconnect with your inner wisdom.
             </h1>
             <p className="mt-6 max-w-lg text-lg text-hero-text/80">
-              Step fully into your true potential and experience joy within.
+              1-hour Usui Reiki healing sessions in Singapore — in-person and distant.
+              Workshops for those ready to learn it for themselves.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button variant="primary" href={BOOKING_URL}>
