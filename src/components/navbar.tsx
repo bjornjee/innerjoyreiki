@@ -14,6 +14,9 @@ export function Navbar() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`);
+
   return (
     <nav className="bg-white">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
@@ -30,20 +33,24 @@ export function Navbar() {
 
         {/* Desktop links */}
         <ul className="hidden gap-8 lg:flex">
-          {NAV_LINKS.map(({ label, href }) => (
-            <li key={href}>
-              <Link
-                href={href}
-                className={`text-sm transition-colors hover:text-primary-light ${
-                  pathname === href
-                    ? "font-medium text-primary-light"
-                    : "text-text-muted"
-                }`}
-              >
-                {label in glossary ? <T term={label as GlossaryTerm} /> : label}
-              </Link>
-            </li>
-          ))}
+          {NAV_LINKS.map(({ label, href }) => {
+            const active = isActive(href);
+            return (
+              <li key={href}>
+                <Link
+                  href={href}
+                  aria-current={active ? "page" : undefined}
+                  className={`text-sm transition-colors hover:text-primary-light ${
+                    active
+                      ? "font-semibold text-foreground underline decoration-primary-light decoration-2 underline-offset-8"
+                      : "text-text-muted"
+                  }`}
+                >
+                  {label in glossary ? <T term={label as GlossaryTerm} /> : label}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
 
         {/* Desktop CTA */}
@@ -90,21 +97,25 @@ export function Navbar() {
       {/* Mobile menu */}
       {menuOpen && (
         <ul id="mobile-menu" className="border-t border-border px-6 py-4 lg:hidden">
-          {NAV_LINKS.map(({ label, href }) => (
-            <li key={href}>
-              <Link
-                href={href}
-                onClick={() => setMenuOpen(false)}
-                className={`block py-2 text-sm ${
-                  pathname === href
-                    ? "font-medium text-primary-light"
-                    : "text-text-muted"
-                }`}
-              >
-                {label in glossary ? <T term={label as GlossaryTerm} /> : label}
-              </Link>
-            </li>
-          ))}
+          {NAV_LINKS.map(({ label, href }) => {
+            const active = isActive(href);
+            return (
+              <li key={href}>
+                <Link
+                  href={href}
+                  onClick={() => setMenuOpen(false)}
+                  aria-current={active ? "page" : undefined}
+                  className={`block border-l-2 py-2 pl-3 text-sm ${
+                    active
+                      ? "border-primary-light font-semibold text-foreground"
+                      : "border-transparent text-text-muted"
+                  }`}
+                >
+                  {label in glossary ? <T term={label as GlossaryTerm} /> : label}
+                </Link>
+              </li>
+            );
+          })}
           <li className="pt-2">
             <LanguageSwitcher />
           </li>
