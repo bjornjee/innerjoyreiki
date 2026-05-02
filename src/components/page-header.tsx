@@ -6,7 +6,7 @@ interface PageHeaderProps {
 
 export function PageHeader({ label, heading, description }: PageHeaderProps) {
   return (
-    <section className="bg-background py-20">
+    <section className="bg-background py-24">
       <div className="mx-auto max-w-3xl px-6">
         <p className="mb-4 text-xs uppercase tracking-[0.2em] text-text-muted">
           {label}

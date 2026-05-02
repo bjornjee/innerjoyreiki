@@ -16,7 +16,7 @@ export function SessionsSection() {
   }
 
   return (
-    <section className="bg-background py-20">
+    <section className="bg-background py-16">
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex items-end justify-between">
           <SectionHeading

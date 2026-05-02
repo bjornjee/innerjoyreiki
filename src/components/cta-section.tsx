@@ -19,7 +19,7 @@ export function CTASection({
   bg = "bg-background",
 }: CTASectionProps) {
   return (
-    <section className={`${bg} py-20`}>
+    <section className={`${bg} py-24`}>
       <div className="mx-auto max-w-3xl px-6 text-center">
         <SectionHeading heading={heading} subtitle={subtitle} />
         <div className="mt-8">
