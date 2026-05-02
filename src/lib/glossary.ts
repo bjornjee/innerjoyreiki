@@ -25,15 +25,52 @@ export const glossary = {
   // Section headings & topics
   "Why Reiki": "为什么选择灵气",
   "Benefits of Reiki": "灵气的益处",
-  "Reiki Healing Sessions": "灵气疗程",
+  "Book a Reiki Healing Session": "预约灵气疗程",
   "Reiki Healing Session for Pets": "宠物灵气疗程",
   "Learn Reiki": "学习灵气",
+  "Simple. Practical. Grounded.": "简单 · 实用 · 踏实",
   "Reiki Workshops": "灵气课程",
   "Reiki Master Teacher Training": "灵气导师培训",
   "Reiki Share": "灵气分享会",
   "Topics Covered": "课程内容",
   "Prerequisites": "入学要求",
   "Open to All": "开放报名",
+
+  // Workshop tracks (services page)
+  "Online + Hybrid": "线上 + 实体混合",
+  "Fully In-Person": "全程实体",
+  "On Request": "可预约",
+  "Online + Hybrid Workshops": "线上 + 实体混合课程",
+  "Chinese Reiki Workshops": "中文灵气课程",
+  "Hybrid learning experience": "混合式学习课程",
+  "Two-day in-person workshop": "两日制实体课程",
+  "in partnership with": "合作单位:",
+  "Self-paced online theory + 2× 3-hour in-person sessions":
+    "自学线上课程 + 两次 3 小时实体课",
+  "2-day in-person workshop in Tanjong Pagar": "丹戎巴葛 两日制实体课程",
+  "Levels 1 · 2 · 3 · Master": "第一级 · 第二级 · 第三级 · 师资级",
+  "View English track": "查看英语课程",
+  "View Chinese track": "查看中文课程",
+  "View available workshop dates and reserve your spot":
+    "查看可预约日期并预留位置",
+  "If you prefer a fully in-person workshop experience, please feel free to contact us to register your interest.":
+    "如希望参加全程实体课程,请联系我们登记报名。",
+  "ENGLISH": "英语课程",
+  "中文": "中文课程",
+
+  // Curriculum / availability badges
+  "EN · Online + Hybrid": "英语 · 线上 + 实体混合",
+  "中文 · In-Person": "中文 · 实体课",
+  "EN · On Request": "英语 · 可预约",
+
+  // Workshop / cohort details
+  "Format": "课程形式",
+  "Dates": "日期",
+  "Time": "时间",
+  "Workshop Fee": "课程费用",
+  "Manual and certificate on completion": "完成后获颁讲义与结业证书",
+  "Includes a non-refundable deposit": "费用包含不可退还订金",
+  "Contact Yin Ling": "联系颖玲",
 
   // Healing session card titles (GT mistranslates contextual terms)
   "In-Person Reiki Healing Session": "上门灵气疗程",
