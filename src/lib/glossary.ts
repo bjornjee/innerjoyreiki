@@ -25,7 +25,7 @@ export const glossary = {
   // Section headings & topics
   "Why Reiki": "为什么选择灵气",
   "Benefits of Reiki": "灵气的益处",
-  "Reiki Healing Sessions": "灵气疗程",
+  "Book a Reiki Healing Session": "预约灵气疗程",
   "Reiki Healing Session for Pets": "宠物灵气疗程",
   "Learn Reiki": "学习灵气",
   "Simple. Practical. Grounded.": "简单 · 实用 · 踏实",
@@ -37,10 +37,11 @@ export const glossary = {
   "Open to All": "开放报名",
 
   // Workshop tracks (services page)
-  "Same curriculum, two formats": "相同课程,两种形式",
   "Online + Hybrid": "线上 + 实体混合",
   "Fully In-Person": "全程实体",
   "On Request": "可预约",
+  "Online + Hybrid Workshops": "线上 + 实体混合课程",
+  "Chinese Reiki Workshops": "中文灵气课程",
   "Hybrid learning experience": "混合式学习课程",
   "Two-day in-person workshop": "两日制实体课程",
   "in partnership with": "合作单位:",
@@ -50,8 +51,10 @@ export const glossary = {
   "Levels 1 · 2 · 3 · Master": "第一级 · 第二级 · 第三级 · 师资级",
   "View English track": "查看英语课程",
   "View Chinese track": "查看中文课程",
-  "See available dates": "查看可预约日期",
-  "Upcoming Cohorts": "近期课程",
+  "View available workshop dates and reserve your spot":
+    "查看可预约日期并预留位置",
+  "If you prefer a fully in-person workshop experience, please feel free to contact us to register your interest.":
+    "如希望参加全程实体课程,请联系我们登记报名。",
   "ENGLISH": "英语课程",
   "中文": "中文课程",
 
@@ -59,15 +62,15 @@ export const glossary = {
   "EN · Online + Hybrid": "英语 · 线上 + 实体混合",
   "中文 · In-Person": "中文 · 实体课",
   "EN · On Request": "英语 · 可预约",
-  "中文 · On Request": "中文 · 可预约",
 
-  // Cohort / format details
+  // Workshop / cohort details
   "Format": "课程形式",
+  "Dates": "日期",
+  "Time": "时间",
+  "Workshop Fee": "课程费用",
+  "Manual and certificate on completion": "完成后获颁讲义与结业证书",
   "Includes a non-refundable deposit": "费用包含不可退还订金",
   "Contact Yin Ling": "联系颖玲",
-  "Contact Yin Ling for next cohort": "联系颖玲查询下一期课程",
-  "Prefer a fully in-person workshop? Please contact us to register your interest.":
-    "如希望参加全程实体课程,请联系我们登记报名。",
 
   // Healing session card titles (GT mistranslates contextual terms)
   "In-Person Reiki Healing Session": "上门灵气疗程",
