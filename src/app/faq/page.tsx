@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHeader } from "@/components/page-header";
 import { CTASection } from "@/components/cta-section";
 import { T } from "@/components/translate-override";
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
     "Frequently asked questions about Reiki, what to expect in a session, and how innerjoy reiki can support your wellbeing.",
 };
 
-const faqs = [
+const faqs: { question: string; answer: React.ReactNode }[] = [
   {
     question: "What is Reiki?",
     answer:
@@ -57,8 +58,15 @@ const faqs = [
   },
   {
     question: "How much does a session cost?",
-    answer:
-      "Private sessions range from SGD $75 to $130 depending on duration and type. Group classes start at SGD $45. Visit our Classes & Sessions page for full details. A reduced-rate First-Time Discovery session is available if you are new to Reiki.",
+    answer: (
+      <>
+        Pricing varies by session type and workshop level. See{" "}
+        <Link href="/services" className="text-primary-light underline hover:no-underline">
+          Services
+        </Link>{" "}
+        for the full list of sessions, workshops, and current rates.
+      </>
+    ),
   },
   {
     question: "What is your cancellation policy?",
