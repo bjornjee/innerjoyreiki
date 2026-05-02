@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { FOOTER_NAV_LINKS, FOOTER_LEGAL_LINKS, SITE_NAME } from "@/lib/constants";
+import { FOOTER_NAV_LINKS, FOOTER_LEGAL_LINKS, SITE_NAME, CONTACT_EMAIL } from "@/lib/constants";
 import { T } from "@/components/translate-override";
 import { glossary, type GlossaryTerm } from "@/lib/glossary";
 
@@ -13,11 +13,17 @@ export function BottomBar() {
           <div className="max-w-xs">
             <p className="font-serif text-lg italic">{SITE_NAME}</p>
             <p className="mt-2 text-sm leading-relaxed text-text-muted">
-              Reconnect with your inner wisdom, step fully into your true
-              potential and experience joy within.
+              Singapore-based Reiki healing &amp; workshops with Yin Ling,
+              Usui Reiki Master Teacher.
             </p>
-            <p className="mt-3 text-xs text-text-muted">
-              Singapore
+            <a
+              href={`mailto:${CONTACT_EMAIL}`}
+              className="mt-3 block text-xs text-text-muted transition-colors hover:text-foreground"
+            >
+              {CONTACT_EMAIL}
+            </a>
+            <p className="mt-1 text-xs text-text-muted">
+              I respond within 1–2 business days.
             </p>
           </div>
           <div className="flex flex-col gap-4 sm:items-end">
