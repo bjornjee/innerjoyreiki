@@ -92,7 +92,7 @@ export default function Terms() {
               If you have questions about these terms, please contact us at{" "}
               <a
                 href={`mailto:${CONTACT_EMAIL}`}
-                className="text-primary hover:underline"
+                className="text-primary-light hover:underline"
               >
                 {CONTACT_EMAIL}
               </a>

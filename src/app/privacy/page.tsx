@@ -73,7 +73,7 @@ export default function Privacy() {
               contact us at{" "}
               <a
                 href={`mailto:${CONTACT_EMAIL}`}
-                className="text-primary hover:underline"
+                className="text-primary-light hover:underline"
               >
                 {CONTACT_EMAIL}
               </a>
@@ -87,7 +87,7 @@ export default function Privacy() {
               is handled, please reach out to{" "}
               <a
                 href={`mailto:${CONTACT_EMAIL}`}
-                className="text-primary hover:underline"
+                className="text-primary-light hover:underline"
               >
                 {CONTACT_EMAIL}
               </a>

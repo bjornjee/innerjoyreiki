@@ -39,3 +39,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Pre-audit exploration screenshots dropped at the repo root.
+# Audit artifacts live under audit/ and are tracked.
+/*.png
+!audit/**/*.png
+
+# Playwright MCP scratch directory
+/.playwright-mcp/
+/tmp/

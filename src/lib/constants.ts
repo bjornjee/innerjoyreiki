@@ -3,8 +3,8 @@ export const BOOKING_URL = "https://calendly.com/innerjoyreiki";
 export const CONTACT_EMAIL = "hello@innerjoyreiki.com";
 
 export const NAV_LINKS = [
-  { label: "About", href: "/about" },
-  { label: "Reiki", href: "/reiki" },
+  { label: "About Yin Ling", href: "/about" },
+  { label: "What is Reiki", href: "/reiki" },
   { label: "Services", href: "/services" },
   { label: "Events", href: "/events" },
   { label: "FAQ", href: "/faq" },
@@ -12,7 +12,7 @@ export const NAV_LINKS = [
 ] as const;
 
 export const FOOTER_NAV_LINKS = [
-  { label: "What to Expect", href: "/about#what-to-expect" },
+  { label: "Services", href: "/services" },
   { label: "Contact", href: "/contact" },
   { label: "Instagram", href: "https://instagram.com" },
 ] as const;

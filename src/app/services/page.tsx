@@ -15,6 +15,10 @@ export const metadata: Metadata = {
 const workshops = [
   {
     title: "Reiki Level 1 for Beginners",
+    level: "Level 1",
+    duration: "2 days",
+    outcome: "Self-healing & Reiki for loved ones",
+    prereqSummary: "None — open to all",
     summary:
       "This foundational course opens the flow of Reiki through your hands. You will explore the practice in a clear, guided way — leaving with confidence in your ability to use it. Once attuned, Reiki remains accessible to you for life. Self-healing is the focus at this level, with practical techniques to support yourself as well as your loved ones and pets.",
     topics: [
@@ -36,6 +40,10 @@ const workshops = [
   },
   {
     title: "Reiki Level 2 Advanced",
+    level: "Level 2",
+    duration: "2 days",
+    outcome: "Distance healing & three symbols",
+    prereqSummary: "Level 1 completed (≥ 2 months)",
     summary:
       "At Reiki Level 2, you will learn how to strengthen your energy channel, practise distance healing, and work with Reiki at a deeper level. You will be introduced to three symbols — the Empowerment, Harmony and Communication symbols — opening greater potential for healing and personal growth.",
     topics: [
@@ -53,6 +61,10 @@ const workshops = [
   },
   {
     title: "Reiki Level 3 Advanced",
+    level: "Level 3",
+    duration: "2 days",
+    outcome: "Master symbol & Heart Attunement",
+    prereqSummary: "Level 2 completed (≥ 6 months)",
     summary:
       "Reiki Level 3 takes you into deeper healing, transformation, and personal growth. It is the final level for those who do not intend to teach, and a required module for Master Reiki Teacher training. You will learn the Master symbol — known for its transformative energy — and be trained to perform the Heart Attunement, temporarily enabling Reiki to flow through others' hands.",
     topics: [
@@ -116,7 +128,10 @@ export default function Services() {
           </div>
 
           {/* Reiki for Pets */}
-          <div className="mt-20">
+          <div className="mt-20 border-t border-border pt-16">
+            <p className="mb-6 text-xs uppercase tracking-[0.2em] text-text-muted">
+              Reiki for Pets
+            </p>
             <div className="relative mx-auto aspect-[4/5] w-full max-w-xs overflow-hidden rounded-2xl sm:max-w-sm lg:max-w-md">
               <Image
                 src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/reiki-dog.png`}
@@ -199,7 +214,25 @@ export default function Services() {
                 <h3 className="font-serif text-xl font-semibold text-foreground">
                   {w.title}
                 </h3>
-                <p className="mt-4 text-sm leading-relaxed text-text-muted">{w.summary}</p>
+                <dl className="mt-4 grid grid-cols-2 gap-3 border-y border-border py-4 text-xs sm:grid-cols-4">
+                  <div>
+                    <dt className="font-medium uppercase tracking-wide text-text-muted">Level</dt>
+                    <dd className="mt-1 text-foreground">{w.level}</dd>
+                  </div>
+                  <div>
+                    <dt className="font-medium uppercase tracking-wide text-text-muted">Duration</dt>
+                    <dd className="mt-1 text-foreground">{w.duration}</dd>
+                  </div>
+                  <div>
+                    <dt className="font-medium uppercase tracking-wide text-text-muted">Outcome</dt>
+                    <dd className="mt-1 text-foreground">{w.outcome}</dd>
+                  </div>
+                  <div>
+                    <dt className="font-medium uppercase tracking-wide text-text-muted">Prereq</dt>
+                    <dd className="mt-1 text-foreground">{w.prereqSummary}</dd>
+                  </div>
+                </dl>
+                <p className="mt-6 text-sm leading-relaxed text-text-muted">{w.summary}</p>
 
                 <h4 className="mt-6 text-sm font-semibold uppercase tracking-wide text-text-muted">
                   <T term="Topics Covered" />
@@ -272,7 +305,7 @@ export default function Services() {
               <h3 className="font-serif text-xl font-semibold text-foreground">
                 Reiki Level 1 for Beginners
               </h3>
-              <p className="mt-1 text-sm font-medium text-primary">
+              <p className="mt-1 text-sm font-medium text-primary-light">
                 2-Day In-Person Workshop
               </p>
               <dl className="mt-6 space-y-3 text-sm">
@@ -292,7 +325,7 @@ export default function Services() {
                   <dt className="w-20 flex-shrink-0 font-medium text-text-muted">Fee</dt>
                   <dd className="text-foreground">
                     SGD $460
-                    <span className="block text-xs text-text-muted">
+                    <span className="mt-1 block text-xs leading-snug text-text-muted">
                       Includes a $180 non-refundable deposit
                     </span>
                   </dd>
@@ -309,7 +342,7 @@ export default function Services() {
               <h3 className="font-serif text-xl font-semibold text-foreground">
                 Reiki Level 2 Advanced
               </h3>
-              <p className="mt-1 text-sm font-medium text-primary">
+              <p className="mt-1 text-sm font-medium text-primary-light">
                 2-Day In-Person Workshop
               </p>
               <dl className="mt-6 space-y-3 text-sm">
@@ -329,7 +362,7 @@ export default function Services() {
                   <dt className="w-20 flex-shrink-0 font-medium text-text-muted">Fee</dt>
                   <dd className="text-foreground">
                     SGD $560
-                    <span className="block text-xs text-text-muted">
+                    <span className="mt-1 block text-xs leading-snug text-text-muted">
                       Includes a $220 non-refundable deposit
                     </span>
                   </dd>

@@ -43,7 +43,7 @@ export default function Contact() {
             </div>
 
             {/* Info cards */}
-            <div className="space-y-8">
+            <div className="space-y-4">
               <h2 className="font-serif text-2xl font-semibold text-foreground">
                 Other Ways to Connect
               </h2>
@@ -51,7 +51,7 @@ export default function Contact() {
               <InfoCard label="Email">
                 <a
                   href={`mailto:${CONTACT_EMAIL}`}
-                  className="text-foreground hover:text-primary"
+                  className="text-foreground hover:text-primary-light"
                 >
                   {CONTACT_EMAIL}
                 </a>
@@ -70,7 +70,7 @@ export default function Contact() {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-foreground hover:text-primary"
+                  className="inline-flex items-center gap-2 text-foreground hover:text-primary-light"
                 >
                   <svg
                     aria-hidden="true"
@@ -84,12 +84,6 @@ export default function Contact() {
                 </a>
               </InfoCard>
 
-              <InfoCard label="Response Time">
-                <p className="text-sm text-text-muted">
-                  I typically respond within 1–2 business days. For urgent
-                  enquiries, please email directly.
-                </p>
-              </InfoCard>
             </div>
           </div>
         </div>
