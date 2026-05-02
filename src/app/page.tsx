@@ -34,8 +34,8 @@ export default function Home() {
             </div>
             <p className="mt-3 text-xs text-hero-text/70">
               New here?{" "}
-              <Link href="/about#what-to-expect" className="underline hover:text-hero-text/80">
-                <T term="See What to Expect" />
+              <Link href="/faq" className="underline hover:text-hero-text/80">
+                Read the FAQ
               </Link>
             </p>
           </div>

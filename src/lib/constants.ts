@@ -12,7 +12,7 @@ export const NAV_LINKS = [
 ] as const;
 
 export const FOOTER_NAV_LINKS = [
-  { label: "What to Expect", href: "/about#what-to-expect" },
+  { label: "Services", href: "/services" },
   { label: "Contact", href: "/contact" },
   { label: "Instagram", href: "https://instagram.com" },
 ] as const;

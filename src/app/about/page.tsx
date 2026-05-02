@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { SectionHeading } from "@/components/section-heading";
 import { T } from "@/components/translate-override";
 
 export const metadata: Metadata = {
@@ -76,65 +75,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* What to Expect */}
-      <section id="what-to-expect" className="bg-surface py-20">
-        <div className="mx-auto max-w-3xl px-6">
-          <SectionHeading
-            heading={<T term="What to Expect" />}
-            subtitle="A typical in-person Reiki healing session lasts approximately one hour. Here is how it unfolds."
-          />
-          <ol className="mt-12 space-y-10">
-            <li className="flex gap-6">
-              <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-icon-bg font-serif text-lg font-semibold text-foreground">
-                1
-              </span>
-              <div>
-                <h3 className="text-lg font-semibold text-foreground">
-                  <T term="Brief Discussion" />
-                </h3>
-                <p className="mt-1 text-sm leading-relaxed text-text-muted">
-                  We begin with a short conversation about how you are feeling and what you
-                  would like to focus on, so the session can be tailored to your individual
-                  needs.
-                </p>
-              </div>
-            </li>
-            <li className="flex gap-6">
-              <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-icon-bg font-serif text-lg font-semibold text-foreground">
-                2
-              </span>
-              <div>
-                <h3 className="text-lg font-semibold text-foreground">
-                  <T term="The Treatment" />
-                </h3>
-                <p className="mt-1 text-sm leading-relaxed text-text-muted">
-                  You remain fully clothed and lie comfortably on a treatment table. I may
-                  gently place my hands on or slightly above various areas of your body — such
-                  as the head, shoulders and torso — to facilitate the flow of Reiki energy
-                  through my hands into your body. Whether you are seeking to manage stress,
-                  address emotional concerns, or enhance your overall energy, the session is
-                  designed to rebalance you holistically.
-                </p>
-              </div>
-            </li>
-            <li className="flex gap-6">
-              <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-icon-bg font-serif text-lg font-semibold text-foreground">
-                3
-              </span>
-              <div>
-                <h3 className="text-lg font-semibold text-foreground">
-                  <T term="Post-Session Debrief" />
-                </h3>
-                <p className="mt-1 text-sm leading-relaxed text-text-muted">
-                  We close with a brief sharing about your experience. Many clients feel
-                  lighter, calmer, or more rested afterwards — and small shifts often continue
-                  to unfold over the following days.
-                </p>
-              </div>
-            </li>
-          </ol>
-        </div>
-      </section>
     </>
   );
 }
