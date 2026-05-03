@@ -19,7 +19,7 @@ export function SubTabs({ tabs, ariaLabel }: SubTabsProps) {
   return (
     <nav
       aria-label={ariaLabel}
-      className="flex flex-wrap gap-2"
+      className="inline-flex flex-wrap gap-1 rounded-full bg-hero-text/10 p-1 backdrop-blur-sm"
     >
       {tabs.map((tab) => {
         const active = pathname === tab.href;
@@ -28,10 +28,10 @@ export function SubTabs({ tabs, ariaLabel }: SubTabsProps) {
             key={tab.href}
             href={tab.href}
             aria-current={active ? "page" : undefined}
-            className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+            className={`rounded-full px-5 py-2.5 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-hero-text/40 focus-visible:ring-offset-2 focus-visible:ring-offset-hero-bg ${
               active
                 ? "bg-hero-text text-hero-bg"
-                : "border border-hero-text/30 text-hero-text/80 hover:border-hero-text/60 hover:text-hero-text"
+                : "bg-white/60 text-hero-text hover:bg-white"
             }`}
           >
             {tab.label}
