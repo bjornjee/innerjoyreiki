@@ -39,9 +39,15 @@ export default function RootLayout({
       className={`${inter.variable} ${geistMono.variable} ${playfair.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-background text-foreground">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-hero-text focus:px-4 focus:py-2 focus:text-sm focus:text-hero-bg"
+        >
+          Skip to content
+        </a>
         <GoogleTranslateProvider>
           <Navbar />
-          <main className="flex-1">{children}</main>
+          <main id="main-content" className="flex-1">{children}</main>
           <BottomBar />
         </GoogleTranslateProvider>
       </body>
