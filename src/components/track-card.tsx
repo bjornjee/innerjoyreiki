@@ -9,6 +9,7 @@ interface TrackCardProps {
   eyebrowFormat: GlossaryTerm;
   headline: GlossaryTerm;
   partnerName?: string;
+  language: string;
   formatLine: GlossaryTerm;
   levelsLine: GlossaryTerm;
   ctaLabel: GlossaryTerm;
@@ -37,6 +38,7 @@ export function TrackCard({
   eyebrowFormat,
   headline,
   partnerName,
+  language,
   formatLine,
   levelsLine,
   ctaLabel,
@@ -67,6 +69,12 @@ export function TrackCard({
       )}
 
       <dl className="mt-8 space-y-3 text-sm text-text-muted">
+        <div>
+          <dt className="text-[11px] font-medium uppercase tracking-wide text-text-muted/70">
+            <T term="Language" />
+          </dt>
+          <dd className="mt-1 text-foreground">{language}</dd>
+        </div>
         <div>
           <dt className="text-[11px] font-medium uppercase tracking-wide text-text-muted/70">
             <T term="Format" />

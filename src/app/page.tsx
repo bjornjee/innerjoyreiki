@@ -17,8 +17,7 @@ export default function Home() {
               Reconnect with your inner wisdom.
             </h1>
             <p className="mt-6 max-w-lg text-lg text-hero-text/80">
-              1-hour Usui Reiki healing sessions in Singapore — in-person and distant.
-              Workshops for those ready to learn it for themselves.
+              Step fully into your true potential and experience joy within.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button variant="primary" href="/contact?type=healing-session">
@@ -28,6 +27,9 @@ export default function Home() {
                 <T term="Explore Services" />
               </Button>
             </div>
+            <p className="mt-4 max-w-lg text-sm text-hero-text/75">
+              1-hour Usui Reiki healing sessions in Singapore. In-person, distant, and workshops to learn for yourself.
+            </p>
             <p className="mt-3 text-xs text-hero-text/85">
               New here?{" "}
               <Link href="/faq" className="underline hover:text-hero-text">
@@ -64,7 +66,7 @@ export default function Home() {
                 </svg>
               }
               title="Mental & Emotional Well-being"
-              description="A gentle, supportive practice for processing what your body and mind have been holding."
+              description="Supports mental and emotional well-being."
             />
             <FeatureCard
               icon={
@@ -73,7 +75,7 @@ export default function Home() {
                 </svg>
               }
               title="Energy & Vitality"
-              description="Many clients notice steadier energy through the day and a body that feels more at home in itself."
+              description="Increases energy and vitality."
             />
             <FeatureCard
               icon={
@@ -82,7 +84,7 @@ export default function Home() {
                 </svg>
               }
               title="Better Sleep"
-              description="Helps the nervous system shift out of alertness so deeper, more restorative sleep can settle in."
+              description="Improves sleep."
             />
             <FeatureCard
               icon={
@@ -91,7 +93,7 @@ export default function Home() {
                 </svg>
               }
               title="Stress Relief"
-              description="A regular practice creates space between you and the day's tension, easing what tends to build up."
+              description="Decreases stress."
             />
             <FeatureCard
               icon={
@@ -100,7 +102,7 @@ export default function Home() {
                 </svg>
               }
               title="Greater Self-Awareness"
-              description="Subtle insight tends to surface when the body is finally given the space to soften and listen."
+              description="Enhances self-awareness, fostering greater clarity and insight."
             />
           </div>
         </div>

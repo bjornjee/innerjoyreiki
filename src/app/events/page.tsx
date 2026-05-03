@@ -6,7 +6,7 @@ import { T } from "@/components/translate-override";
 export const metadata: Metadata = {
   title: "Events | innerjoy reiki",
   description:
-    "Reiki Share — a monthly community gathering open to both Reiki practitioners and those new to Reiki.",
+    "Reiki Share — a community Reiki gathering open to both Reiki practitioners and those new to Reiki.",
 };
 
 export default function Events() {
@@ -15,7 +15,7 @@ export default function Events() {
       <PageHeader
         label={<T term="Events" />}
         heading="Reiki Share"
-        description="A monthly community gathering — open to both Reiki practitioners and those completely new to Reiki."
+        description="A community Reiki gathering — open to both Reiki practitioners and those completely new to Reiki."
       />
 
       <section className="bg-surface py-20">

@@ -85,15 +85,6 @@ export default function HealingPage() {
                   it especially beneficial for senior or ageing pets who may need extra
                   comfort and care.
                 </p>
-                <p className="mt-4 text-sm leading-relaxed text-text-muted">
-                  Reiki healing for pets is offered either in person or remotely, depending
-                  on what is most suitable for your pet. In-person sessions are conducted at
-                  the client&apos;s residence to ensure your pet remains in a familiar and
-                  comfortable environment. Your pet&apos;s comfort is always the priority,
-                  and Reiki may be offered through light touch or from a slight distance —
-                  whichever your pet responds to best. Your pet is free to move, rest, or
-                  disengage at any time. Sessions typically last around 45 minutes.
-                </p>
               </div>
               <div className="relative mx-auto aspect-[4/5] w-full max-w-xs overflow-hidden rounded-2xl sm:max-w-sm md:max-w-none">
                 <Image
@@ -104,6 +95,20 @@ export default function HealingPage() {
                   className="object-cover"
                 />
               </div>
+            </div>
+            <div className="mt-12 max-w-3xl">
+              <h3 className="font-serif text-lg font-semibold text-foreground">
+                Session Format
+              </h3>
+              <p className="mt-3 text-base leading-relaxed text-text-muted">
+                Reiki healing for pets is offered either in person or remotely, depending on
+                what is most suitable for your pet. In-person sessions are conducted at the
+                client&apos;s residence to ensure your pet remains in a familiar and
+                comfortable environment. Reiki may be offered through light touch or from a
+                slight distance — whichever your pet responds to best. Your pet is free to
+                move, rest, or disengage at any time. Sessions typically last around 45
+                minutes, and may extend up to an hour if your pet is receptive.
+              </p>
             </div>
             <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2">
               <OfferingCard

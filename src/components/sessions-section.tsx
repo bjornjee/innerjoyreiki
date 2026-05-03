@@ -102,7 +102,7 @@ export function SessionsSection() {
             title={<T term="Reiki Share" />}
             duration="2 hrs"
             price="SGD $10"
-            description="A monthly community gathering — open to both practitioners and those new to Reiki. Receive, give, and experience Reiki in a supportive group setting."
+            description="A community Reiki gathering — open to both practitioners and those new to Reiki. Receive, give, and experience Reiki in a supportive group setting."
             actionLabel={<T term="View Event" />}
             actionHref="/events"
           />

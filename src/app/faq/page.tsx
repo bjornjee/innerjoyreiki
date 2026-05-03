@@ -52,9 +52,9 @@ const faqs: { question: string; answer: React.ReactNode }[] = [
       "Wear comfortable, loose-fitting clothing. You remain fully clothed throughout the session. Avoid heavy meals or caffeine right before your appointment. Come as you are — there is nothing special you need to do.",
   },
   {
-    question: "Do you offer distance or remote Reiki?",
+    question: "Do you offer distant or remote Reiki?",
     answer:
-      "Yes. Distance Reiki sessions are available for those who cannot attend in person. The session is conducted via a video call, and many clients report similar benefits to in-person sessions.",
+      "Yes. Distant Reiki sessions are available for those who cannot attend in person, or who prefer to remain in their own space. There's a brief check-in before, then you rest comfortably in a quiet space at the scheduled time while Reiki is sent across distance, followed by a short sharing afterwards.",
   },
   {
     question: "How much does a session cost?",
