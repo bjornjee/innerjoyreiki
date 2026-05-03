@@ -72,6 +72,7 @@ export const glossary = {
   "EN · On Request": "英语 · 可预约",
 
   // Workshop / cohort details
+  "Language": "授课语言",
   "Format": "课程形式",
   "Dates": "日期",
   "Time": "时间",
