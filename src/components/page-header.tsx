@@ -27,7 +27,7 @@ export function PageHeader({
         {breadcrumb ? (
           <nav
             aria-label="Breadcrumb"
-            className="mb-4 flex flex-wrap items-center gap-2 text-xs uppercase tracking-[0.2em] text-hero-text/70"
+            className="mb-4 flex flex-wrap items-center gap-2 text-xs uppercase tracking-[0.2em] text-hero-text/85"
           >
             {breadcrumb.map((item, i) => {
               const isLast = i === breadcrumb.length - 1;
