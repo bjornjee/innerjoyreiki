@@ -16,7 +16,6 @@ export const NAV_LINKS = [
 export const FOOTER_NAV_LINKS = [
   { label: "Services", href: "/services" },
   { label: "Contact", href: "/contact" },
-  { label: "Instagram", href: "https://instagram.com" },
 ] as const;
 
 export const FOOTER_LEGAL_LINKS = [
