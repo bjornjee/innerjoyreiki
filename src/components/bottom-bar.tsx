@@ -13,8 +13,7 @@ export function BottomBar() {
           <div className="max-w-xs">
             <p className="font-serif text-lg italic">{SITE_NAME}</p>
             <p className="mt-2 text-sm leading-relaxed text-text-muted">
-              Singapore-based Reiki healing &amp; workshops with Yin Ling,
-              Usui Reiki Master Teacher.
+              A supportive space for Usui Reiki healing and workshops in Singapore.
             </p>
             <a
               href={`mailto:${CONTACT_EMAIL}`}
@@ -22,9 +21,6 @@ export function BottomBar() {
             >
               {CONTACT_EMAIL}
             </a>
-            <p className="mt-1 text-xs text-text-muted">
-              I respond within 1–2 business days.
-            </p>
           </div>
           <div className="flex flex-col gap-4 sm:items-end">
             <ul className="flex flex-wrap gap-x-6 gap-y-2">

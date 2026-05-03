@@ -1,16 +1,15 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/page-header";
-import { ContactForm } from "@/components/contact-form";
+import { ContactChannels } from "@/components/contact-channels";
 import { InfoCard } from "@/components/info-card";
-import { CTASection } from "@/components/cta-section";
-import { BOOKING_URL, CONTACT_EMAIL } from "@/lib/constants";
+import { CONTACT_EMAIL, WHATSAPP_URL } from "@/lib/constants";
 import { T } from "@/components/translate-override";
 
 export const metadata: Metadata = {
   title: "Contact | innerjoy reiki",
   description:
-    "Get in touch with innerjoy reiki to book a Reiki healing session, register for a workshop, or reserve a spot at our next Reiki Share.",
+    "Get in touch with innerjoy reiki by email or WhatsApp to book a Reiki healing session, register for a workshop, or reserve a spot at our next Reiki Share.",
 };
 
 export default function Contact() {
@@ -22,22 +21,21 @@ export default function Contact() {
         description="Connect with us to book a healing session, register for a workshop, or reserve a spot at the next Reiki Share."
       />
 
-      {/* Form + Info */}
+      {/* Channels + Info */}
       <section className="bg-surface py-20">
         <div className="mx-auto max-w-5xl px-6">
           <div className="grid grid-cols-1 gap-16 md:grid-cols-2">
-            {/* Contact form */}
+            {/* Contact channels */}
             <div>
               <h2 className="font-serif text-2xl font-semibold text-foreground">
-                Send a Message
+                Reach Out
               </h2>
               <p className="mt-2 text-sm text-text-muted">
-                Fill out the form and I&apos;ll respond within 1–2 business
-                days.
+                Email or WhatsApp — I&apos;ll respond within 1–2 business days.
               </p>
               <div className="mt-8">
-                <Suspense fallback={<div className="h-96" />}>
-                  <ContactForm />
+                <Suspense fallback={<div className="h-32" />}>
+                  <ContactChannels />
                 </Suspense>
               </div>
             </div>
@@ -57,6 +55,17 @@ export default function Contact() {
                 </a>
               </InfoCard>
 
+              <InfoCard label="WhatsApp">
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-foreground hover:text-primary-light"
+                >
+                  Message us on WhatsApp
+                </a>
+              </InfoCard>
+
               <InfoCard label="Location">
                 <p className="text-foreground">Singapore</p>
                 <p className="mt-1 text-sm text-text-muted">
@@ -65,36 +74,10 @@ export default function Contact() {
                 </p>
               </InfoCard>
 
-              <InfoCard label="Social">
-                <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-foreground hover:text-primary-light"
-                >
-                  <svg
-                    aria-hidden="true"
-                    className="h-5 w-5"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-                  </svg>
-                  Follow on Instagram
-                </a>
-              </InfoCard>
-
             </div>
           </div>
         </div>
       </section>
-
-      <CTASection
-        heading="Prefer to Book Directly?"
-        subtitle="Skip the form and reserve your session online."
-        buttonLabel={<T term="Book Now" />}
-        buttonHref={BOOKING_URL}
-      />
     </>
   );
 }

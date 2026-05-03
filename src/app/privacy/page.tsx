@@ -21,9 +21,10 @@ export default function Privacy() {
         <div className="mx-auto max-w-3xl space-y-12 px-6">
           <ProseSection heading="Information We Collect">
             <p>
-              When you use our website or book a session, we may collect
-              personal information including your name, email address, and any
-              details you share through our contact form or booking system.
+              When you contact us by email or WhatsApp, we receive the
+              information you choose to share — typically your name, contact
+              details, and any context about the session or workshop you&apos;re
+              enquiring about.
             </p>
             <p>
               We do not collect sensitive health information through this
@@ -48,11 +49,10 @@ export default function Privacy() {
 
           <ProseSection heading="Third-Party Services">
             <p>
-              We use trusted third-party services to operate this website and
-              manage bookings, including form processing (Formspree) and
-              scheduling (Calendly). These services have their own privacy
-              policies, and we encourage you to review them. We only share the
-              minimum information necessary for these services to function.
+              Email and WhatsApp messages you send us are handled by the
+              respective providers (your email provider and WhatsApp). These
+              services have their own privacy policies, and we encourage you to
+              review them.
             </p>
           </ProseSection>
 
