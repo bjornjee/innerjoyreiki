@@ -21,9 +21,6 @@ export function BottomBar() {
             >
               {CONTACT_EMAIL}
             </a>
-            <p className="mt-1 text-xs text-text-muted">
-              I respond within 1–2 business days.
-            </p>
           </div>
           <div className="flex flex-col gap-4 sm:items-end">
             <ul className="flex flex-wrap gap-x-6 gap-y-2">
