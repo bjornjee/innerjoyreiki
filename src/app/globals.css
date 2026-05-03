@@ -24,6 +24,7 @@
 :root {
   --background: #faf7f2;
   --foreground: #2c2c2c;
+  /* Decorative use only — fails 3:1 as text on cream. Use --color-primary-light for foreground. */
   --color-primary: #97a491;
   --color-primary-light: #3d5a3e;
   --color-accent: #c4a46c;
@@ -62,4 +63,10 @@ body {
   visibility: hidden;
   height: 0;
   overflow: hidden;
+}
+/* Floating language pill that leaks bottom-left past the .skiptranslate rule */
+[class*="VIpgJd-ZVi9od-aZ2wEe-OiiCO"],
+[class*="VIpgJd-ZVi9od-l4eHX-hSRGPd"],
+[class*="VIpgJd-ZVi9od-aZ2wEe-wOHMyf"] {
+  display: none !important;
 }
