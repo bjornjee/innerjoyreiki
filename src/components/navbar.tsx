@@ -18,7 +18,7 @@ export function Navbar() {
     href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`);
 
   return (
-    <nav className="bg-white">
+    <nav className="sticky top-0 z-40 border-b border-border/60 bg-white/90 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Link href="/">
           <Image
