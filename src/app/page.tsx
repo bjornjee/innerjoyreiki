@@ -29,9 +29,9 @@ export default function Home() {
                 <T term="Explore Services" />
               </Button>
             </div>
-            <p className="mt-3 text-xs text-hero-text/70">
+            <p className="mt-3 text-xs text-hero-text/85">
               New here?{" "}
-              <Link href="/faq" className="underline hover:text-hero-text/80">
+              <Link href="/faq" className="underline hover:text-hero-text">
                 Read the FAQ
               </Link>
             </p>

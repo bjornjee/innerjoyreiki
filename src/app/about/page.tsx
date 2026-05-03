@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { PageHeader } from "@/components/page-header";
 import { T } from "@/components/translate-override";
 
 export const metadata: Metadata = {
@@ -11,17 +12,15 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <>
-      {/* Founder Story */}
-      <section className="bg-background py-20">
-        <div className="mx-auto max-w-3xl px-6">
-          <p className="mb-4 text-xs uppercase tracking-[0.2em] text-text-muted">
-            <T term="About Us" />
-          </p>
-          <h1 className="font-serif text-4xl font-semibold leading-[1.15] -tracking-[0.02em] text-foreground md:text-5xl">
-            Meet Yin Ling
-          </h1>
+      <PageHeader
+        label={<T term="About Us" />}
+        heading="Meet Yin Ling"
+        description="Usui Reiki Master Teacher of The Reiki Centre lineage and founder of innerjoy reiki."
+      />
 
-          <div className="mt-10 flex flex-col items-center gap-6 rounded-2xl border border-border bg-surface p-8 sm:flex-row sm:items-start">
+      <section className="bg-background py-16">
+        <div className="mx-auto max-w-3xl px-6">
+          <div className="flex flex-col items-center gap-6 rounded-2xl border border-border bg-surface p-8 sm:flex-row sm:items-start">
             <div className="relative h-32 w-32 flex-shrink-0 overflow-hidden rounded-full bg-icon-bg sm:h-40 sm:w-40">
               <Image
                 src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/practioner.jpeg`}
