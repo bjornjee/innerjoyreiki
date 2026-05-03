@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/page-header";
 import { SectionHeading } from "@/components/section-heading";
 import { CTASection } from "@/components/cta-section";
-import { BOOKING_URL } from "@/lib/constants";
 import { T } from "@/components/translate-override";
 
 export const metadata: Metadata = {
@@ -85,7 +84,7 @@ export default function Reiki() {
         heading="Ready to experience it?"
         subtitle="Book an in-person or distant Reiki healing session."
         buttonLabel={<T term="Book a Session" />}
-        buttonHref={BOOKING_URL}
+        buttonHref="/contact?type=healing-session"
         bg="bg-surface"
       />
     </>

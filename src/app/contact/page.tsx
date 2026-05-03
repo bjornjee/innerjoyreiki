@@ -1,16 +1,15 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/page-header";
-import { ContactForm } from "@/components/contact-form";
+import { ContactChannels } from "@/components/contact-channels";
 import { InfoCard } from "@/components/info-card";
-import { CTASection } from "@/components/cta-section";
-import { BOOKING_URL, CONTACT_EMAIL } from "@/lib/constants";
+import { CONTACT_EMAIL, WHATSAPP_URL } from "@/lib/constants";
 import { T } from "@/components/translate-override";
 
 export const metadata: Metadata = {
   title: "Contact | innerjoy reiki",
   description:
-    "Get in touch with innerjoy reiki to book a Reiki healing session, register for a workshop, or reserve a spot at our next Reiki Share.",
+    "Get in touch with innerjoy reiki by email or WhatsApp to book a Reiki healing session, register for a workshop, or reserve a spot at our next Reiki Share.",
 };
 
 export default function Contact() {
@@ -22,22 +21,21 @@ export default function Contact() {
         description="Connect with us to book a healing session, register for a workshop, or reserve a spot at the next Reiki Share."
       />
 
-      {/* Form + Info */}
+      {/* Channels + Info */}
       <section className="bg-surface py-20">
         <div className="mx-auto max-w-5xl px-6">
           <div className="grid grid-cols-1 gap-16 md:grid-cols-2">
-            {/* Contact form */}
+            {/* Contact channels */}
             <div>
               <h2 className="font-serif text-2xl font-semibold text-foreground">
-                Send a Message
+                Reach Out
               </h2>
               <p className="mt-2 text-sm text-text-muted">
-                Fill out the form and I&apos;ll respond within 1–2 business
-                days.
+                Email or WhatsApp — I&apos;ll respond within 1–2 business days.
               </p>
               <div className="mt-8">
-                <Suspense fallback={<div className="h-96" />}>
-                  <ContactForm />
+                <Suspense fallback={<div className="h-32" />}>
+                  <ContactChannels />
                 </Suspense>
               </div>
             </div>
@@ -54,6 +52,17 @@ export default function Contact() {
                   className="text-foreground hover:text-primary-light"
                 >
                   {CONTACT_EMAIL}
+                </a>
+              </InfoCard>
+
+              <InfoCard label="WhatsApp">
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-foreground hover:text-primary-light"
+                >
+                  Message us on WhatsApp
                 </a>
               </InfoCard>
 
@@ -88,13 +97,6 @@ export default function Contact() {
           </div>
         </div>
       </section>
-
-      <CTASection
-        heading="Prefer to Book Directly?"
-        subtitle="Skip the form and reserve your session online."
-        buttonLabel={<T term="Book Now" />}
-        buttonHref={BOOKING_URL}
-      />
     </>
   );
 }

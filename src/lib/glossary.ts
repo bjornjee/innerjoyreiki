@@ -10,7 +10,6 @@ export const glossary = {
   "Contact": "联系我们",
   "FAQ": "常见问题",
   "What to Expect": "疗程须知",
-  "Book Now": "立即预约",
 
   // CTA buttons (GT mistranslates "Book" as 图书/书籍)
   "Book a Session": "预约疗程",

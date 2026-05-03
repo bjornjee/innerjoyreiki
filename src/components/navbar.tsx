@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { NAV_LINKS, SITE_NAME, BOOKING_URL } from "@/lib/constants";
+import { NAV_LINKS, SITE_NAME } from "@/lib/constants";
 import { Button } from "@/components/button";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { T } from "@/components/translate-override";
@@ -56,8 +56,8 @@ export function Navbar() {
         {/* Desktop CTA */}
         <div className="hidden items-center gap-3 lg:flex">
           <LanguageSwitcher />
-          <Button variant="primary" href={BOOKING_URL}>
-            <T term="Book Now" />
+          <Button variant="primary" href="/contact">
+            <T term="Contact" />
           </Button>
         </div>
 
@@ -120,8 +120,8 @@ export function Navbar() {
             <LanguageSwitcher />
           </li>
           <li className="pt-2">
-            <Button variant="primary" href={BOOKING_URL}>
-              <T term="Book Now" />
+            <Button variant="primary" href="/contact">
+              <T term="Contact" />
             </Button>
           </li>
         </ul>

@@ -4,7 +4,6 @@ import { Button } from "@/components/button";
 import { SectionHeading } from "@/components/section-heading";
 import { FeatureCard } from "@/components/feature-card";
 import { SessionsSection } from "@/components/sessions-section";
-import { BOOKING_URL } from "@/lib/constants";
 import { T } from "@/components/translate-override";
 
 export default function Home() {
@@ -22,7 +21,7 @@ export default function Home() {
               Workshops for those ready to learn it for themselves.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Button variant="primary" href={BOOKING_URL}>
+              <Button variant="primary" href="/contact?type=healing-session">
                 <T term="Book a Session" />
               </Button>
               <Button variant="outline" href="/services" className="border-hero-text text-hero-text hover:border-hero-text/80 hover:text-hero-text/80">
