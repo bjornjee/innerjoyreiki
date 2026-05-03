@@ -92,7 +92,9 @@ export default function HealingPage() {
                   comfortable environment. Your pet&apos;s comfort is always the priority,
                   and Reiki may be offered through light touch or from a slight distance —
                   whichever your pet responds to best. Your pet is free to move, rest, or
-                  disengage at any time. Sessions typically last around 45 minutes.
+                  disengage at any time. Sessions typically last around 45 minutes — and may
+                  extend up to an hour if your pet is receptive, though most animals settle
+                  quickly and require less time.
                 </p>
               </div>
               <div className="relative mx-auto aspect-[4/5] w-full max-w-xs overflow-hidden rounded-2xl sm:max-w-sm md:max-w-none">
