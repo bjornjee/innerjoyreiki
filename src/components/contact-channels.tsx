@@ -11,21 +11,21 @@ type Prefill = {
 const PREFILLS = {
   "healing-session": {
     subject: "Reiki healing session enquiry",
-    body: "Hi,\n\nName:\nEnquiry type: Reiki healing\nPreferred date/time:\n\nThanks!",
+    body: "Hello,\n\nI'd like to book a Reiki healing session.\n\nName: \nSession type (in-person / distant): \nPreferred date and time: \nNotes: \n\nThank you.",
   },
   workshop: {
     subject: "Reiki workshop enquiry",
-    body: "Hi,\n\nName:\nEnquiry type: Workshop\nLevel (Level 1 / Level 2 / Level 3 / Master Teacher):\nPreferred date:\n\nThanks!",
+    body: "Hello,\n\nI'd like to register interest in a Reiki workshop.\n\nName: \nLevel (Level 1 / Level 2 / Level 3 / Master Teacher): \nTrack (English Hybrid / English In-Person / Chinese In-Person): \nPreferred cohort or date: \nNotes: \n\nThank you.",
   },
   "reiki-share": {
     subject: "Reiki Share RSVP",
-    body: "Hi,\n\nName:\nEnquiry type: Reiki Share RSVP\nPreferred date:\n\nThanks!",
+    body: "Hello,\n\nI'd like to reserve a spot at the next Reiki Share.\n\nName: \nNumber of attendees: \nNotes: \n\nThank you.",
   },
 } as const;
 
 const DEFAULT_PREFILL: Prefill = {
   subject: "Hello from innerjoyreiki.com",
-  body: "Hi,\n\nName:\nEnquiry type (Reiki healing or Workshop, including level and date):\n\nThanks!",
+  body: "Hello,\n\nI'd like to enquire about Reiki.\n\nName: \nType (healing session / workshop / Reiki Share): \nWorkshop level (if applicable): \nPreferred date: \nNotes: \n\nThank you.",
 };
 
 type TypeValue = keyof typeof PREFILLS;
