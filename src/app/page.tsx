@@ -46,7 +46,7 @@ export default function Home() {
       {/* Hero — text-only, taglines as the focal */}
       <section className="relative overflow-hidden bg-gradient-to-br from-hero-bg to-hero-bg-end">
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-24">
-          <h1 className="sr-only">Innerjoy Reiki — Reiki healing and workshops in Singapore</h1>
+          <h1 className="sr-only">Innerjoy Reiki: Reiki healing and workshops in Singapore</h1>
 
           <div className="text-center">
             <p className="text-xs uppercase tracking-[0.3em] text-hero-text/70 md:text-sm">

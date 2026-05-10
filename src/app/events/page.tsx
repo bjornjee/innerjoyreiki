@@ -6,7 +6,7 @@ import { T } from "@/components/translate-override";
 export const metadata: Metadata = {
   title: "Events | Innerjoy Reiki",
   description:
-    "Reiki Share — a community Reiki gathering open to both Reiki practitioners and those new to Reiki.",
+    "Reiki Share is a community Reiki gathering, open to both practitioners and those new to Reiki.",
 };
 
 export default function Events() {
@@ -15,7 +15,7 @@ export default function Events() {
       <PageHeader
         label={<T term="Events" />}
         heading="Reiki Share"
-        description="A community Reiki gathering — open to both Reiki practitioners and those completely new to Reiki."
+        description="A community Reiki gathering, open to both Reiki practitioners and those completely new to Reiki."
       />
 
       <section className="bg-surface py-20">
@@ -39,7 +39,7 @@ export default function Events() {
                 great chance to give and receive Reiki in a supportive group setting.
               </p>
               <p className="italic">
-                Just come as you are — no pressure, no expectations.
+                Come as you are. No pressure, no expectations.
               </p>
             </div>
 

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/page-header";
 import { ContactChannels } from "@/components/contact-channels";
 import { InfoCard } from "@/components/info-card";
-import { CONTACT_EMAIL } from "@/lib/constants";
+import { CONTACT_EMAIL, WHATSAPP_DISPLAY, WHATSAPP_NUMBER } from "@/lib/constants";
 import { T } from "@/components/translate-override";
 
 export const metadata: Metadata = {
@@ -28,7 +28,7 @@ export default function Contact() {
               Reach Out
             </h2>
             <p className="mt-2 text-sm text-text-muted">
-              Email or WhatsApp — I&apos;ll respond within 1–2 business days.
+              Email or WhatsApp. I&apos;ll respond within 1–2 business days.
             </p>
             <div className="mt-8">
               <Suspense fallback={<div className="h-32" />}>
@@ -42,6 +42,15 @@ export default function Contact() {
                 className="text-foreground hover:text-primary-light"
               >
                 {CONTACT_EMAIL}
+              </a>
+            </p>
+            <p className="mt-1 text-center text-sm text-text-muted">
+              or call:{" "}
+              <a
+                href={`tel:+${WHATSAPP_NUMBER}`}
+                className="text-foreground hover:text-primary-light"
+              >
+                {WHATSAPP_DISPLAY}
               </a>
             </p>
           </div>

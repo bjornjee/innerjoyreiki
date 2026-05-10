@@ -6,20 +6,20 @@ import { T } from "@/components/translate-override";
 export const metadata: Metadata = {
   title: "Articles | Innerjoy Reiki",
   description:
-    "Short reads on Reiki — its history, the Five Principles (Gokai), and simple practices you can try today.",
+    "Short reads on Reiki, covering its history, the Five Principles (Gokai), and simple practices you can try today.",
 };
 
 const articles = [
   {
     title: "The History of Usui Reiki",
     blurb:
-      "Where the practice came from — Mikao Usui's life, the founding of the Usui Reiki Ryoho Gakkai, and how the lineage reached Singapore.",
+      "Where the practice came from: Mikao Usui's life, the founding of the Usui Reiki Ryoho Gakkai, and how the lineage reached Singapore.",
     href: "/articles/history-of-usui-reiki",
   },
   {
     title: "The Five Principles (Gokai)",
     blurb:
-      "Five short lines that anchor the daily practice. A look at each one — anger, worry, gratitude, honest work, kindness — as a contemplation rather than a rule.",
+      "Five short lines that anchor the daily practice. A look at each one (anger, worry, gratitude, honest work, kindness) as a contemplation rather than a rule.",
     href: "/articles/the-five-principles-gokai",
   },
   {
@@ -36,7 +36,7 @@ export default function ArticlesIndex() {
       <PageHeader
         label={<T term="Articles" />}
         heading="Articles"
-        description="Short reads on Reiki — its history, its principles, and a few simple practices you can try today."
+        description="Short reads on Reiki, covering its history, its principles, and a few simple practices you can try today."
       />
 
       <section className="bg-surface py-20">

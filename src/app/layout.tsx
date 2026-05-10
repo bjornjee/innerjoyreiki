@@ -25,7 +25,7 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Innerjoy Reiki",
   description:
-    "Innerjoy Reiki — reconnect with your inner wisdom, step fully into your potential, live joyful from within.",
+    "Innerjoy Reiki: reconnect with your inner wisdom, step fully into your potential, and live joyful from within.",
 };
 
 export default function RootLayout({
