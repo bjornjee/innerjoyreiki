@@ -5,9 +5,9 @@ import { CTASection } from "@/components/cta-section";
 import { T } from "@/components/translate-override";
 
 export const metadata: Metadata = {
-  title: "FAQ | innerjoy reiki",
+  title: "FAQ | Innerjoy Reiki",
   description:
-    "Frequently asked questions about Reiki, what to expect in a session, and how innerjoy reiki can support your wellbeing.",
+    "Frequently asked questions about Reiki, what to expect in a session, and how Innerjoy Reiki can support your wellbeing.",
 };
 
 const faqs: { question: string; answer: React.ReactNode }[] = [
@@ -61,8 +61,12 @@ const faqs: { question: string; answer: React.ReactNode }[] = [
     answer: (
       <>
         Pricing varies by session type and workshop level. See{" "}
-        <Link href="/services" className="text-primary-light underline hover:no-underline">
-          Services
+        <Link href="/healing" className="text-primary-light underline hover:no-underline">
+          Reiki Healing
+        </Link>{" "}
+        and{" "}
+        <Link href="/workshops" className="text-primary-light underline hover:no-underline">
+          Reiki Workshops
         </Link>{" "}
         for the full list of sessions, workshops, and current rates.
       </>

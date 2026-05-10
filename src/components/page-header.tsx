@@ -12,6 +12,7 @@ interface PageHeaderProps {
   heading: string;
   description?: string;
   children?: ReactNode;
+  compact?: boolean;
 }
 
 export function PageHeader({
@@ -20,9 +21,12 @@ export function PageHeader({
   heading,
   description,
   children,
+  compact = false,
 }: PageHeaderProps) {
+  const sectionPadding = compact ? "py-12 md:py-16" : "py-20 md:py-24";
+  const headingSize = compact ? "text-3xl md:text-4xl" : "text-4xl md:text-5xl";
   return (
-    <section className="bg-gradient-to-br from-hero-bg to-hero-bg-end py-20 md:py-24">
+    <section className={`bg-gradient-to-br from-hero-bg to-hero-bg-end ${sectionPadding}`}>
       <div className="mx-auto max-w-3xl px-6">
         {breadcrumb ? (
           <nav
@@ -64,7 +68,7 @@ export function PageHeader({
             </p>
           )
         )}
-        <h1 className="font-serif text-4xl font-semibold leading-[1.15] -tracking-[0.02em] text-hero-text md:text-5xl">
+        <h1 className={`font-serif font-semibold leading-[1.15] -tracking-[0.02em] text-hero-text ${headingSize}`}>
           {heading}
         </h1>
         {description && (

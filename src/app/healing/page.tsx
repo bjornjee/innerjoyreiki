@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { PageHeader } from "@/components/page-header";
 import { OfferingCard } from "@/components/offering-card";
-import { CTASection } from "@/components/cta-section";
-import { SubTabs } from "@/components/sub-tabs";
 import { T } from "@/components/translate-override";
 
 export const metadata: Metadata = {
-  title: "Reiki Healing Sessions | innerjoy reiki",
+  title: "Reiki Healing Sessions | Innerjoy Reiki",
   description:
     "In-person and distant Reiki healing sessions in Singapore — for adults and pets. Tailored to your individual needs and rebalancing your system holistically.",
 };
@@ -16,24 +15,23 @@ export default function HealingPage() {
   return (
     <>
       <PageHeader
-        breadcrumb={[
-          { label: <T term="Services" />, href: "/services" },
-          { label: <T term="Reiki Healing" /> },
-        ]}
-        heading="Book a Reiki Healing Session"
+        label={<T term="Reiki Healing" />}
+        heading="Reiki Healing Sessions"
         description="Tailored to support your individual needs and rebalance your system holistically."
-      >
-        <SubTabs
-          ariaLabel="Services sections"
-          tabs={[
-            { label: <T term="Healing Sessions" />, href: "/services/healing" },
-            { label: <T term="Workshops" />, href: "/services/workshops" },
-          ]}
-        />
-      </PageHeader>
+      />
 
       <section className="bg-surface py-20">
         <div className="mx-auto max-w-5xl px-6">
+          <p className="mb-12 text-center text-sm text-text-muted">
+            New to Reiki?{" "}
+            <Link
+              href="/articles/history-of-usui-reiki"
+              className="text-primary-light underline-offset-4 hover:underline"
+            >
+              Read about the practice
+              <span aria-hidden="true"> →</span>
+            </Link>
+          </p>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <OfferingCard
               title={<T term="In-Person Reiki Healing Session" />}
@@ -141,13 +139,6 @@ export default function HealingPage() {
           </div>
         </div>
       </section>
-
-      <CTASection
-        heading="Ready to book?"
-        subtitle="Send us your details and we'll be in touch with the next steps."
-        buttonLabel={<T term="Book Session" />}
-        buttonHref="/contact?type=healing-session"
-      />
     </>
   );
 }

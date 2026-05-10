@@ -2,7 +2,7 @@ import Link from "next/link";
 import { T } from "@/components/translate-override";
 import type { GlossaryTerm } from "@/lib/glossary";
 
-type Tone = "sage" | "peach";
+type Tone = "sage" | "peach" | "muted";
 
 interface TrackCardProps {
   eyebrowLanguage: GlossaryTerm;
@@ -28,6 +28,11 @@ const toneClasses: Record<
   },
   peach: {
     card: "bg-icon-bg-peach border-accent/30",
+    eyebrow: "text-foreground",
+    cta: "text-foreground hover:text-primary-light",
+  },
+  muted: {
+    card: "bg-icon-bg-amber border-accent/30",
     eyebrow: "text-foreground",
     cta: "text-foreground hover:text-primary-light",
   },
