@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { PageHeader } from "@/components/page-header";
 import { TrackCard } from "@/components/track-card";
 import { LevelCard } from "@/components/level-card";
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
 
 interface Level {
   title: string;
-  summary: React.ReactNode;
+  summary: ReactNode;
   topics: string[];
   prerequisites: string;
 }

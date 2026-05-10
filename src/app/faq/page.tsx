@@ -61,8 +61,12 @@ const faqs: { question: string; answer: React.ReactNode }[] = [
     answer: (
       <>
         Pricing varies by session type and workshop level. See{" "}
-        <Link href="/services" className="text-primary-light underline hover:no-underline">
-          Services
+        <Link href="/healing" className="text-primary-light underline hover:no-underline">
+          Reiki Healing
+        </Link>{" "}
+        and{" "}
+        <Link href="/workshops" className="text-primary-light underline hover:no-underline">
+          Reiki Workshops
         </Link>{" "}
         for the full list of sessions, workshops, and current rates.
       </>
