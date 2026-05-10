@@ -199,7 +199,7 @@ export default function WorkshopsPage() {
 
             <nav
               aria-label="Jump to level"
-              className="sticky top-16 z-10 mt-8 -mx-6 border-y border-border bg-background/85 px-6 py-3 backdrop-blur md:top-20"
+              className="sticky top-[89px] z-10 mt-8 -mx-6 border-y border-border bg-background/85 px-6 py-3 backdrop-blur"
             >
               <ul className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
                 <li className="text-xs font-medium uppercase tracking-[0.18em] text-text-muted">
