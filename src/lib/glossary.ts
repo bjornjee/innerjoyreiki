@@ -122,8 +122,8 @@ export const glossary = {
   "The Five Principles (Gokai)": "灵气五戒(Gokai)",
   "Calm Yourself with Simple Reiki Techniques": "用简单的灵气方法安定自己",
   "Read article": "阅读文章",
-  "Short reads on Reiki — its history, its principles, and a few simple practices you can try today.":
-    "关于灵气的短文 — 它的历史、原则,以及一些今天就可以尝试的简单练习。",
+  "Short reads on Reiki, covering its history, its principles, and a few simple practices you can try today.":
+    "关于灵气的短文,涵盖它的历史、原则,以及一些今天就可以尝试的简单练习。",
 } as const;
 
 export type GlossaryTerm = keyof typeof glossary;

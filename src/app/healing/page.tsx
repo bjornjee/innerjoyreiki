@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { PageHeader } from "@/components/page-header";
 import { OfferingCard } from "@/components/offering-card";
 import { T } from "@/components/translate-override";
@@ -8,7 +7,7 @@ import { T } from "@/components/translate-override";
 export const metadata: Metadata = {
   title: "Reiki Healing Sessions | Innerjoy Reiki",
   description:
-    "In-person and distant Reiki healing sessions in Singapore — for adults and pets. Tailored to your individual needs and rebalancing your system holistically.",
+    "In-person and distant Reiki healing sessions in Singapore, for adults and pets. Tailored to rebalance your system holistically.",
 };
 
 export default function HealingPage() {
@@ -22,22 +21,12 @@ export default function HealingPage() {
 
       <section className="bg-surface py-20">
         <div className="mx-auto max-w-5xl px-6">
-          <p className="mb-12 text-center text-sm text-text-muted">
-            New to Reiki?{" "}
-            <Link
-              href="/articles/history-of-usui-reiki"
-              className="text-primary-light underline-offset-4 hover:underline"
-            >
-              Read about the practice
-              <span aria-hidden="true"> →</span>
-            </Link>
-          </p>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <OfferingCard
               title={<T term="In-Person Reiki Healing Session" />}
               duration="~1 hour"
               price="SGD $150"
-              description="An in-person Reiki healing session typically lasts approximately one hour, including a brief discussion before the session and a post-session debrief. You remain fully clothed and lie comfortably on a treatment table while hands are gently placed on or slightly above various areas of your body — such as the head, shoulders and torso — to facilitate the flow of Reiki energy."
+              description="An in-person Reiki healing session typically lasts approximately one hour, including a brief discussion before the session and a post-session debrief. You remain fully clothed and lie comfortably on a treatment table while hands are gently placed on or slightly above various areas of your body (such as the head, shoulders, and torso) to facilitate the flow of Reiki energy."
               highlights={[
                 <T key="discussion" term="Brief discussion before" />,
                 <T key="treatment" term="Full Reiki treatment" />,
@@ -103,7 +92,7 @@ export default function HealingPage() {
                 what is most suitable for your pet. In-person sessions are conducted at the
                 client&apos;s residence to ensure your pet remains in a familiar and
                 comfortable environment. Reiki may be offered through light touch or from a
-                slight distance — whichever your pet responds to best. Your pet is free to
+                slight distance, whichever your pet responds to best. Your pet is free to
                 move, rest, or disengage at any time. Sessions typically last around 45
                 minutes, and may extend up to an hour if your pet is receptive.
               </p>
@@ -113,7 +102,7 @@ export default function HealingPage() {
                 title={<T term="In-Person Reiki for Pets" />}
                 duration="up to 45 min"
                 price="SGD $150"
-                description="A house-visit session so your pet stays in a familiar, comfortable environment. Reiki may be offered through light touch or from a slight distance — whichever your pet responds to best."
+                description="A house-visit session so your pet stays in a familiar, comfortable environment. Reiki may be offered through light touch or from a slight distance, whichever your pet responds to best."
                 highlights={[
                   "House visit",
                   "Light touch or slight distance",
@@ -126,7 +115,7 @@ export default function HealingPage() {
                 title={<T term="Distant Reiki for Pets" />}
                 duration="up to 30 min"
                 price="SGD $75"
-                description="A distant Reiki session — gentle, non-invasive support delivered remotely. Suitable when an in-person visit isn't practical, or for pets who are most settled in a quiet, familiar space."
+                description="A distant Reiki session: gentle, non-invasive support delivered remotely. Suitable when an in-person visit isn't practical, or for pets who are most settled in a quiet, familiar space."
                 highlights={[
                   "Conducted remotely",
                   "Ideal for anxious or ageing pets",

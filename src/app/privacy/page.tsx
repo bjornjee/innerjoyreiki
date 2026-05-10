@@ -22,7 +22,7 @@ export default function Privacy() {
           <ProseSection heading="Information We Collect">
             <p>
               When you contact us by email or WhatsApp, we receive the
-              information you choose to share — typically your name, contact
+              information you choose to share, typically your name, contact
               details, and any context about the session or workshop you&apos;re
               enquiring about.
             </p>

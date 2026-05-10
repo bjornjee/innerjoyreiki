@@ -19,7 +19,7 @@ const faqs: { question: string; answer: React.ReactNode }[] = [
   {
     question: "Is Reiki a religion?",
     answer:
-      "No. Reiki is not tied to any religion or belief system. People of all backgrounds and beliefs receive Reiki. You do not need to believe in anything specific for a session to be beneficial — simply being open to relaxation is enough.",
+      "No. Reiki is not tied to any religion or belief system. People of all backgrounds and beliefs receive Reiki. You do not need to believe in anything specific for a session to be beneficial; simply being open to relaxation is enough.",
   },
   {
     question: "What does a session feel like?",
@@ -39,7 +39,7 @@ const faqs: { question: string; answer: React.ReactNode }[] = [
   {
     question: "Is Reiki safe? Are there side effects?",
     answer:
-      "Reiki is considered very safe. It is non-invasive and has no known negative side effects. Some people feel more tired or emotional after a session as the body processes the experience — this is normal and usually passes quickly.",
+      "Reiki is considered very safe. It is non-invasive and has no known negative side effects. Some people feel more tired or emotional after a session as the body processes the experience. This is normal and usually passes quickly.",
   },
   {
     question: "Can Reiki replace medical treatment?",
@@ -49,7 +49,7 @@ const faqs: { question: string; answer: React.ReactNode }[] = [
   {
     question: "What should I wear? How should I prepare?",
     answer:
-      "Wear comfortable, loose-fitting clothing. You remain fully clothed throughout the session. Avoid heavy meals or caffeine right before your appointment. Come as you are — there is nothing special you need to do.",
+      "Wear comfortable, loose-fitting clothing. You remain fully clothed throughout the session. Avoid heavy meals or caffeine right before your appointment. Come as you are. There is nothing special you need to do.",
   },
   {
     question: "Do you offer distant or remote Reiki?",
@@ -75,7 +75,7 @@ const faqs: { question: string; answer: React.ReactNode }[] = [
   {
     question: "What is your cancellation policy?",
     answer:
-      "Please provide at least 24 hours' notice if you need to cancel or reschedule. Late cancellations or no-shows may be charged the full session fee. I understand that things come up — just let me know as early as you can.",
+      "Please provide at least 24 hours' notice if you need to cancel or reschedule. Late cancellations or no-shows may be charged the full session fee. I understand that things come up; please let me know as early as you can.",
   },
 ];
 

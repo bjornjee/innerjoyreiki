@@ -27,7 +27,7 @@ const levels: Level[] = [
       <>
         This <strong className="font-semibold text-foreground">two-day</strong> foundational
         course opens the flow of Reiki through your hands. You will explore the practice in a
-        clear, guided way—leaving with confidence in your ability to use it. Once attuned, Reiki
+        clear, guided way, leaving with confidence in your ability to use it. Once attuned, Reiki
         remains accessible to you for life. Self-healing is the focus at this level, with
         practical techniques to support yourself as well as your loved ones and pets.
       </>
@@ -58,15 +58,15 @@ const levels: Level[] = [
         <strong className="font-semibold text-foreground">
           During the two-day workshop,
         </strong>{" "}
-        you will be introduced to three symbols — the Empowerment, Harmony and the
-        Communication Symbols — opening greater potential for healing and personal growth.
+        you will be introduced to three symbols (the Empowerment, Harmony, and Communication
+        Symbols), opening greater potential for healing and personal growth.
       </>
     ),
     topics: [
       "The Empowerment symbol",
       "The Harmony symbol",
       "The Communication symbol",
-      "Sending to others — tips and cautions",
+      "Sending to others: tips and cautions",
       "Sending to events, issues, past and future",
       "Sending to affirmations",
       "The turbo self-treatment",
@@ -85,8 +85,8 @@ const levels: Level[] = [
         <strong className="font-semibold text-foreground">
           At the 2½-day workshop,
         </strong>{" "}
-        you will learn the final and most powerful symbol of the Usui lineage—the Master
-        symbol—known for its transformative energy. You will also be trained to perform Heart
+        you will learn the final and most powerful symbol of the Usui lineage, the Master
+        symbol, known for its transformative energy. You will also be trained to perform Heart
         Attunement, temporarily enabling Reiki to flow through others&apos; hands.
       </>
     ),
@@ -300,7 +300,7 @@ export default function WorkshopsPage() {
             <p className="mt-3 max-w-2xl text-sm leading-relaxed text-text-muted">
               For those who prefer to learn entirely in-person, this format runs as a
               continuous workshop in Tanjong Pagar. Theory, practice, attunements and group
-              discussion all happen in the room together — no separate self-paced module.
+              discussion all happen in the room together. There is no separate self-paced module.
             </p>
 
             <div className="mt-6 rounded-2xl border border-border bg-white p-8 shadow-sm">

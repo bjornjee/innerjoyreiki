@@ -11,21 +11,21 @@ type Prefill = {
 const PREFILLS = {
   "healing-session": {
     subject: "Reiki healing session enquiry",
-    body: "Hi, I'd like to book a Reiki healing session. ",
+    body: "Hi,\n\nName:\nEnquiry type: Reiki healing\nPreferred date/time:\n\nThanks!",
   },
   workshop: {
     subject: "Reiki workshop enquiry",
-    body: "Hi, I'd like to register for a Reiki workshop. Date I'm interested in: ",
+    body: "Hi,\n\nName:\nEnquiry type: Workshop\nLevel (Level 1 / Level 2 / Level 3 / Master Teacher):\nPreferred date:\n\nThanks!",
   },
   "reiki-share": {
     subject: "Reiki Share RSVP",
-    body: "Hi, I'd like to reserve a spot at the next Reiki Share. ",
+    body: "Hi,\n\nName:\nEnquiry type: Reiki Share RSVP\nPreferred date:\n\nThanks!",
   },
 } as const;
 
 const DEFAULT_PREFILL: Prefill = {
   subject: "Hello from innerjoyreiki.com",
-  body: "",
+  body: "Hi,\n\nName:\nEnquiry type (Reiki healing or Workshop, including level and date):\n\nThanks!",
 };
 
 type TypeValue = keyof typeof PREFILLS;

@@ -6,7 +6,7 @@ import { T } from "@/components/translate-override";
 export const metadata: Metadata = {
   title: "About | Innerjoy Reiki",
   description:
-    "Meet Yin Ling — Usui Reiki Master Teacher of The Reiki Centre lineage and founder of Innerjoy Reiki.",
+    "Meet Yin Ling, Usui Reiki Master Teacher of The Reiki Centre lineage and founder of Innerjoy Reiki.",
 };
 
 export default function About() {
@@ -47,7 +47,7 @@ export default function About() {
           <div className="mt-10 space-y-6 text-base leading-relaxed text-text-muted">
             <p>
               Yin Ling is a Usui Reiki Master Teacher of The Reiki Centre lineage and the founder
-              of Innerjoy Reiki — a supportive space where individuals are invited to reconnect
+              of Innerjoy Reiki, a supportive space where individuals are invited to reconnect
               with their inner wisdom, discover their innate potential and experience life with
               deeper joy and authenticity.
             </p>
@@ -59,7 +59,7 @@ export default function About() {
             <p>
               In 2016, Yin Ling turned to Reiki to support her digestive health, unaware that it
               would spark a total life transformation. Through this practice, she did more than
-              just heal her body — she released limiting beliefs that were holding her back and
+              just heal her body; she released limiting beliefs that were holding her back and
               found the joy of living authentically.
             </p>
             <p>
