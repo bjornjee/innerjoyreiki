@@ -1,68 +1,26 @@
+import type { ReactNode } from "react";
 import { T } from "@/components/translate-override";
-import { FormatBadge } from "@/components/format-badge";
-import type { GlossaryTerm } from "@/lib/glossary";
-
-interface AvailabilityBadge {
-  term: GlossaryTerm;
-  tone: "sage" | "peach" | "muted";
-}
 
 interface LevelCardProps {
   title: string;
-  level: string;
-  duration: string;
-  outcome: string;
-  prereqSummary: string;
-  summary: string;
+  summary: ReactNode;
   topics: string[];
   prerequisites: string;
-  availability: AvailabilityBadge[];
 }
 
 export function LevelCard({
   title,
-  level,
-  duration,
-  outcome,
-  prereqSummary,
   summary,
   topics,
   prerequisites,
-  availability,
 }: LevelCardProps) {
   return (
     <article className="rounded-2xl border border-border bg-white p-8 shadow-sm">
-      <div className="flex flex-wrap items-start justify-between gap-4">
-        <h4 className="font-serif text-xl font-semibold text-foreground">
-          {title}
-        </h4>
-        <div className="flex flex-wrap gap-2">
-          {availability.map((a) => (
-            <FormatBadge key={a.term} term={a.term} tone={a.tone} />
-          ))}
-        </div>
-      </div>
+      <h4 className="font-serif text-xl font-semibold text-foreground">
+        {title}
+      </h4>
 
-      <dl className="mt-4 grid grid-cols-2 gap-3 border-y border-border py-4 text-xs sm:grid-cols-4">
-        <div>
-          <dt className="font-medium uppercase tracking-wide text-text-muted">Level</dt>
-          <dd className="mt-1 text-foreground">{level}</dd>
-        </div>
-        <div>
-          <dt className="font-medium uppercase tracking-wide text-text-muted">Duration</dt>
-          <dd className="mt-1 text-foreground">{duration}</dd>
-        </div>
-        <div>
-          <dt className="font-medium uppercase tracking-wide text-text-muted">Outcome</dt>
-          <dd className="mt-1 text-foreground">{outcome}</dd>
-        </div>
-        <div>
-          <dt className="font-medium uppercase tracking-wide text-text-muted">Prereq</dt>
-          <dd className="mt-1 text-foreground">{prereqSummary}</dd>
-        </div>
-      </dl>
-
-      <p className="mt-6 text-sm leading-relaxed text-text-muted">{summary}</p>
+      <p className="mt-4 text-sm leading-relaxed text-text-muted">{summary}</p>
 
       <h5 className="mt-6 text-sm font-semibold uppercase tracking-wide text-text-muted">
         <T term="Topics Covered" />

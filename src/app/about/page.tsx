@@ -4,9 +4,9 @@ import { PageHeader } from "@/components/page-header";
 import { T } from "@/components/translate-override";
 
 export const metadata: Metadata = {
-  title: "About | innerjoy reiki",
+  title: "About | Innerjoy Reiki",
   description:
-    "Meet Yin Ling — Usui Reiki Master Teacher of The Reiki Centre lineage and founder of innerjoy reiki.",
+    "Meet Yin Ling — Usui Reiki Master Teacher of The Reiki Centre lineage and founder of Innerjoy Reiki.",
 };
 
 export default function About() {
@@ -15,7 +15,7 @@ export default function About() {
       <PageHeader
         label={<T term="About Us" />}
         heading="Meet Yin Ling"
-        description="Usui Reiki Master Teacher of The Reiki Centre lineage and founder of innerjoy reiki."
+        description="On the practice, the lineage, and what brought us here."
       />
 
       <section className="bg-background py-16">
@@ -24,7 +24,7 @@ export default function About() {
             <div className="relative h-32 w-32 flex-shrink-0 overflow-hidden rounded-full bg-icon-bg sm:h-40 sm:w-40">
               <Image
                 src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/practioner.jpeg`}
-                alt="Yin Ling, Usui Reiki Master Teacher and founder of innerjoy reiki"
+                alt="Yin Ling, Usui Reiki Master Teacher and founder of Innerjoy Reiki"
                 fill
                 sizes="(min-width: 640px) 160px, 128px"
                 className="object-cover object-[50%_20%]"
@@ -36,7 +36,7 @@ export default function About() {
                 Yin Ling
               </h2>
               <p className="mt-1 text-sm font-medium text-primary-light">
-                Usui Reiki Master Teacher · The Reiki Centre lineage · Founder of innerjoy reiki
+                Usui Reiki Master Teacher · The Reiki Centre lineage · Founder of Innerjoy Reiki
               </p>
               <p className="mt-3 text-sm leading-relaxed text-text-muted">
                 Master&apos;s degree in Gerontology · Diploma in Holistic Counselling
@@ -47,7 +47,7 @@ export default function About() {
           <div className="mt-10 space-y-6 text-base leading-relaxed text-text-muted">
             <p>
               Yin Ling is a Usui Reiki Master Teacher of The Reiki Centre lineage and the founder
-              of innerjoy reiki — a supportive space where individuals are invited to reconnect
+              of Innerjoy Reiki — a supportive space where individuals are invited to reconnect
               with their inner wisdom, discover their innate potential and experience life with
               deeper joy and authenticity.
             </p>

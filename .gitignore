@@ -48,3 +48,4 @@ next-env.d.ts
 # Playwright MCP scratch directory
 /.playwright-mcp/
 /tmp/
+/data/

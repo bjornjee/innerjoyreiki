@@ -5,7 +5,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { NAV_LINKS, SITE_NAME } from "@/lib/constants";
-import { Button } from "@/components/button";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { T } from "@/components/translate-override";
 import { glossary, type GlossaryTerm } from "@/lib/glossary";
@@ -53,12 +52,9 @@ export function Navbar() {
           })}
         </ul>
 
-        {/* Desktop CTA */}
+        {/* Desktop language switcher */}
         <div className="hidden items-center gap-3 lg:flex">
           <LanguageSwitcher />
-          <Button variant="primary" href="/contact">
-            <T term="Contact" />
-          </Button>
         </div>
 
         {/* Mobile menu button */}
@@ -118,11 +114,6 @@ export function Navbar() {
           })}
           <li className="pt-2">
             <LanguageSwitcher />
-          </li>
-          <li className="pt-2">
-            <Button variant="primary" href="/contact">
-              <T term="Contact" />
-            </Button>
           </li>
         </ul>
       )}

@@ -53,7 +53,7 @@ export function ContactChannels() {
     <div className="flex flex-col gap-3">
       <a
         href={mailtoHref}
-        aria-label={`Email innerjoy reiki at ${CONTACT_EMAIL}`}
+        aria-label={`Email Innerjoy Reiki at ${CONTACT_EMAIL}`}
         className={`${buttonBase} bg-accent text-foreground hover:bg-accent-light`}
       >
         <svg
@@ -76,7 +76,7 @@ export function ContactChannels() {
         href={whatsappHref}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Message innerjoy reiki on WhatsApp"
+        aria-label="Message Innerjoy Reiki on WhatsApp"
         className={`${buttonBase} border border-border text-foreground hover:border-primary-light hover:text-primary-light`}
       >
         <svg

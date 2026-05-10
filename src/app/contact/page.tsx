@@ -7,9 +7,9 @@ import { CONTACT_EMAIL } from "@/lib/constants";
 import { T } from "@/components/translate-override";
 
 export const metadata: Metadata = {
-  title: "Contact | innerjoy reiki",
+  title: "Contact | Innerjoy Reiki",
   description:
-    "Get in touch with innerjoy reiki by email or WhatsApp to book a Reiki healing session, register for a workshop, or reserve a spot at our next Reiki Share.",
+    "Get in touch with Innerjoy Reiki by email or WhatsApp to book a Reiki healing session, register for a workshop, or reserve a spot at our next Reiki Share.",
 };
 
 export default function Contact() {

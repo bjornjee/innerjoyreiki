@@ -4,7 +4,7 @@ import { Button } from "@/components/button";
 import { T } from "@/components/translate-override";
 
 export const metadata: Metadata = {
-  title: "Events | innerjoy reiki",
+  title: "Events | Innerjoy Reiki",
   description:
     "Reiki Share — a community Reiki gathering open to both Reiki practitioners and those new to Reiki.",
 };

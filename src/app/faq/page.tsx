@@ -5,9 +5,9 @@ import { CTASection } from "@/components/cta-section";
 import { T } from "@/components/translate-override";
 
 export const metadata: Metadata = {
-  title: "FAQ | innerjoy reiki",
+  title: "FAQ | Innerjoy Reiki",
   description:
-    "Frequently asked questions about Reiki, what to expect in a session, and how innerjoy reiki can support your wellbeing.",
+    "Frequently asked questions about Reiki, what to expect in a session, and how Innerjoy Reiki can support your wellbeing.",
 };
 
 const faqs: { question: string; answer: React.ReactNode }[] = [

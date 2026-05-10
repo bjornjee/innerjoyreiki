@@ -1,5 +1,6 @@
 export const glossary = {
   // Nav & UI
+  "About": "关于",
   "About Us": "关于我们",
   "About Yin Ling": "关于颖玲",
   "About Reiki": "关于灵气",
@@ -10,6 +11,7 @@ export const glossary = {
   "Contact": "联系我们",
   "FAQ": "常见问题",
   "What to Expect": "疗程须知",
+  "Articles": "灵气文章",
 
   // CTA buttons (GT mistranslates "Book" as 图书/书籍)
   "Book a Session": "预约疗程",
@@ -46,19 +48,27 @@ export const glossary = {
 
   // Workshop tracks (services page)
   "Online + Hybrid": "线上 + 实体混合",
+  "Hybrid Learning": "混合式学习",
   "Fully In-Person": "全程实体",
   "On Request": "可预约",
   "Online + Hybrid Workshops": "线上 + 实体混合课程",
+  "English Fully In-Person Workshops": "英语全程实体课程",
   "Chinese Reiki Workshops": "中文灵气课程",
   "Hybrid learning experience": "混合式学习课程",
+  "Fully in-person workshop": "全程实体课程",
   "Two-day in-person workshop": "两日制实体课程",
   "in partnership with": "合作单位:",
   "Self-paced online theory + 2× 3-hour in-person sessions":
     "自学线上课程 + 两次 3 小时实体课",
+  "Self-paced theory + in-person attunement sessions":
+    "自学课程 + 实体灵气授证课",
+  "In-person workshop in Tanjong Pagar": "丹戎巴葛 实体课程",
   "2-day in-person workshop in Tanjong Pagar": "丹戎巴葛 两日制实体课程",
   "Levels 1 · 2 · 3 · Master": "第一级 · 第二级 · 第三级 · 师资级",
-  "View English track": "查看英语课程",
+  "View English track": "查看英语混合式课程",
+  "View English In-Person track": "查看英语实体课程",
   "View Chinese track": "查看中文课程",
+  "Contact us to register your interest": "联系我们登记报名",
   "View available workshop dates and reserve your spot":
     "查看可预约日期并预留位置",
   "If you prefer a fully in-person workshop experience, please feel free to contact us to register your interest.":
@@ -99,6 +109,21 @@ export const glossary = {
   "Date & Time": "日期与时间",
   "Venue": "地点",
   "Energy Exchange": "能量交换",
+
+  // Homepage taglines + brand line
+  "Reconnect with your inner wisdom": "与内在智慧重新连接",
+  "Step fully into your potential": "全然活出潜能",
+  "Live joyful from within": "由内而外活出喜悦",
+  "A supportive space for inner alignment and personal growth":
+    "一个支持内在和谐与个人成长的空间",
+
+  // Articles
+  "The History of Usui Reiki": "臼井灵气的历史",
+  "The Five Principles (Gokai)": "灵气五戒(Gokai)",
+  "Calm Yourself with Simple Reiki Techniques": "用简单的灵气方法安定自己",
+  "Read article": "阅读文章",
+  "Short reads on Reiki — its history, its principles, and a few simple practices you can try today.":
+    "关于灵气的短文 — 它的历史、原则,以及一些今天就可以尝试的简单练习。",
 } as const;
 
 export type GlossaryTerm = keyof typeof glossary;

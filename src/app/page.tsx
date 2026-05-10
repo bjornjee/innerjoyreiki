@@ -1,115 +1,181 @@
+import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/button";
 import { SectionHeading } from "@/components/section-heading";
-import { FeatureCard } from "@/components/feature-card";
-import { SessionsSection } from "@/components/sessions-section";
 import { T } from "@/components/translate-override";
+
+const taglines: { id: string; node: ReactNode }[] = [
+  {
+    id: "reconnect",
+    node: (
+      <>
+        Reconnect with your <strong className="font-semibold">inner wisdom</strong>
+      </>
+    ),
+  },
+  {
+    id: "step",
+    node: (
+      <>
+        Step fully into your <strong className="font-semibold">potential</strong>
+      </>
+    ),
+  },
+  {
+    id: "live",
+    node: (
+      <>
+        Live <strong className="font-semibold">joyful</strong> from within
+      </>
+    ),
+  },
+];
+
+const benefits = [
+  "Supports mental and emotional well-being",
+  "Increases energy and vitality",
+  "Improves sleep",
+  "Decreases stress",
+  "Enhances self-awareness, fostering greater clarity and insight",
+];
 
 export default function Home() {
   return (
     <>
-      {/* Hero */}
+      {/* Hero — text-only, taglines as the focal */}
       <section className="relative overflow-hidden bg-gradient-to-br from-hero-bg to-hero-bg-end">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 md:grid-cols-2 md:py-28">
-          <div>
-            <h1 className="font-serif text-4xl font-semibold leading-[1.15] -tracking-[0.02em] text-hero-text md:text-5xl lg:text-6xl">
-              Reconnect with your inner wisdom.
-            </h1>
-            <p className="mt-6 max-w-lg text-lg text-hero-text/80">
-              Step fully into your true potential and experience joy within.
+        <div className="mx-auto max-w-7xl px-6 py-20 md:py-24">
+          <h1 className="sr-only">Innerjoy Reiki — Reiki healing and workshops in Singapore</h1>
+
+          <div className="text-center">
+            <p className="text-xs uppercase tracking-[0.3em] text-hero-text/70 md:text-sm">
+              Innerjoy Reiki
             </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Button variant="primary" href="/contact?type=healing-session">
-                <T term="Book a Session" />
-              </Button>
-              <Button variant="outline" href="/services" className="border-hero-text text-hero-text hover:border-hero-text/80 hover:text-hero-text/80">
-                <T term="Explore Services" />
-              </Button>
-            </div>
-            <p className="mt-4 max-w-lg text-sm text-hero-text/75">
-              1-hour Usui Reiki healing sessions in Singapore. In-person, distant, and workshops to learn for yourself.
-            </p>
-            <p className="mt-3 text-xs text-hero-text/85">
-              New here?{" "}
-              <Link href="/faq" className="underline hover:text-hero-text">
-                Read the FAQ
-              </Link>
+            <p className="mx-auto mt-3 max-w-md text-sm text-hero-text/80 md:text-base">
+              <T term="A supportive space for inner alignment and personal growth" />
             </p>
           </div>
-          <div className="flex justify-center">
-            <div className="relative h-72 w-72 overflow-hidden rounded-[40%_60%_50%_50%] md:h-96 md:w-96">
+
+          <div className="mt-12 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-3 md:gap-6">
+            {taglines.map((tagline) => (
+              <p
+                key={tagline.id}
+                className="text-balance text-center font-serif text-xl leading-snug text-hero-text md:text-[1.35rem] lg:text-2xl"
+              >
+                {tagline.node}
+              </p>
+            ))}
+          </div>
+
+          <div className="mt-12 flex flex-wrap justify-center gap-4 md:mt-14">
+            <Button variant="primary" href="/workshops">
+              <T term="Reiki Workshops" />
+            </Button>
+            <Button
+              variant="outline"
+              href="/healing"
+              className="border-hero-text text-hero-text hover:border-hero-text/80 hover:text-hero-text/80"
+            >
+              <T term="Reiki Healing" />
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* What is Reiki — paired image + prose */}
+      <section className="bg-surface py-20">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
+            <div className="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-2xl shadow-sm md:max-w-none">
               <Image
                 src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/reiki-hands.png`}
-                alt="Reiki healing hands"
+                alt="A practitioner offering Reiki, hands gently positioned to channel energy"
                 fill
+                sizes="(min-width: 768px) 50vw, 24rem"
                 className="object-cover"
                 priority
               />
             </div>
+            <div>
+              <SectionHeading
+                heading={<T term="What is Reiki" />}
+                subtitle="A gentle, non-invasive Japanese practice for restoring balance and supporting the body's natural healing response."
+                align="left"
+              />
+              <div className="mt-8 space-y-5 text-base leading-relaxed text-text-muted">
+                <p>
+                  The word{" "}
+                  <span className="font-medium text-foreground">&lsquo;Reiki&rsquo;</span>{" "}
+                  comes from the Japanese words{" "}
+                  <span className="font-medium text-foreground">&lsquo;Rei&rsquo;</span>,
+                  meaning universe or divine, and{" "}
+                  <span className="font-medium text-foreground">&lsquo;Ki&rsquo;</span>, which
+                  means vital energy or life force. Together, Reiki refers to the universal
+                  life force energy.
+                </p>
+                <p>
+                  <span className="font-medium text-foreground">Usui Shiki Ryoho</span>, the
+                  Usui System of Natural Healing, is a Reiki practice that restores balance
+                  and harmony by activating the body&apos;s natural healing response.
+                  Developed by Mikao Usui in Japan in the 1900s, the system has since become
+                  widely known simply as &ldquo;Reiki&rdquo;.
+                </p>
+                <p>
+                  Reiki is a subtle form of energy work that is safe, gentle and non-invasive.
+                  This natural healing practice is not religious and has no dogma. It can be
+                  received from a practitioner or learned as a self-practice, offering a
+                  simple yet powerful path for self-care, personal growth and empowerment.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Why Reiki — Benefits */}
-      <section className="bg-surface py-20">
-        <div className="mx-auto max-w-5xl px-6">
+      {/* Benefits of Reiki */}
+      <section className="bg-background py-20">
+        <div className="mx-auto max-w-3xl px-6">
           <SectionHeading
-            heading={<T term="Why Reiki" />}
-            subtitle="Reiki works with the physical, mental, emotional and spiritual aspects of an individual. Some of the benefits of a Reiki practice include:"
+            heading={<T term="Benefits of Reiki" />}
+            subtitle="Reiki works with the physical, mental, emotional and spiritual aspects of an individual. Some of the benefits of the practice include:"
           />
-          <div className="mt-16 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
-            <FeatureCard
-              icon={
-                <svg aria-hidden="true" className="h-7 w-7 text-primary-light" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.25}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+          <ul className="mx-auto mt-12 max-w-2xl space-y-4">
+            {benefits.map((benefit) => (
+              <li
+                key={benefit}
+                className="flex items-start gap-3 rounded-2xl border border-border bg-white p-5"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
                 </svg>
-              }
-              title="Mental & Emotional Well-being"
-              description="Supports mental and emotional well-being."
-            />
-            <FeatureCard
-              icon={
-                <svg aria-hidden="true" className="h-7 w-7 text-primary-light" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.25}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
-                </svg>
-              }
-              title="Energy & Vitality"
-              description="Increases energy and vitality."
-            />
-            <FeatureCard
-              icon={
-                <svg aria-hidden="true" className="h-7 w-7 text-primary-light" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.25}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
-                </svg>
-              }
-              title="Better Sleep"
-              description="Improves sleep."
-            />
-            <FeatureCard
-              icon={
-                <svg aria-hidden="true" className="h-7 w-7 text-primary-light" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.25}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 12a9 9 0 1018 0 9 9 0 00-18 0zm9-4.5v9m4.5-4.5h-9" />
-                </svg>
-              }
-              title="Stress Relief"
-              description="Decreases stress."
-            />
-            <FeatureCard
-              icon={
-                <svg aria-hidden="true" className="h-7 w-7 text-primary-light" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.25}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25V9m7.5 0H8.25m7.5 0L18 21H6l2.25-12" />
-                </svg>
-              }
-              title="Greater Self-Awareness"
-              description="Enhances self-awareness, fostering greater clarity and insight."
-            />
-          </div>
+                <span className="text-base text-foreground">{benefit}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-12 text-center text-sm text-text-muted">
+            Want to read more?{" "}
+            <Link
+              href="/articles"
+              className="text-primary-light underline-offset-4 hover:underline"
+            >
+              Browse the articles
+              <span aria-hidden="true"> →</span>
+            </Link>
+          </p>
         </div>
       </section>
-
-      {/* Services teaser */}
-      <SessionsSection />
     </>
   );
 }
