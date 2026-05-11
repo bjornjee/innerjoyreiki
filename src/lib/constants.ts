@@ -1,5 +1,5 @@
 export const SITE_NAME = "Innerjoy Reiki";
-export const CONTACT_EMAIL = "enquiry@innerjoyreiki.com";
+export const CONTACT_EMAIL = "innerjoyling@gmail.com";
 export const WHATSAPP_NUMBER = "6597953408";
 export const WHATSAPP_DISPLAY = "+65 9795 3408";
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
