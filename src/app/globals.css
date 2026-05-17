@@ -17,6 +17,7 @@
   --color-icon-bg-amber: var(--color-icon-bg-amber);
   --color-border: var(--color-border);
   --color-text-muted: var(--color-text-muted);
+  --color-on-dark: var(--background);
   --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
   --font-serif: var(--font-playfair);

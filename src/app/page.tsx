@@ -48,7 +48,7 @@ export default function Home() {
         <div className="mx-auto max-w-5xl px-6 py-20 md:py-24">
           <h1 className="sr-only">Innerjoy Reiki: Reiki healing and workshops in Singapore</h1>
 
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-6">
+          <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-3 md:gap-6">
             {taglines.map((tagline) => (
               <p
                 key={tagline.id}
@@ -60,7 +60,11 @@ export default function Home() {
           </div>
 
           <div className="mt-12 flex flex-wrap justify-center gap-4 md:mt-14">
-            <Button variant="primary" href="/workshops">
+            <Button
+              variant="primary"
+              href="/workshops"
+              className="bg-hero-text text-on-dark hover:bg-hero-text/90"
+            >
               <T term="Reiki Workshops" />
             </Button>
             <Button
