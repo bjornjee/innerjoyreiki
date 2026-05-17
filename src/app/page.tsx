@@ -48,11 +48,11 @@ export default function Home() {
         <div className="mx-auto max-w-5xl px-6 py-20 md:py-24">
           <h1 className="sr-only">Innerjoy Reiki: Reiki healing and workshops in Singapore</h1>
 
-          <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-3 md:gap-6">
+          <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-3 md:gap-12">
             {taglines.map((tagline) => (
               <p
                 key={tagline.id}
-                className="text-balance text-center font-serif font-semibold leading-snug -tracking-[0.02em] text-hero-text text-2xl md:text-[1.65rem] lg:text-[1.875rem]"
+                className="text-balance text-center font-serif font-normal leading-relaxed text-hero-text text-[1.625rem] md:text-[1.875rem] lg:text-[2.25rem]"
               >
                 {tagline.node}
               </p>
