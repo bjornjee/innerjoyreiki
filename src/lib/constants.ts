@@ -13,10 +13,11 @@ export const NAV_LINKS = [
 ] as const;
 
 export const FOOTER_NAV_LINKS = [
+  { label: "About", href: "/about" },
   { label: "Reiki Healing", href: "/healing" },
   { label: "Reiki Workshops", href: "/workshops" },
-  { label: "Articles", href: "/articles" },
   { label: "Events", href: "/events" },
+  { label: "Articles", href: "/articles" },
   { label: "Contact", href: "/contact" },
 ] as const;
 
