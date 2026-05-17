@@ -252,8 +252,6 @@ export default function WorkshopsPage() {
           <div id="en-hybrid-track" className="mt-24 scroll-mt-24">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary-light">
               <T term="ENGLISH" />
-              <span className="mx-2 opacity-50">·</span>
-              <T term="Hybrid Learning" />
             </p>
             <h2 className="mt-3 font-serif text-2xl font-semibold text-foreground">
               <T term="Hybrid learning experience" />
@@ -281,8 +279,6 @@ export default function WorkshopsPage() {
           <div id="en-inperson-track" className="mt-20 scroll-mt-24">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-text-muted">
               <T term="ENGLISH" />
-              <span className="mx-2 opacity-50">·</span>
-              <T term="Fully In-Person" />
             </p>
             <h2 className="mt-3 font-serif text-2xl font-semibold text-foreground">
               <T term="English Fully In-Person Workshops" />
@@ -311,8 +307,6 @@ export default function WorkshopsPage() {
           <div id="zh-track" className="mt-20 scroll-mt-24">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-foreground">
               <T term="中文" />
-              <span className="mx-2 opacity-50">·</span>
-              <T term="Fully In-Person" />
             </p>
             <h2 className="mt-3 font-serif text-2xl font-semibold text-foreground">
               <T term="Chinese Reiki Workshops" />

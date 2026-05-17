@@ -46,10 +46,6 @@ export const glossary = {
   "Workshops": "灵气课程",
 
   // Workshop tracks (services page)
-  "Online + Hybrid": "线上 + 实体混合",
-  "Hybrid Learning": "混合式学习",
-  "Fully In-Person": "全程实体",
-  "On Request": "可预约",
   "Online + Hybrid Workshops": "线上 + 实体混合课程",
   "English Fully In-Person Workshops": "英语全程实体课程",
   "Chinese Reiki Workshops": "中文灵气课程",
@@ -74,11 +70,6 @@ export const glossary = {
     "如希望参加全程实体课程,请联系我们登记报名。",
   "ENGLISH": "英语课程",
   "中文": "中文课程",
-
-  // Curriculum / availability badges
-  "EN · Online + Hybrid": "英语 · 线上 + 实体混合",
-  "中文 · In-Person": "中文 · 实体课",
-  "EN · On Request": "英语 · 可预约",
 
   // Workshop / cohort details
   "Language": "授课语言",
