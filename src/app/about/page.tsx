@@ -15,7 +15,6 @@ export default function About() {
       <PageHeader
         label={<T term="About Us" />}
         heading="Meet Yin Ling"
-        description="On the practice, the lineage, and what brought us here."
       />
 
       <section className="bg-background py-16">
@@ -46,10 +45,9 @@ export default function About() {
 
           <div className="mt-10 space-y-6 text-base leading-relaxed text-text-muted">
             <p>
-              Yin Ling is a Usui Reiki Master Teacher of The Reiki Centre lineage and the founder
-              of Innerjoy Reiki, a supportive space where individuals are invited to reconnect
-              with their inner wisdom, discover their innate potential and experience life with
-              deeper joy and authenticity.
+              Through Innerjoy Reiki, Yin Ling holds a supportive space where individuals are
+              invited to reconnect with their inner wisdom, discover their innate potential and
+              experience life with deeper joy and authenticity.
             </p>
             <p>
               Naturally intuitive and deeply empathic, Yin Ling has been sensitive to energy from
@@ -65,10 +63,9 @@ export default function About() {
             <p>
               Yin Ling believes that we all have the capacity to grow, heal, and step into our
               fullest potential. She is passionate about sharing Reiki as a powerful path to
-              self-healing and transformation. With a Master&apos;s degree in Gerontology and a
-              Diploma in Holistic Counselling, Yin Ling integrates her knowledge with intuitive
-              practice in her healing work. Her work with Reiki is rooted in a genuine desire to
-              help others reconnect with themselves and experience meaningful transformation.
+              self-healing and transformation. In her healing work, she integrates her academic
+              background with intuitive practice, rooted in a genuine desire to help others
+              reconnect with themselves and experience meaningful transformation.
             </p>
           </div>
         </div>

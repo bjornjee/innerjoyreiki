@@ -36,7 +36,6 @@ export default function ArticlesIndex() {
       <PageHeader
         label={<T term="Articles" />}
         heading="Articles"
-        description="Short reads on Reiki, covering its history, its principles, and a few simple practices you can try today."
       />
 
       <section className="bg-surface py-20">

@@ -137,7 +137,6 @@ export default function WorkshopsPage() {
       <PageHeader
         label={<T term="Reiki Workshops" />}
         heading="Learn Reiki"
-        description="Our workshops follow the traditional Usui Reiki system, with a focus on Reiki as a powerful modality for self-healing and personal empowerment."
       />
 
       <section className="bg-background py-20">

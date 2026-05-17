@@ -18,7 +18,6 @@ export default function Contact() {
       <PageHeader
         label={<T term="Contact" />}
         heading="Get in Touch"
-        description="Connect with us to book a healing session, register for a workshop, or reserve a spot at the next Reiki Share."
       />
 
       <section className="bg-surface py-20">

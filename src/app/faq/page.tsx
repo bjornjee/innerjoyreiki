@@ -93,7 +93,6 @@ export default function FAQ() {
       <PageHeader
         label="FAQ"
         heading="Frequently Asked Questions"
-        description="Everything you might want to know before your first session."
       />
 
       {/* Accordion */}
