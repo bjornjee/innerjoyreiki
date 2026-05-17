@@ -36,7 +36,6 @@ src/
 │   ├── about/            # About page
 │   ├── classes/           # Classes page
 │   ├── contact/           # Contact page
-│   ├── faq/               # FAQ page
 │   ├── privacy/           # Privacy policy
 │   ├── terms/             # Terms of service
 │   ├── layout.tsx         # Root layout (fonts, navbar, footer)
