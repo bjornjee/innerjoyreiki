@@ -6,7 +6,6 @@ type Tone = "sage" | "peach" | "muted";
 
 interface TrackCardProps {
   eyebrowLanguage: GlossaryTerm;
-  eyebrowFormat: GlossaryTerm;
   headline: GlossaryTerm;
   partnerName?: string;
   language: string;
@@ -40,7 +39,6 @@ const toneClasses: Record<
 
 export function TrackCard({
   eyebrowLanguage,
-  eyebrowFormat,
   headline,
   partnerName,
   language,
@@ -58,8 +56,6 @@ export function TrackCard({
     >
       <p className={`text-xs font-semibold uppercase tracking-[0.18em] ${t.eyebrow}`}>
         <T term={eyebrowLanguage} />
-        <span className="mx-2 opacity-50">·</span>
-        <T term={eyebrowFormat} />
       </p>
 
       <p className="mt-6 font-serif text-2xl font-semibold text-foreground">

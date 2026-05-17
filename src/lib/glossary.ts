@@ -9,7 +9,6 @@ export const glossary = {
   "Services": "疗程与课程",
   "Events": "活动",
   "Contact": "联系我们",
-  "FAQ": "常见问题",
   "What to Expect": "疗程须知",
   "Articles": "灵气文章",
 
@@ -64,7 +63,7 @@ export const glossary = {
     "自学课程 + 实体灵气授证课",
   "In-person workshop in Tanjong Pagar": "丹戎巴葛 实体课程",
   "2-day in-person workshop in Tanjong Pagar": "丹戎巴葛 两日制实体课程",
-  "Levels 1 · 2 · 3 · Master": "第一级 · 第二级 · 第三级 · 师资级",
+  "Levels 1 · 2 · 3 · Master Teacher": "第一级 · 第二级 · 第三级 · 师资级",
   "View English track": "查看英语混合式课程",
   "View English In-Person track": "查看英语实体课程",
   "View Chinese track": "查看中文课程",
