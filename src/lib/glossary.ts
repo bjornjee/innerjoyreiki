@@ -47,8 +47,6 @@ export const glossary = {
 
   // Workshop tracks (services page)
   "Online + Hybrid": "线上 + 实体混合",
-  "Hybrid Learning": "混合式学习",
-  "Fully In-Person": "全程实体",
   "On Request": "可预约",
   "Online + Hybrid Workshops": "线上 + 实体混合课程",
   "English Fully In-Person Workshops": "英语全程实体课程",
