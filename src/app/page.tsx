@@ -48,16 +48,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-24">
           <h1 className="sr-only">Innerjoy Reiki: Reiki healing and workshops in Singapore</h1>
 
-          <div className="text-center">
-            <p className="text-xs uppercase tracking-[0.3em] text-hero-text/70 md:text-sm">
-              Innerjoy Reiki
-            </p>
-            <p className="mx-auto mt-3 max-w-md text-sm text-hero-text/80 md:text-base">
-              <T term="A supportive space for inner alignment and personal growth" />
-            </p>
-          </div>
-
-          <div className="mt-12 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-3 md:gap-6">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-6">
             {taglines.map((tagline) => (
               <p
                 key={tagline.id}

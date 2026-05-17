@@ -15,7 +15,6 @@ export default function Events() {
       <PageHeader
         label={<T term="Events" />}
         heading="Reiki Share"
-        description="A community Reiki gathering, open to both Reiki practitioners and those completely new to Reiki."
       />
 
       <section className="bg-surface py-20">

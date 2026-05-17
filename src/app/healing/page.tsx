@@ -16,7 +16,6 @@ export default function HealingPage() {
       <PageHeader
         label={<T term="Reiki Healing" />}
         heading="Reiki Healing Sessions"
-        description="Tailored to support your individual needs and rebalance your system holistically."
       />
 
       <section className="bg-surface py-20">

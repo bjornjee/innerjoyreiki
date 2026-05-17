@@ -110,7 +110,7 @@ export const glossary = {
   "Venue": "地点",
   "Energy Exchange": "能量交换",
 
-  // Homepage taglines + brand line
+  // Homepage taglines + footer brand line
   "Reconnect with your inner wisdom": "与内在智慧重新连接",
   "Step fully into your potential": "全然活出潜能",
   "Live joyful from within": "由内而外活出喜悦",
@@ -122,8 +122,6 @@ export const glossary = {
   "The Five Principles (Gokai)": "灵气五戒(Gokai)",
   "Calm Yourself with Simple Reiki Techniques": "用简单的灵气方法安定自己",
   "Read article": "阅读文章",
-  "Short reads on Reiki, covering its history, its principles, and a few simple practices you can try today.":
-    "关于灵气的短文,涵盖它的历史、原则,以及一些今天就可以尝试的简单练习。",
 } as const;
 
 export type GlossaryTerm = keyof typeof glossary;
