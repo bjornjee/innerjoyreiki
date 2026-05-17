@@ -8,15 +8,16 @@ export const NAV_LINKS = [
   { label: "About", href: "/about" },
   { label: "Reiki Healing", href: "/healing" },
   { label: "Reiki Workshops", href: "/workshops" },
+  { label: "Events", href: "/events" },
   { label: "Articles", href: "/articles" },
 ] as const;
 
 export const FOOTER_NAV_LINKS = [
+  { label: "About", href: "/about" },
   { label: "Reiki Healing", href: "/healing" },
   { label: "Reiki Workshops", href: "/workshops" },
-  { label: "Articles", href: "/articles" },
   { label: "Events", href: "/events" },
-  { label: "FAQ", href: "/faq" },
+  { label: "Articles", href: "/articles" },
   { label: "Contact", href: "/contact" },
 ] as const;
 

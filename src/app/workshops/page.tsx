@@ -25,11 +25,11 @@ const levels: Level[] = [
     title: "Reiki Level 1 for Beginners",
     summary: (
       <>
-        This <strong className="font-semibold text-foreground">two-day</strong> foundational
-        course opens the flow of Reiki through your hands. You will explore the practice in a
-        clear, guided way, leaving with confidence in your ability to use it. Once attuned, Reiki
-        remains accessible to you for life. Self-healing is the focus at this level, with
-        practical techniques to support yourself as well as your loved ones and pets.
+        This two-day foundational course opens the flow of Reiki through your hands. You will
+        explore the practice in a clear, guided way, leaving with confidence in your ability to
+        use it. Once attuned, Reiki remains accessible to you for life. Self-healing is the focus
+        at this level, with practical techniques to support yourself as well as your loved ones
+        and pets.
       </>
     ),
     topics: [
@@ -54,10 +54,7 @@ const levels: Level[] = [
     summary: (
       <>
         At Reiki Level 2, you will learn how to strengthen your energy channel, practise
-        distance healing, and work with Reiki at a deeper level.{" "}
-        <strong className="font-semibold text-foreground">
-          During the two-day workshop,
-        </strong>{" "}
+        distance healing, and work with Reiki at a deeper level. During the two-day workshop,
         you will be introduced to three symbols (the Empowerment, Harmony, and Communication
         Symbols), opening greater potential for healing and personal growth.
       </>
@@ -81,13 +78,10 @@ const levels: Level[] = [
       <>
         Reiki Level 3 takes you into deeper healing, transformation, and personal growth. It is
         the final level for those who do not intend to teach, and also a required module for
-        Reiki Master Teacher training.{" "}
-        <strong className="font-semibold text-foreground">
-          At the 2½-day workshop,
-        </strong>{" "}
-        you will learn the final and most powerful symbol of the Usui lineage, the Master
-        symbol, known for its transformative energy. You will also be trained to perform Heart
-        Attunement, temporarily enabling Reiki to flow through others&apos; hands.
+        Reiki Master Teacher training. At the 2½-day workshop, you will learn the final and most
+        powerful symbol of the Usui lineage, the Master symbol, known for its transformative
+        energy. You will also be trained to perform Heart Attunement, temporarily enabling Reiki
+        to flow through others&apos; hands.
       </>
     ),
     topics: [
@@ -153,33 +147,30 @@ export default function WorkshopsPage() {
             <TrackCard
               tone="sage"
               eyebrowLanguage="ENGLISH"
-              eyebrowFormat="Hybrid Learning"
               headline="Hybrid learning experience"
               language="English"
               formatLine="Self-paced theory + in-person attunement sessions"
-              levelsLine="Levels 1 · 2 · 3 · Master"
+              levelsLine="Levels 1 · 2 · 3 · Master Teacher"
               ctaLabel="View English track"
               anchor="#en-hybrid-track"
             />
             <TrackCard
               tone="muted"
               eyebrowLanguage="ENGLISH"
-              eyebrowFormat="Fully In-Person"
               headline="Fully in-person workshop"
               language="English"
               formatLine="In-person workshop in Tanjong Pagar"
-              levelsLine="Levels 1 · 2 · 3 · Master"
+              levelsLine="Levels 1 · 2 · 3 · Master Teacher"
               ctaLabel="View English In-Person track"
               anchor="#en-inperson-track"
             />
             <TrackCard
               tone="peach"
               eyebrowLanguage="中文"
-              eyebrowFormat="Fully In-Person"
               headline="Two-day in-person workshop"
               language="中文 (Chinese)"
               formatLine="2-day in-person workshop in Tanjong Pagar"
-              levelsLine="Levels 1 · 2 · 3 · Master"
+              levelsLine="Levels 1 · 2 · 3 · Master Teacher"
               ctaLabel="View Chinese track"
               anchor="#zh-track"
             />
