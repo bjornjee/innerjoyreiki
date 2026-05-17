@@ -10,7 +10,7 @@ const taglines: { id: string; node: ReactNode }[] = [
     id: "reconnect",
     node: (
       <>
-        Reconnect with your <strong className="font-semibold">inner wisdom</strong>
+        Reconnect with your <strong className="font-bold">inner wisdom</strong>
       </>
     ),
   },
@@ -18,7 +18,7 @@ const taglines: { id: string; node: ReactNode }[] = [
     id: "step",
     node: (
       <>
-        Step fully into your <strong className="font-semibold">potential</strong>
+        Step fully into your <strong className="font-bold">potential</strong>
       </>
     ),
   },
@@ -26,7 +26,7 @@ const taglines: { id: string; node: ReactNode }[] = [
     id: "live",
     node: (
       <>
-        Live <strong className="font-semibold">joyful</strong> from within
+        Live <strong className="font-bold">joyful</strong> from within
       </>
     ),
   },
@@ -45,14 +45,14 @@ export default function Home() {
     <>
       {/* Hero — text-only, taglines as the focal */}
       <section className="relative overflow-hidden bg-gradient-to-br from-hero-bg to-hero-bg-end">
-        <div className="mx-auto max-w-7xl px-6 py-20 md:py-24">
+        <div className="mx-auto max-w-5xl px-6 py-20 md:py-24">
           <h1 className="sr-only">Innerjoy Reiki: Reiki healing and workshops in Singapore</h1>
 
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-6">
+          <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-3 md:gap-12">
             {taglines.map((tagline) => (
               <p
                 key={tagline.id}
-                className="text-balance text-center font-serif text-xl leading-snug text-hero-text md:text-[1.35rem] lg:text-2xl"
+                className="text-balance text-center font-serif font-normal leading-relaxed text-hero-text text-[1.625rem] md:text-[1.875rem] lg:text-[2.25rem]"
               >
                 {tagline.node}
               </p>
@@ -60,7 +60,11 @@ export default function Home() {
           </div>
 
           <div className="mt-12 flex flex-wrap justify-center gap-4 md:mt-14">
-            <Button variant="primary" href="/workshops">
+            <Button
+              variant="primary"
+              href="/workshops"
+              className="bg-hero-text text-on-dark hover:bg-hero-text/90"
+            >
               <T term="Reiki Workshops" />
             </Button>
             <Button
